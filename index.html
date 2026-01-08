@@ -1,1 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parfum Campaigns</title>
+  <meta name="description" content="Parfum Campaigns is a curated archive of fragrance advertising and visual campaign work. Documentary, neutral, and historically oriented." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111111;
+      --muted:#666666;
+      --line:#e6e6e6;
+      --link:#0b57d0;
+      --sidebar:#f6f6f6;
+      --card:#fafafa;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.55;
+    }
+    a{color:var(--link); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .layout{
+      display:grid;
+      grid-template-columns: 300px 1fr;
+      min-height:100vh;
+    }
+    aside{
+      border-right:1px solid var(--line);
+      background:var(--sidebar);
+      padding:28px 18px;
+      position:sticky;
+      top:0;
+      height:100vh;
+      overflow:auto;
+    }
+    .brand{
+      font-size:34px;
+      font-weight:700;
+      letter-spacing:.5px;
+      margin:0 0 14px 0;
+    }
+    .search{
+      width:100%;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:4px;
+      background:#fff;
+      font-family: inherit;
+      font-size:16px;
+      margin:10px 0 18px 0;
+    }
+    nav a{
+      display:block;
+      padding:8px 6px;
+      border-radius:4px;
+      font-size:18px;
+      color:var(--link);
+    }
+    nav a:hover{background:#eee; text-decoration:none;}
+    main{
+      padding:34px 34px 80px 34px;
+      max-width: 1100px;
+    }
+    h1,h2,h3{
+      margin:0 0 12px 0;
+      font-weight:700;
+    }
+    h2{
+      margin-top:36px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      font-size:44px;
+      letter-spacing:.4px;
+    }
+    h3{
+      margin-top:24px;
+      font-size:22px;
+    }
+    p{margin:0 0 14px 0;}
+    .subhead{
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight:700;
+      font-size:13px;
+      letter-spacing:2px;
+      color:#222;
+      margin:10px 0 18px 0;
+    }
+    .rule{border-top:1px solid var(--line); margin:18px 0;}
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+      margin:14px 0 18px 0;
+    }
+    .card{
+      border:1px solid var(--line);
+      background:var(--card);
+      padding:12px;
+      border-radius:4px;
+    }
+    .card img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:2px;
+      border:1px solid #ddd;
+      background:#fff;
+    }
+    .caption{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size:12px;
+      color:var(--muted);
+      margin-top:8px;
+    }
+    .note{
+      font-family: Arial, Helvetica, sans-serif;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:8px;
+    }
+    .footer{
+      border-top:1px solid var(--line);
+      margin-top:40px;
+      padding-top:18px;
+      font-family: Arial, Helvetica, sans-serif;
+      color:var(--muted);
+      font-size:13px;
+    }
+    @media (max-width: 900px){
+      .layout{grid-template-columns: 1fr;}
+      aside{position:relative; height:auto; border-right:none; border-bottom:1px solid var(--line);}
+      main{padding:22px 18px 70px 18px;}
+      h2{font-size:34px;}
+      .grid{grid-template-columns: 1fr;}
+    }
+  </style>
+</head>
 
+<body>
+<div class="layout">
+
+  <aside>
+    <div class="brand">Parfum<br/>Campaigns</div>
+    <input class="search" id="search" type="search" placeholder="Search this page..." />
+    <nav id="nav">
+      <a href="#overview">Overview</a>
+      <a href="#mission">Mission</a>
+      <a href="#scope">Scope</a>
+      <a href="#archive-method">Archive Method</a>
+      <a href="#chanel">CHANEL (Paris, 1910)</a>
+      <a href="#calvin-klein">CALVIN KLEIN (New York, 1968)</a>
+      <a href="#giorgio-armani">GIORGIO ARMANI (Milan, 1975)</a>
+      <a href="#ralph-lauren">RALPH LAUREN (New York, 1967)</a>
+      <a href="#versace">VERSACE (Milan, 1978)</a>
+      <a href="#tom-ford">TOM FORD (New York, 2005)</a>
+      <a href="#dior">DIOR (Paris, 1946)</a>
+      <a href="#ysl">YVES SAINT LAURENT (Paris, 1961)</a>
+      <a href="#hugoboss">HUGO BOSS (Metzingen, 1924)</a>
+      <a href="#gucci">GUCCI (Florence, 1921)</a>
+      <a href="#prada">PRADA (Milan, 1913)</a>
+      <a href="#burberry">BURBERRY (London, 1856)</a>
+      <a href="#archive-notes">Archive Notes</a>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="subhead" id="overview">OVERVIEW</div>
+
+    <p>
+      Parfum Campaigns is a curated archive of fragrance advertising and visual campaign work. It is designed to preserve a factual,
+      image-first record of how houses and brands constructed authority, desire, and cultural placement through photography, art direction,
+      casting, typography, and media strategy.
+    </p>
+
+    <p>
+      This archive is not a review site, not a shopping guide, and not a list of “best campaigns.” It is a documentary record. Houses are
+      included because their campaigns demonstrate identifiable visual language and institutional repeatability across time.
+    </p>
+
+    <div class="subhead" id="mission" style="margin-top:28px;">MISSION</div>
+    <p>
+      Preserve a neutral, historically oriented reference library of fragrance campaign imagery, grouped by house, with minimal editorial
+      interference. The goal is clarity: what the house did, how it looked, and how consistently it repeated.
+    </p>
+
+    <div class="subhead" id="scope" style="margin-top:28px;">SCOPE</div>
+    <p>
+      The archive prioritizes internationally distributed houses and brands whose fragrance campaigns were produced at institutional scale.
+      Where possible, entries favor campaigns with clear art direction, known photographers, and identifiable era placement.
+    </p>
+
+    <div class="subhead" id="archive-method" style="margin-top:28px;">ARCHIVE METHOD</div>
+    <p>
+      Each house entry follows the same structure: a brief historical/context line, a campaign/visual language section, signature eras or
+      recognizable campaign patterns, bottle/iconography notes, and archival notes. The goal is consistent comparability across houses.
+    </p>
+
+    <h2 id="chanel">CHANEL (Paris, 1910)</h2>
+    <p>
+      Chanel is archived in Parfum Campaigns as a baseline house — proof that the strongest fragrance advertising does not chase attention.
+      It consolidates authority until the bottle feels inevitable.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="assets/img/chanel-no5-bottle-still-life.jpg" alt="Chanel No.5 perfume bottle still life campaign image emphasizing minimalism and authority." />
+        <div class="caption">Chanel — bottle-first authority; minimal composition.</div>
+      </div>
+      <div class="card">
+        <img src="assets/img/chanel-campaign-portrait.jpg" alt="Chanel fragrance campaign portrait emphasizing restraint, editorial lighting, and iconic brand posture." />
+        <div class="caption">Chanel — portrait-driven editorial restraint.</div>
+      </div>
+    </div>
+
+    <h2 id="calvin-klein">CALVIN KLEIN (New York, 1968)</h2>
+    <p>
+      Calvin Klein is archived for its institutional mastery of provocation and minimal typography. The house repeatedly used controlled
+      controversy and clean design to make campaigns feel like cultural documents rather than advertisements.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="assets/img/calvin-klein-obsession-campaign.jpg" alt="Calvin Klein campaign image with stark composition and provocative casting, archival fragrance advertising." />
+        <div class="caption">Calvin Klein — provocation with institutional restraint.</div>
+      </div>
+      <div class="card">
+        <img src="assets/img/calvin-klein-fragrance-bottle-box.jpg" alt="Calvin Klein fragrance bottle and box product image with minimal typography and dark tonal styling." />
+        <div class="caption">Calvin Klein — typography and product inevitability.</div>
+      </div>
+    </div>
+
+    <h2 id="giorgio-armani">GIORGIO ARMANI (Milan, 1975)</h2>
+    <p>
+      Giorgio Armani is archived for its disciplined luxury posture — architecture, silence, and a specific kind of adult authority.
+      Campaigns favor clean environments, composure, and a sense of private confidence.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="assets/img/armani-building-campaign.jpg" alt="Giorgio Armani campaign image featuring architectural setting and restrained luxury tone." />
+        <div class="caption">Armani — architecture as authority.</div>
+      </div>
+      <div class="card">
+        <img src="assets/img/armani-fragrance-bottle.jpg" alt="Giorgio Armani fragrance bottle campaign image with minimalist styling and clean lighting." />
+        <div class="caption">Armani — product minimalism, controlled light.</div>
+      </div>
+    </div>
+
+    <h2 id="ralph-lauren">RALPH LAUREN (New York, 1967)</h2>
+    <p>
+      Ralph Lauren is archived for its consistent construction of American mythology: equestrian iconography, country estate staging, and
+      heritage-coded masculinity. The campaigns function as lifestyle proof rather than product demonstration.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="assets/img/ralph-lauren-polo-campaign.jpg" alt="Ralph Lauren Polo campaign image featuring heritage American styling and equestrian-coded masculinity." />
+        <div class="caption">Ralph Lauren — heritage staging and myth.</div>
+      </div>
+      <div class="card">
+        <img src="assets/img/ralph-lauren-fragrance-bottle.jpg" alt="Ralph Lauren fragrance bottle campaign image with classic Americana tone and minimal layout." />
+        <div class="caption">Ralph Lauren — bottle as emblem.</div>
+      </div>
+    </div>
+
+    <h2 id="versace">VERSACE (Milan, 1978)</h2>
+    <p>
+      Versace is archived for maximal glamour: saturation, body, metallic surfaces, and explicit power. Campaigns function as visual excess
+      with high-recognition iconography.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="assets/img/versace-campaign-glamour.jpg" alt="Versace fragrance campaign image featuring maximal glamour, bold lighting, and high-impact styling." />
+        <div class="caption">Versace — glamour as spectacle.</div>
+      </div>
+      <div class="card">
+        <img src="assets/img/versace-fragrance-bottle.jpg" alt="Versace fragrance bottle campaign image with metallic styling and bold brand iconography." />
+        <div class="caption">Versace — iconography and shine.</div>
+      </div>
+    </div>
+
+    <h2 id="tom-ford">TOM FORD (New York, 2005)</h2>
+    <p>
+      Tom Ford is archived for controlled provocation executed with luxury lighting and editorial precision. Campaigns are deliberate,
+      often confrontational, and visually engineered to read as premium print.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="assets/img/tom-ford-campaign-editorial.jpg" alt="Tom Ford fragrance campaign image with editorial lighting and controlled provocative tone." />
+        <div class="caption">Tom Ford — editorial confrontation.</div>
+      </div>
+      <div class="card">
+        <img src="assets/img/tom-ford-fragrance-bottle.jpg" alt="Tom Ford fragrance bottle campaign image with clean luxury styling and high-contrast lighting." />
+        <div class="caption">Tom Ford — bottle as object, not accessory.</div>
+      </div>
+    </div>
+
+    <h2 id="dior">DIOR (Paris, 1946)</h2>
+    <p>
+      Dior is archived for cinematic romance and high-institution prestige. Campaigns emphasize narrative staging, formal elegance, and
+      recognizable French luxury codes.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="assets/img/dior-campaign-cinematic.jpg" alt="Dior fragrance campaign image with cinematic staging, formal elegance, and narrative tone." />
+        <div class="caption">Dior — cinema as luxury language.</div>
+      </div>
+      <div class="card">
+        <img src="assets/img/dior-fragrance-bottle.jpg" alt="Dior fragrance bottle campaign image with clean composition and prestige styling." />
+        <div class="caption">Dior — prestige object presentation.</div>
+      </div>
+    </div>
+
+    <h2 id="ysl">YVES SAINT LAURENT (Paris, 1961)</h2>
+    <p>
+      YSL is archived for sharp sexuality executed with fashion-house discipline. Campaigns often operate at the boundary between art,
+      provocation, and institutional cool.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="assets/img/ysl-campaign-cool.jpg" alt="Yves Saint Laurent fragrance campaign image emphasizing cool provocation and fashion-house discipline." />
+        <div class="caption">YSL — cool authority with edge.</div>
+      </div>
+      <div class="card">
+        <img src="assets/img/ysl-fragrance-bottle.jpg" alt="Yves Saint Laurent fragrance bottle campaign image with crisp styling and minimal layout." />
+        <div class="caption">YSL — product clarity and posture.</div>
+      </div>
+    </div>
+
+    <h2 id="hugoboss">HUGO BOSS (Metzingen, 1924)</h2>
+    <p>
+      Hugo Boss is archived for its long-running, repeatable construction of corporate masculinity: sharp suits, controlled lighting, and
+      institutional certainty. Campaigns read like uniform.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="assets/img/hugo-boss-campaign-suit.jpg" alt="Hugo Boss fragrance campaign image featuring suit-coded masculinity and controlled corporate styling." />
+        <div class="caption">Hugo Boss — uniform masculinity.</div>
+      </div>
+      <div class="card">
+        <img src="assets/img/hugo-boss-fragrance-bottle.jpg" alt="Hugo Boss fragrance bottle campaign image with minimalist corporate styling and clean lighting." />
+        <div class="caption">Hugo Boss — bottle as corporate emblem.</div>
+      </div>
+    </div>
+
+    <h2 id="gucci">GUCCI (Florence, 1921)</h2>
+    <p>
+      Gucci is archived for its ability to shift eras while maintaining recognizable luxury codes — pattern, iconography, and the deliberate
+      use of fashion as atmosphere.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="assets/img/gucci-campaign-fashion.jpg" alt="Gucci fragrance campaign image with fashion-forward styling and iconic luxury codes." />
+        <div class="caption">Gucci — fashion as atmosphere.</div>
+      </div>
+      <div class="card">
+        <img src="assets/img/gucci-fragrance-bottle.jpg" alt="Gucci fragrance bottle campaign image with decorative iconography and luxury styling." />
+        <div class="caption">Gucci — iconography and presentation.</div>
+      </div>
+    </div>
+
+    <h2 id="prada">PRADA (Milan, 1913)</h2>
+    <p>
+      Prada is archived for intellectual minimalism — campaigns that feel like design documents. The posture is often cool, architectural,
+      and deliberately anti-sentimental.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="assets/img/prada-campaign-minimal.jpg" alt="Prada fragrance campaign image emphasizing intellectual minimalism and architectural restraint." />
+        <div class="caption">Prada — minimalism as intellect.</div>
+      </div>
+      <div class="card">
+        <img src="assets/img/prada-fragrance-bottle.jpg" alt="Prada fragrance bottle campaign image with clean composition and restrained luxury styling." />
+        <div class="caption">Prada — quiet object presentation.</div>
+      </div>
+    </div>
+
+    <h2 id="burberry">BURBERRY (London, 1856)</h2>
+    <p>
+      Burberry is archived for British heritage coding: trench iconography, weathered texture, and controlled romantic seriousness.
+      Campaigns often emphasize environment and continuity.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="assets/img/burberry-campaign-heritage.jpg" alt="Burberry fragrance campaign image featuring British heritage styling and trench-coded iconography." />
+        <div class="caption">Burberry — heritage and environment.</div>
+      </div>
+      <div class="card">
+        <img src="assets/img/burberry-fragrance-bottle.jpg" alt="Burberry fragrance bottle campaign image with classic British styling and neutral composition." />
+        <div class="caption">Burberry — bottle framed as legacy object.</div>
+      </div>
+    </div>
+
+    <div class="subhead" id="archive-notes" style="margin-top:34px;">ARCHIVE NOTES</div>
+    <p class="note">
+      This page is intentionally neutral. It is an archival index: how houses constructed visual authority through campaign language.
+      Where specific photographers, art direction, or dates are known, they will be appended as documentation rather than commentary.
+    </p>
+
+    <div class="footer">
+      Parfum Campaigns — archival reference page. No affiliate framing. No promotional claims. Documentary intent only.
+    </div>
+
+  </main>
+
+</div>
+
+<script>
+  // Simple client-side filter for sidebar links based on text
+  const search = document.getElementById('search');
+  const nav = document.getElementById('nav');
+  const links = Array.from(nav.querySelectorAll('a'));
+
+  search.addEventListener('input', () => {
+    const q = search.value.trim().toLowerCase();
+    links.forEach(a => {
+      const t = a.textContent.toLowerCase();
+      a.style.display = t.includes(q) ? 'block' : 'none';
+    });
+  });
+</script>
+</body>
+</html>
