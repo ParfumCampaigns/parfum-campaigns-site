@@ -1,1103 +1,1040 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Parfum Campaigns</title>
-  <meta name="description" content="Independent editorial archive dedicated to the documentation and preservation of fragrance advertising, campaign imagery, and brand visual language." />
-  <style>
-    :root{
-      --bg:#ffffff;
-      --ink:#111111;
-      --muted:#555555;
-      --line:#d9d9d9;
-      --soft:#f4f4f4;
-      --link:#0b57d0;
-      --max:1080px;
-      --side:300px;
-      --gap:28px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: Georgia, "Times New Roman", Times, serif;
-      color:var(--ink);
-      background:var(--bg);
-      line-height:1.45;
-    }
-    a{color:var(--link); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .layout{
-      display:grid;
-      grid-template-columns: var(--side) 1fr;
-      min-height:100vh;
-    }
-    .sidebar{
-      border-right:1px solid var(--line);
-      padding:28px 22px;
-      position:sticky;
-      top:0;
-      height:100vh;
-      overflow:auto;
-      background:var(--bg);
-    }
-    .brand{
-      font-size:34px;
-      font-weight:700;
-      letter-spacing:.2px;
-      margin:0 0 14px 0;
-    }
-    .search{
-      width:100%;
-      padding:10px 10px;
-      border:1px solid var(--line);
-      border-radius:3px;
-      font-size:14px;
-      margin:8px 0 18px 0;
-      font-family: inherit;
-    }
-    .navgroup-title{
-      font-weight:700;
-      margin:18px 0 10px;
-    }
-    .nav a{
-      display:block;
-      padding:7px 10px;
-      border-radius:3px;
-      margin:2px 0;
-    }
-    .nav a.active{
-      background:#eef3ff;
-      font-weight:700;
-    }
-    .nav .indent{padding-left:18px}
-    .content{
-      padding:36px 42px;
-      max-width: calc(var(--max) + 84px);
-    }
-    h1{
-      font-size:54px;
-      margin:0 0 8px 0;
-      letter-spacing:.2px;
-    }
-    .subtitle{
-      margin:0 0 18px 0;
-      color:var(--muted);
-      font-size:18px;
-      max-width: var(--max);
-    }
-    .topgrid{
-      display:grid;
-      grid-template-columns: 1fr 380px;
-      gap:22px;
-      align-items:start;
-      max-width: var(--max);
-    }
-    .callout{
-      border:1px solid var(--line);
-      padding:18px 18px;
-      background:#fff;
-    }
-    .info{
-      border:1px solid var(--line);
-      padding:0;
-      background:#fff;
-    }
-    table{
-      width:100%;
-      border-collapse:collapse;
-      font-size:16px;
-    }
-    th, td{
-      border:1px solid var(--line);
-      padding:12px 12px;
-      text-align:left;
-      vertical-align:top;
-    }
-    th{
-      width:38%;
-      background:#fafafa;
-      font-weight:700;
-    }
-    .contents{
-      max-width: var(--max);
-      margin:22px 0 0 0;
-      border:1px solid var(--line);
-      padding:14px 18px;
-      background:#fff;
-    }
-    .contents h3{
-      margin:0 0 10px 0;
-      font-size:20px;
-    }
-    .contents ol{margin:0 0 0 18px; padding:0}
-    .contents li{margin:6px 0}
-    section{
-      max-width: var(--max);
-      padding-top:18px;
-      margin-top:22px;
-      border-top:1px solid var(--line);
-    }
-    section:first-of-type{border-top:0}
-    h2{
-      font-size:44px;
-      margin:0 0 10px 0;
-    }
-    h3{
-      font-size:22px;
-      margin:16px 0 8px 0;
-    }
-    .house{
-      padding-top:24px;
-      margin-top:26px;
-      border-top:1px solid var(--line);
-      max-width: var(--max);
-    }
-    .house h2{
-      font-size:34px;
-      margin:0 0 10px 0;
-      letter-spacing:.3px;
-    }
-    .twoup{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:18px;
-      margin:10px 0 16px 0;
-    }
-    figure{
-      margin:0;
-      border:1px solid var(--line);
-      padding:10px;
-      background:#fff;
-    }
-    figure img{
-      width:100%;
-      height:auto;
-      display:block;
-      background:var(--soft);
-    }
-    figcaption{
-      margin-top:10px;
-      color:#222;
-      font-size:16px;
-    }
-    .caption-title{font-weight:700; margin-bottom:4px}
-    .caption-note{color:var(--muted); margin-top:0}
-    ul{margin:8px 0 0 20px}
-    .footer-note{
-      max-width: var(--max);
-      margin:34px 0 0 0;
-      padding-top:18px;
-      border-top:1px solid var(--line);
-      color:#111;
-      font-weight:700;
-    }
-    @media (max-width: 980px){
-      .layout{grid-template-columns: 1fr}
-      .sidebar{position:relative; height:auto; border-right:0; border-bottom:1px solid var(--line)}
-      .content{padding:22px}
-      .topgrid{grid-template-columns:1fr}
-      .twoup{grid-template-columns:1fr}
-      h1{font-size:44px}
-      h2{font-size:36px}
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Parfum Campaigns</title>
+<meta name="description" content="Independent editorial archive dedicated to the documentation and preservation of fragrance advertising, campaign imagery, and brand visual language." />
+<style>
+:root{
+--bg:#ffffff;
+--ink:#111111;
+--muted:#555555;
+--line:#d9d9d9;
+--soft:#f4f4f4;
+--link:#0b57d0;
+--max:1080px;
+--side:300px;
+--gap:28px;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family: Georgia, "Times New Roman", Times, serif;
+color:var(--ink);
+background:var(--bg);
+line-height:1.45;
+}
+a{color:var(--link); text-decoration:none}
+a:hover{text-decoration:underline}
+.layout{
+display:grid;
+grid-template-columns: var(--side) 1fr;
+min-height:100vh;
+}
+.sidebar{
+border-right:1px solid var(--line);
+padding:28px 22px;
+position:sticky;
+top:0;
+height:100vh;
+overflow:auto;
+background:var(--bg);
+}
+.brand{
+font-size:34px;
+font-weight:700;
+letter-spacing:.2px;
+margin:0 0 14px 0;
+}
+.search{
+width:100%;
+padding:10px 10px;
+border:1px solid var(--line);
+border-radius:3px;
+font-size:14px;
+margin:8px 0 18px 0;
+font-family: inherit;
+}
+.navgroup-title{
+font-weight:700;
+margin:18px 0 10px;
+}
+.nav a{
+display:block;
+padding:7px 10px;
+border-radius:3px;
+margin:2px 0;
+}
+.nav a.active{
+background:#eef3ff;
+font-weight:700;
+}
+.nav .indent{padding-left:18px}
+.content{
+padding:36px 42px;
+max-width: calc(var(--max) + 84px);
+}
+h1{
+font-size:54px;
+margin:0 0 8px 0;
+letter-spacing:.2px;
+}
+.subtitle{
+margin:0 0 18px 0;
+color:var(--muted);
+font-size:18px;
+max-width: var(--max);
+}
+.topgrid{
+display:grid;
+grid-template-columns: 1fr 380px;
+gap:22px;
+align-items:start;
+max-width: var(--max);
+}
+.callout{
+border:1px solid var(--line);
+padding:18px 18px;
+background:#fff;
+}
+.info{
+border:1px solid var(--line);
+padding:0;
+background:#fff;
+}
+table{
+width:100%;
+border-collapse:collapse;
+font-size:16px;
+}
+th, td{
+border:1px solid var(--line);
+padding:12px 12px;
+text-align:left;
+vertical-align:top;
+}
+th{
+width:38%;
+background:#fafafa;
+font-weight:700;
+}
+.contents{
+max-width: var(--max);
+margin:22px 0 0 0;
+border:1px solid var(--line);
+padding:14px 18px;
+background:#fff;
+}
+.contents h3{
+margin:0 0 10px 0;
+font-size:20px;
+}
+.contents ol{margin:0 0 0 18px; padding:0}
+.contents li{margin:6px 0}
+section{
+max-width: var(--max);
+padding-top:18px;
+margin-top:22px;
+border-top:1px solid var(--line);
+}
+section:first-of-type{border-top:0}
+h2{
+font-size:44px;
+margin:0 0 10px 0;
+}
+h3{
+font-size:22px;
+margin:16px 0 8px 0;
+}
+.house{
+padding-top:24px;
+margin-top:26px;
+border-top:1px solid var(--line);
+max-width: var(--max);
+}
+.house h2{
+font-size:34px;
+margin:0 0 10px 0;
+letter-spacing:.3px;
+}
+.twoup{
+display:grid;
+grid-template-columns: 1fr 1fr;
+gap:18px;
+margin:10px 0 16px 0;
+}
+figure{
+margin:0;
+border:1px solid var(--line);
+padding:10px;
+background:#fff;
+}
+figure img{
+width:100%;
+height:auto;
+display:block;
+background:var(--soft);
+}
+figcaption{
+margin-top:10px;
+color:#222;
+font-size:16px;
+}
+.caption-title{font-weight:700; margin-bottom:4px}
+.caption-note{color:var(--muted); margin-top:0}
+ul{margin:8px 0 0 20px}
+.footer-note{
+max-width: var(--max);
+margin:34px 0 0 0;
+padding-top:18px;
+border-top:1px solid var(--line);
+color:#111;
+font-weight:700;
+}
+@media (max-width: 980px){
+.layout{grid-template-columns: 1fr}
+.sidebar{position:relative; height:auto; border-right:0; border-bottom:1px solid var(--line)}
+.content{padding:22px}
+.topgrid{grid-template-columns:1fr}
+.twoup{grid-template-columns:1fr}
+h1{font-size:44px}
+h2{font-size:36px}
+}
+</style>
 </head>
 <body>
-  <div class="layout">
-    <aside class="sidebar">
-      <div class="brand">Parfum<br/>Campaigns</div>
-      <input id="search" class="search" type="search" placeholder="Search this page..." aria-label="Search this page" />
-
-      <div class="navgroup-title">Overview</div>
-      <nav class="nav" id="nav">
-        <a href="#overview">Overview</a>
-        <a href="#mission">Mission</a>
-        <a href="#scope">Scope</a>
-        <a href="#site-structure">Site structure</a>
-        <a href="#image-standards">Image standards</a>
-        <a href="#seo-standards">SEO standards</a>
-        <a href="#style-guide">Style guide</a>
-        <a href="#change-log">Change log</a>
-        <a href="#references">References</a>
-
-        <div class="navgroup-title" style="margin-top:18px;">Houses</div>
-        <a class="indent" href="#house-chanel">CHANEL</a>
-        <a class="indent" href="#house-calvin-klein">CALVIN KLEIN</a>
-        <a class="indent" href="#house-hugo-boss">HUGO BOSS</a>
-        <a class="indent" href="#house-creed">CREED</a>
-        <a class="indent" href="#house-morph">MORPH</a>
-        <a class="indent" href="#house-guess">GUESS</a>
-        <a class="indent" href="#house-giorgio-armani">GIORGIO ARMANI</a>
-        <a class="indent" href="#house-tom-ford">TOM FORD</a>
-        <a class="indent" href="#house-dior">DIOR</a>
-        <a class="indent" href="#house-ysl">YSL</a>
-      </nav>
-    </aside>
-
-    <main class="content">
-      <h1>Parfum Campaigns</h1>
-      <p class="subtitle">Independent editorial archive dedicated to the documentation and preservation of fragrance advertising, campaign imagery, and brand visual language.</p>
-
-      <div class="topgrid">
-        <div class="callout">
-          <p style="margin:0;">
-            Parfum Campaigns functions as a reference system — not a marketplace, not a review platform, and not a promotional outlet. It serves as a single source of structural and visual truth for the archive.
-          </p>
-        </div>
-
-        <div class="info" aria-label="Parfum Campaigns summary table">
-          <table>
-            <tr><th colspan="2" style="text-align:center; font-size:18px;">Parfum Campaigns</th></tr>
-            <tr><th>Type</th><td>Independent editorial archive</td></tr>
-            <tr><th>Focus</th><td>Fragrance advertising campaigns</td></tr>
-            <tr><th>Layout</th><td>White background, grid-first</td></tr>
-            <tr><th>Image system</th><td>Descriptive filenames and alt text</td></tr>
-            <tr><th>Hosting</th><td>Static single-page HTML</td></tr>
-            <tr><th>Status</th><td>Active</td></tr>
-          </table>
-        </div>
-      </div>
-
-      <div class="contents" aria-label="Contents">
-        <h3>Contents</h3>
-        <ol>
-          <li><a href="#overview">Overview</a></li>
-          <li><a href="#mission">Mission</a></li>
-          <li><a href="#scope">Scope</a></li>
-          <li><a href="#site-structure">Site structure</a></li>
-          <li><a href="#image-standards">Image standards</a></li>
-          <li><a href="#seo-standards">SEO standards</a></li>
-          <li><a href="#style-guide">Style guide</a></li>
-          <li><a href="#change-log">Change log</a></li>
-          <li><a href="#references">References</a></li>
-        </ol>
-      </div>
-
-      <section id="overview">
-        <h2>Overview</h2>
-        <p>
-          This archive exists to document fragrance campaigns as cultural artifacts: the way houses frame identity, status, gender, and permanence through image discipline. The emphasis is not on product description. The emphasis is on visual language — what repeats, what endures, and what collapses under trend.
-        </p>
-        <p>
-          Operating principle: the archive records what is structurally true in campaign work — not what is currently fashionable.
-        </p>
-      </section>
-
-      <section id="mission">
-        <h2>Mission</h2>
-        <p>
-          Preserve high-signal campaign executions and document the structural principles behind them: composition, casting posture, graphic hierarchy, bottle treatment, and brand myth mechanics.
-        </p>
-        <p><strong>This is documentation, not promotion.</strong></p>
-      </section>
-
-      <section id="scope">
-        <h2>Scope</h2>
-        <p>
-          The archive prioritizes: (1) print campaigns, (2) billboard and outdoor executions, (3) film and stills when they represent durable brand language, and (4) bottle/iconography systems when the bottle is treated as a seal rather than a prop.
-        </p>
-        <p>
-          Coverage will expand house-by-house. The standard is consistency: every house follows the same template.
-        </p>
-      </section>
-
-      <section id="site-structure">
-        <h2>Site structure</h2>
-        <p>
-          Single-page reference layout with a left navigation index and anchored sections. Houses appear under the “Houses” group and follow a consistent editorial template.
-        </p>
-        <ul>
-          <li>Neutral documentary tone.</li>
-          <li>No pricing. No calls to action. No affiliate framing.</li>
-          <li>Two-up image grids where applicable.</li>
-          <li>Descriptive filenames + descriptive alt text for every image.</li>
-        </ul>
-      </section>
-
-      <section id="image-standards">
-        <h2>Image standards</h2>
-        <ul>
-          <li>Use clean scans or official press assets where possible.</li>
-          <li>Prefer representative executions over exhaustive duplication.</li>
-          <li>Avoid watermarks where possible.</li>
-          <li>JPG format preferred for consistency.</li>
-          <li>Images live in <code>/assets/img/</code>.</li>
-        </ul>
-      </section>
-
-      <section id="seo-standards">
-        <h2>SEO standards</h2>
-        <p>
-          Filenames must be descriptive and consistent. The filename is part of the archive record.
-        </p>
-        <p>
-          Filename pattern: <code>house-product-campaign-context.jpg</code>
-        </p>
-        <p>Examples:</p>
-        <ul>
-          <li><code>chanel-no5-print-campaign-classic-bottle.jpg</code></li>
-          <li><code>chanel-allure-homme-sport-mens-fragrance-campaign-monochrome.jpg</code></li>
-        </ul>
-        <p>
-          Alt text must be descriptive, not decorative. It should describe what is visible (and why it matters) without sales language.
-        </p>
-      </section>
-
-      <section id="style-guide">
-        <h2>Style guide</h2>
-        <ul>
-          <li>House names in caps in the nav; title case in body headings is allowed.</li>
-          <li>Keep sentences direct. Avoid hype.</li>
-          <li>Describe structure: discipline, framing, hierarchy, posture, permanence.</li>
-          <li>No claims about performance or scent unless explicitly documented and relevant.</li>
-        </ul>
-      </section>
-
-      <section id="change-log">
-        <h2>Change log</h2>
-        <ul>
-          <li>2026-01-06: Restored full wiki sections and locked CHANEL house entry with working two-image grid.</li>
-          <li>2026-01-06: Added CALVIN KLEIN house entry with locked two-image grid and archival template compliance.</li>
-          <li>2026-01-06: Added HUGO BOSS house entry with locked two-image grid and archival template compliance.</li>
-          <li>2026-01-06: Added CREED house entry with locked two-image grid and archival template compliance.</li>
-          <li>2026-01-06: Added MORPH house entry with locked two-image grid and archival template compliance.</li>
-          <li>2026-01-06: Added GUESS house entry with locked two-image grid and archival template compliance.</li>
-          <li>2026-01-06: Added GIORGIO ARMANI house entry with locked two-image grid and archival template compliance.</li>
-          <li>2026-01-08: Added TOM FORD house entry with locked two-image grid and archival template compliance.</li>
-          <li>2026-01-14: Added DIOR house entry with locked two-image grid and archival template compliance.</li>
-          <li>2026-01-15: Added YSL house entry with locked two-image grid and archival template compliance.</li>
-        </ul>
-      </section>
-
-      <section id="references">
-        <h2>References</h2>
-        <p><strong>Primary sources:</strong> official campaign releases, press materials, and archival scans.</p>
-        <p><strong>Secondary sources:</strong> reputable editorial archives (credits recorded only when verified).</p>
-      </section>
-
-      <div class="house" id="house-chanel">
-        <h2>CHANEL (Paris, 1910)</h2>
-
-        <div class="twoup">
-          <figure>
-            <img src="assets/img/chanel-no5-print-campaign-classic-bottle.jpg"
-                 alt="Chanel No. 5 classic print advertisement showing the rectangular bottle on a neutral background" />
-            <figcaption>
-              <div class="caption-title">Chanel No. 5 classic print advertisement showing the rectangular bottle on a neutral background</div>
-              <div class="caption-note">Icon object framing: the bottle treated as a seal, not a prop.</div>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="assets/img/chanel-allure-homme-sport-mens-fragrance-campaign-monochrome.jpg"
-                 alt="Chanel Allure Homme Sport men’s fragrance campaign photographed in monochrome studio lighting" />
-            <figcaption>
-              <div class="caption-title">Chanel Allure Homme Sport men’s fragrance campaign photographed in monochrome studio lighting</div>
-              <div class="caption-note">Men’s presence framing: posture, restraint, and controlled myth.</div>
-            </figcaption>
-          </figure>
-        </div>
-
-        <h3>Historical / Context Overview</h3>
-        <p>
-          Chanel is a Paris fashion house founded in 1910 whose fragrance work became one of the defining reference points of 20th-century luxury advertising. In campaign history, Chanel consistently treats fragrance as identity and myth — less “product story” and more cultural signal — built through controlled imagery, disciplined casting, and an insistence on permanence.
-        </p>
-        <p>
-          For Parfum Campaigns, Chanel is included because its advertising language set enduring standards: minimal visual noise, high editorial authority, and a repeated ability to make a single bottle feel like an institution.
-        </p>
-
-        <h3>Campaign & Visual Language</h3>
-        <p>Chanel campaigns typically operate on three structural principles:</p>
-        <ul>
-          <li><strong>Icon-first framing:</strong> the bottle or emblem is treated like a seal, not a prop.</li>
-          <li><strong>Editorial restraint:</strong> controlled color, clean negative space, and a refusal to “explain” the scent visually.</li>
-          <li><strong>Casting as architecture:</strong> faces are selected for posture and myth, not relatability — reinforcing distance, authority, and longevity.</li>
-        </ul>
-        <p>
-          Across decades, Chanel’s strongest work avoids trend-chasing. Even when campaigns become cinematic, the visual message remains: this is not a seasonal release; it is a permanent object.
-        </p>
-
-        <h3>Signature Eras / Campaign References</h3>
-        <ul>
-          <li>No. 5 — The Icon Era (multi-decade): fragrance advertising as cultural mythology, positioned above fashion cycles.</li>
-          <li>1990s–2000s cinematic luxury: film-scale storytelling with the bottle treated as a formal artifact.</li>
-          <li>Modern men’s fragrance authority: clean architecture, monochrome discipline, command presence.</li>
-        </ul>
-
-        <h3>Bottle / Iconography Notes</h3>
-        <p>
-          Chanel’s bottle language is geometric, strict, and intentionally unromantic. Packaging is treated like typography: legibility over ornament, permanence over novelty.
-        </p>
-
-        <h3>Archival Notes</h3>
-        <ul>
-          <li>Images are archived as advertising artifacts, not lifestyle content.</li>
-          <li>Credits are recorded only when verified.</li>
-          <li>Representative executions are prioritized over exhaustive duplication.</li>
-        </ul>
-
-        <h3>Closing</h3>
-        <p>
-          Chanel is archived in Parfum Campaigns as a baseline house — proof that the strongest fragrance advertising does not chase attention. It consolidates authority until the bottle feels inevitable.
-        </p>
-      </div>
-
-      <div class="house" id="house-calvin-klein">
-        <h2>CALVIN KLEIN (New York, 1968)</h2>
-
-        <div class="twoup">
-          <figure>
-            <img src="assets/img/calvin-klein-black-white-campaign-1980s.jpg"
-                 alt="Black-and-white Calvin Klein campaign image reflecting the brand's minimalist, body-forward advertising style" />
-            <figcaption>
-              <div class="caption-title">Black-and-white Calvin Klein campaign image reflecting the brand's minimalist, body-forward advertising style</div>
-              <div class="caption-note">Minimalism as authority: the body used as the billboard, with almost no visual noise.</div>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="assets/img/calvin-klein-calvin-cologne-1981-vintage-bottle.jpg"
-                 alt="Vintage bottle of Calvin Klein Calvin Cologne (1981) shown as a reference point in the house’s fragrance iconography" />
-            <figcaption>
-              <div class="caption-title">Vintage bottle of Calvin Klein Calvin Cologne (1981) shown as a reference point in the house’s fragrance iconography</div>
-              <div class="caption-note">Bottle as signature: plain-spoken, direct, and intentionally non-ornamental.</div>
-            </figcaption>
-          </figure>
-        </div>
-
-        <h3>Historical / Context Overview</h3>
-        <p>
-          Calvin Klein is a New York fashion house founded in 1968 whose advertising became a defining reference point for late 20th-century American minimalism. In campaign history, Calvin Klein repeatedly reduces luxury to a single idea: a controlled image, a controlled body, and an uncompromising graphic hierarchy.
-        </p>
-        <p>
-          For Parfum Campaigns, Calvin Klein is included because the house demonstrated how restraint can function as mass impact — not by adding story, but by removing everything that is not the signal.
-        </p>
-
-        <h3>Campaign & Visual Language</h3>
-        <p>Calvin Klein’s strongest campaign work tends to operate on three structural principles:</p>
-        <ul>
-          <li><strong>Reduction as strategy:</strong> minimal sets, minimal copy, and a refusal to decorate the frame.</li>
-          <li><strong>Body-forward casting:</strong> posture and physical presence treated as the core brand language.</li>
-          <li><strong>Graphic discipline:</strong> typography and marks kept sparse, legible, and repeatable across formats.</li>
-        </ul>
-        <p>
-          The result is a visual system that can scale from print to billboard without changing the core message. When it works, the image feels inevitable: not a campaign trying to persuade, but a brand stating what it is.
-        </p>
-
-        <h3>Signature Eras / Campaign References</h3>
-        <ul>
-          <li>Late 1970s–1990s black-and-white dominance: high-contrast photography used to manufacture permanence.</li>
-          <li>Jeans and underwear iconography: American minimalism framed as provocation through restraint.</li>
-          <li>Fragrance as extension of image discipline: bottles and ads kept direct, spare, and instantly readable.</li>
-        </ul>
-
-        <h3>Bottle / Iconography Notes</h3>
-        <p>
-          Calvin Klein bottle language typically avoids ornament and romantic symbolism. The most durable executions treat packaging like a label system: clear naming, clean geometry, and a deliberate absence of flourish.
-        </p>
-
-        <h3>Archival Notes</h3>
-        <ul>
-          <li>Images are archived as advertising artifacts, not lifestyle content.</li>
-          <li>Credits are recorded only when verified.</li>
-          <li>Representative executions are prioritized over exhaustive duplication.</li>
-        </ul>
-
-        <h3>Closing</h3>
-        <p>
-          Calvin Klein is archived in Parfum Campaigns as a proof case for American minimalism: a house that repeatedly achieved scale through reduction, letting the frame do less so the signal could do more.
-        </p>
-      </div>
-
-      <div class="house" id="house-hugo-boss">
-        <h2>HUGO BOSS (Metzingen, 1924)</h2>
-
-        <div class="twoup">
-          <figure>
-            <img src="assets/img/hugo-boss-mens-tailoring-campaign-1990s.jpg"
-                 alt="Hugo Boss men’s tailoring campaign image emphasizing structured suits, masculine posture, and disciplined authority" />
-            <figcaption>
-              <div class="caption-title">Hugo Boss men’s tailoring campaign image emphasizing structured suits, masculine posture, and disciplined authority</div>
-              <div class="caption-note">Tailoring as language: structure, posture, and controlled masculinity.</div>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="assets/img/hugo-boss-boss-bottled-1998-fragrance-bottle.jpg"
-                 alt="Hugo Boss Boss Bottled (1998) fragrance bottle shown as a reference point in the house’s modern fragrance iconography" />
-            <figcaption>
-              <div class="caption-title">Hugo Boss Boss Bottled (1998) fragrance bottle shown as a reference point in the house’s modern fragrance iconography</div>
-              <div class="caption-note">Modern icon object: clean geometry, mass legibility, repeatable form.</div>
-            </figcaption>
-          </figure>
-        </div>
-
-        <h3>Historical / Context Overview</h3>
-        <p>
-          Hugo Boss is a German fashion house founded in 1924 and associated in late 20th-century culture with a specific visual promise: clean tailoring, professional masculinity, and an image system engineered for mainstream legibility.
-        </p>
-        <p>
-          For Parfum Campaigns, Hugo Boss is included because its campaigns often function as a blueprint for corporate-era men’s advertising: the suit as structure, the model as posture, the frame as controlled signal.
-        </p>
-
-        <h3>Campaign & Visual Language</h3>
-        <p>Hugo Boss campaign work typically operates on three structural principles:</p>
-        <ul>
-          <li><strong>Tailoring-first authority:</strong> the suit is treated as identity architecture rather than wardrobe.</li>
-          <li><strong>Controlled posture:</strong> stillness, stance, and restraint carry more meaning than narrative.</li>
-          <li><strong>Clean repeatability:</strong> imagery designed to read instantly across print, outdoor, and retail environments.</li>
-        </ul>
-        <p>
-          The strongest executions avoid clutter and trend effects. The image is built to be understood at a glance, then remembered as a stable type of masculinity rather than a specific story.
-        </p>
-
-        <h3>Signature Eras / Campaign References</h3>
-        <ul>
-          <li>1990s–2000s suit-era authority: sharp tailoring and neutral environments used to manufacture permanence.</li>
-          <li>Retail-scale masculinity: campaigns designed for repetition without diminishing the signal.</li>
-          <li>Modern fragrance iconography: bottles and packaging treated as clean industrial objects.</li>
-        </ul>
-
-        <h3>Bottle / Iconography Notes</h3>
-        <p>
-          Hugo Boss fragrance iconography is typically geometric and functional: bottles designed for clarity, shelf recognition, and consistency across flankers. When it works, the object reads as a stable token of the house’s broader tailoring identity.
-        </p>
-
-        <h3>Archival Notes</h3>
-        <ul>
-          <li>Images are archived as advertising artifacts, not lifestyle content.</li>
-          <li>Credits are recorded only when verified.</li>
-          <li>Representative executions are prioritized over exhaustive duplication.</li>
-        </ul>
-
-        <h3>Closing</h3>
-        <p>
-          Hugo Boss is archived in Parfum Campaigns as a reference for disciplined, retail-scalable masculinity: a house that repeatedly uses tailoring, posture, and reduction to hold a stable visual message across decades.
-        </p>
-      </div>
-
-      <div class="house" id="house-creed">
-        <h2>CREED (London / Paris, 1760)</h2>
-
-        <div class="twoup">
-          <figure>
-            <img src="assets/img/creed-aventus-mens-fragrance-print-campaign-bottle.jpg"
-                 alt="Creed Aventus bottle photographed in dramatic studio lighting with angled composition and deep shadow" />
-            <figcaption>
-              <div class="caption-title">Creed Aventus bottle photographed in dramatic studio lighting with angled composition and deep shadow</div>
-              <div class="caption-note">Object primacy: the bottle treated as the entire message.</div>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="assets/img/creed-green-irish-tweed-vintage-print-advertisement.jpg"
-                 alt="Vintage Creed Green Irish Tweed presentation showing the bottle beside plain packaging, photographed as a collectible object" />
-            <figcaption>
-              <div class="caption-title">Vintage Creed Green Irish Tweed presentation showing the bottle beside plain packaging, photographed as a collectible object</div>
-              <div class="caption-note">Inheritance framing: packaging and bottle treated as heirloom artifacts.</div>
-            </figcaption>
-          </figure>
-        </div>
-
-        <h3>Historical / Context Overview</h3>
-        <p>
-          Creed is a fragrance house with a heritage narrative anchored in London and Paris, presenting itself through continuity, tradition, and controlled understatement. In campaign terms, Creed’s visual language often treats fragrance less as lifestyle and more as a formal object: a name, a bottle, a lineage.
-        </p>
-        <p>
-          For Parfum Campaigns, Creed is included because it demonstrates a specific discipline: the refusal to entertain. The imagery prioritizes stability over spectacle and relies on inheritance signaling rather than narrative escalation.
-        </p>
-
-        <h3>Campaign & Visual Language</h3>
-        <p>Creed’s strongest advertising posture typically operates on three structural principles:</p>
-        <ul>
-          <li><strong>Object-first hierarchy:</strong> the bottle is treated as the main subject, not a prop inside a scene.</li>
-          <li><strong>Heritage signaling:</strong> names, marks, and presentation imply lineage and continuity more than novelty.</li>
-          <li><strong>Controlled austerity:</strong> restrained color, restrained environments, and minimal performative casting.</li>
-        </ul>
-        <p>
-          The result is a visual system that can appear “quiet” or “boring” by design: the work aims to feel older than the moment, and therefore less dependent on attention tactics.
-        </p>
-
-        <h3>Signature Eras / Campaign References</h3>
-        <ul>
-          <li>Modern studio bottle portraits: dramatic light, clean framing, minimal copy.</li>
-          <li>Retail object authority: packaging treated as a formal case rather than an expressive design canvas.</li>
-          <li>Heritage continuity: repeated emphasis on lineage rather than seasonal creative reinvention.</li>
-        </ul>
-
-        <h3>Bottle / Iconography Notes</h3>
-        <p>
-          Creed’s bottle language functions as a signature object system: recognizable silhouette, repeatable label structure, and controlled ornament. The bottle is positioned as a token of continuity — not a stage for trend design.
-        </p>
-
-        <h3>Archival Notes</h3>
-        <ul>
-          <li>Images are archived as campaign artifacts and object/typography references.</li>
-          <li>Credits are recorded only when verified.</li>
-          <li>Representative executions are prioritized over exhaustive duplication.</li>
-        </ul>
-
-        <h3>Closing</h3>
-        <p>
-          Creed is archived in Parfum Campaigns as a reference for deliberate restraint: a house that often removes casting and story so the object can carry the entire claim.
-        </p>
-      </div>
-
-      <div class="house" id="house-morph">
-     <h2>
-  MORPH <span class="subhead">House of Salisbury</span> <span class="region">(United States)</span>
-</h2>
-
-        <div class="twoup">
-          <figure>
-            <img src="assets/img/morph-house-of-salisbury-fragrance-surreal-mens-campaign-chase-visual.jpg"
-                 alt="Surreal men’s fragrance campaign image showing a suited man running while a goat charges behind him, with a MORPH House of Salisbury bottle composited in the foreground" />
-            <figcaption>
-              <div class="caption-title">Surreal men’s fragrance campaign image showing a suited man running while a goat charges behind him, with a MORPH House of Salisbury bottle composited in the foreground</div>
-              <div class="caption-note">Surreal threat framing: status imagery destabilized to create tension and recall.</div>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="assets/img/morph-house-of-salisbury-fragrance-bottle-box-studio-print-campaign.jpg"
-                 alt="Studio print-style campaign image showing the MORPH House of Salisbury fragrance bottle beside its black presentation box on a dark background with a quoted headline" />
-            <figcaption>
-              <div class="caption-title">Studio print-style campaign image showing the MORPH House of Salisbury fragrance bottle beside its black presentation box on a dark background with a quoted headline</div>
-              <div class="caption-note">Object authority: bottle and box treated as a formal seal, supported by disciplined typography.</div>
-            </figcaption>
-          </figure>
-        </div>
-
-        <h3>Historical / Context Overview</h3>
-        <p>
-          MORPH is a United States–based independent fragrance project presented under HOUSE OF SALISBURY. Within the archive, MORPH is documented for its deliberate use of tension, restraint, and object-forward hierarchy — placing the bottle as an emblem rather than a lifestyle accessory.
-        </p>
-        <p>
-          For Parfum Campaigns, MORPH is included as a contemporary reference point: a modern house attempting to recover structural discipline in an era dominated by trend mimicry and short-lived visual language.
-        </p>
-
-        <h3>Campaign & Visual Language</h3>
-        <p>MORPH campaign work, as represented here, tends to operate on three structural principles:</p>
-        <ul>
-          <li><strong>Tension as signal:</strong> scenarios and compositions engineered to create unease, contrast, and memorability.</li>
-          <li><strong>Object-first hierarchy:</strong> the bottle treated as the seal of the frame, not a prop competing for attention.</li>
-          <li><strong>Controlled typography:</strong> large, legible marks used as an authority layer rather than copy-heavy persuasion.</li>
-        </ul>
-        <p>
-          The visual system prioritizes readability and recall: the viewer understands the object immediately, then feels the framing. The result is less “storytelling” and more posture — a claim of identity made through structure.
-        </p>
-
-        <h3>Signature Eras / Campaign References</h3>
-        <ul>
-          <li>Studio object authority: bottle and packaging presented as formal artifacts, with minimal distraction.</li>
-          <li>Surreal disruption executions: luxury settings interrupted by threat or absurdity to produce tension and memory.</li>
-          <li>Typography-led identity: strong wordmark scale functioning as a structural anchor for the frame.</li>
-        </ul>
-
-        <h3>Bottle / Iconography Notes</h3>
-        <p>
-          The bottle treatment is intentionally legible: rectangular geometry, high-contrast label system, and a restrained presentation that reads clearly at distance. Packaging is used as reinforcement — not ornament — extending the object’s authority rather than competing with it.
-        </p>
-
-        <h3>Archival Notes</h3>
-        <ul>
-          <li>Images are archived as campaign artifacts and typography/structure references.</li>
-          <li>Credits are recorded only when verified.</li>
-          <li>Representative executions are prioritized over exhaustive duplication.</li>
-        </ul>
-
-        <h3>Closing</h3>
-        <p>
-          MORPH is archived in Parfum Campaigns as a contemporary attempt at permanence: a house using controlled hierarchy, tension, and object discipline to produce recall without relying on trend language.
-        </p>
-      </div>
-
-      <div class="house" id="house-guess">
-        <h2>GUESS (Los Angeles, 1981)</h2>
-
-        <div class="twoup">
-          <figure>
-            <img src="assets/img/guess-jeans-1980s-print-advertising-sexuality-los-angeles.jpg"
-                 alt="Vintage GUESS Jeans print advertisement featuring intimate black-and-white couple imagery, emblematic of the brand’s sexually charged Los Angeles campaign language in the 1980s" />
-            <figcaption>
-              <div class="caption-title">Vintage GUESS Jeans print advertisement featuring intimate black-and-white couple imagery, emblematic of the brand’s sexually charged Los Angeles campaign language in the 1980s</div>
-              <div class="caption-note">Provocation framing: erotic tension and denim sexuality used as primary brand signal.</div>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="assets/img/guess-1981-los-angeles-mens-fragrance-bottle-studio.jpg"
-                 alt="GUESS 1981 Los Angeles men’s fragrance bottle photographed in studio, emphasizing amber glass, minimal typography, and heritage branding" />
-            <figcaption>
-              <div class="caption-title">GUESS 1981 Los Angeles men’s fragrance bottle photographed in studio, emphasizing amber glass, minimal typography, and heritage branding</div>
-              <div class="caption-note">Heritage anchoring: the fragrance bottle as a symbolic extension of GUESS’s founding myth.</div>
-            </figcaption>
-          </figure>
-        </div>
-
-        <h3>Historical / Context Overview</h3>
-        <p>
-          GUESS is a Los Angeles fashion brand founded in 1981 that became culturally associated with denim advertising as a form of provocation: black-and-white photography, erotic charge, and a deliberate blur between fashion and seduction.
-        </p>
-        <p>
-          For Parfum Campaigns, GUESS is included because its strongest work demonstrates a different kind of discipline than luxury restraint: a consistent, repeatable sexualized visual system that reads immediately at print and billboard scale.
-        </p>
-
-        <h3>Campaign & Visual Language</h3>
-        <p>GUESS campaign language typically operates on three structural principles:</p>
-        <ul>
-          <li><strong>Erotic proximity:</strong> intimacy staged as the primary attention mechanism, often with minimal narrative context.</li>
-          <li><strong>Denim as identity:</strong> the product functions as a uniform and a signal, supported by consistent styling codes.</li>
-          <li><strong>High-contrast legibility:</strong> monochrome framing and simplified backgrounds engineered for billboard readability.</li>
-        </ul>
-        <p>
-          The system is “raunchy” by design, but it is not random. The visual posture is consistent: youth, heat, closeness, and a certain Los Angeles performance of sexuality.
-        </p>
-
-        <h3>Signature Eras / Campaign References</h3>
-        <ul>
-          <li>1980s–1990s denim billboard dominance: black-and-white photography built for repetition and recall.</li>
-          <li>Logo-as-stamp hierarchy: the GUESS wordmark used as a bold seal rather than a decorative layer.</li>
-          <li>Fragrance extensions: bottle systems that borrow the founding myth language (city/year) to anchor product lines.</li>
-        </ul>
-
-        <h3>Bottle / Iconography Notes</h3>
-        <p>
-          GUESS fragrance iconography often leans on heritage tagging — city and founding year — to convert a fashion brand into an “origin story.” Bottle forms are typically simple and legible, with typography used as the primary authority layer.
-        </p>
-
-        <h3>Archival Notes</h3>
-        <ul>
-          <li>Images are archived as campaign artifacts and brand-language references.</li>
-          <li>Credits are recorded only when verified.</li>
-          <li>Representative executions are prioritized over exhaustive duplication.</li>
-        </ul>
-
-        <h3>Closing</h3>
-        <p>
-          GUESS is archived in Parfum Campaigns as a proof of repeatable provocation: a house that standardized erotic tension into a durable, billboard-scale visual system.
-        </p>
-      </div>
-
-      <div class="house" id="house-giorgio-armani">
-        <h2>GIORGIO ARMANI (Milan, 1975)</h2>
-
-        <div class="twoup">
-          <figure>
-            <img src="assets/img/giorgio-armani-boutique-storefront-menswear-evening-suit.jpg"
-                 alt="Man in a dark overcoat and suit walking past the Giorgio Armani boutique storefront at night, luxury menswear windows behind him" />
-            <figcaption>
-              <div class="caption-title">Man in a dark overcoat and suit walking past the Giorgio Armani boutique storefront at night, luxury menswear windows behind him.</div>
-              <div class="caption-note">City authority framing: tailoring posture set against the house name as an architectural stamp.</div>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="assets/img/giorgio-armani-acqua-di-gio-eau-de-toilette-bottle-still-life-watch-cufflinks.jpg"
-                 alt="Frosted Acqua di Giò Giorgio Armani Eau de Toilette bottle on a desk beside a metal watch, cufflinks, and a water glass in moody light" />
-            <figcaption>
-              <div class="caption-title">Frosted Acqua di Giò Giorgio Armani Eau de Toilette bottle on a desk beside a metal watch, cufflinks, and a water glass in moody light.</div>
-              <div class="caption-note">Object restraint: the bottle presented as a quiet seal inside a disciplined masculine still life.</div>
-            </figcaption>
-          </figure>
-        </div>
-
-        <h3>Historical / Context Overview</h3>
-        <p>
-          Giorgio Armani is an Italian fashion house founded in 1975 and associated with a particular form of modern luxury discipline: relaxed tailoring, controlled palette, and a refusal to overstate. In campaign history, Armani frequently communicates status through restraint — the opposite of spectacle.
-        </p>
-        <p>
-          For Parfum Campaigns, Giorgio Armani is included because its advertising language often operates like architecture: clean surfaces, precise posture, and an insistence that the house name itself is the authority layer.
-        </p>
-
-        <h3>Campaign & Visual Language</h3>
-        <p>Armani’s strongest campaign work tends to operate on three structural principles:</p>
-        <ul>
-          <li><strong>Tailoring as structure:</strong> clothing used as posture and identity architecture, not decoration.</li>
-          <li><strong>Neutral authority palette:</strong> controlled color temperature and minimal graphic noise to sustain permanence.</li>
-          <li><strong>Object as seal:</strong> fragrance bottles presented as quiet tokens of the house rather than staged lifestyle props.</li>
-        </ul>
-        <p>
-          When the system works, the frame reads as composed and inevitable. The campaigns do not attempt to entertain. They establish control, then let the viewer project aspiration into the silence.
-        </p>
-
-        <h3>Signature Eras / Campaign References</h3>
-        <ul>
-          <li>Tailoring-era menswear authority: cinematic street scenes and clean storefront/architecture cues reinforcing house dominance.</li>
-          <li>Acqua di Giò object discipline: bottle imagery built around understatement, clarity, and mass legibility without clutter.</li>
-          <li>Modern luxury retail language: brand name used as a physical stamp — signage, glass, and controlled interiors.</li>
-        </ul>
-
-        <h3>Bottle / Iconography Notes</h3>
-        <p>
-          Armani fragrance iconography typically emphasizes clarity and repeatable form: clean bottle geometry, restrained typography, and a presentation that reads instantly at distance. The object is not dramatized; it is positioned as stable, adult, and permanent.
-        </p>
-
-        <h3>Archival Notes</h3>
-        <ul>
-          <li>Images are archived as campaign artifacts and object/typography references.</li>
-          <li>Credits are recorded only when verified.</li>
-          <li>Representative executions are prioritized over exhaustive duplication.</li>
-        </ul>
-
-        <h3>Closing</h3>
-        <p>
-          Giorgio Armani is archived in Parfum Campaigns as a reference for restraint-as-authority: a house that repeatedly communicates luxury through control, letting posture and structure do the work instead of narrative excess.
-        </p>
-      </div>
-
-      <div class="house" id="house-tom-ford">
-        <h2>TOM FORD (New York, 2005)</h2>
-
-        <div class="twoup">
-          <figure>
-            <img src="assets/img/tom-ford-private-blend-neroli-portofino-mandarin-di-amalfi-oud-wood-bottles-campaign.jpg"
-                 alt="Tom Ford Private Blend fragrance bottles shown against a monochrome male portrait background, featuring Mandarin di Amalfi, Oud Wood, and Neroli Portofino Forte" />
-            <figcaption>
-              <div class="caption-title">Tom Ford Private Blend bottle collage with portrait background (Mandarin di Amalfi, Oud Wood, Neroli Portofino Forte)</div>
-              <div class="caption-note">Indexing by color: the bottle system functions as catalog discipline, not storytelling.</div>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="assets/img/tom-ford-black-orchid-gold-and-black-bottles-splash-campaign.jpg"
-                 alt="Tom Ford Black Orchid campaign image showing gold and black ribbed bottles surrounded by a dramatic liquid splash on a dark background" />
-            <figcaption>
-              <div class="caption-title">Tom Ford Black Orchid bottle pair with liquid splash (gold and black ribbed bottles)</div>
-              <div class="caption-note">Spectacle with control: texture, plaque, and liquid used to communicate weight without clutter.</div>
-            </figcaption>
-          </figure>
-        </div>
-
-        <h3>Historical / Context Overview</h3>
-        <p>
-          Tom Ford is a modern luxury house whose fragrance advertising operates as a disciplined system of surface, posture, and controlled provocation. The work repeatedly treats fragrance as an authority object rather than a lifestyle accessory, using clean hierarchy and tactile implication to make the bottle read as inevitable.
-        </p>
-        <p>
-          For Parfum Campaigns, Tom Ford is included because the house standardized a contemporary visual language that scales: the bottle as catalog unit, the label as stamp, and sensuality communicated through composition rather than narrative.
-        </p>
-
-        <h3>Campaign & Visual Language</h3>
-        <p>Tom Ford’s strongest campaign language tends to operate on three structural principles:</p>
-        <ul>
-          <li><strong>Object-first hierarchy:</strong> the bottle carries the claim; the scene exists to support it.</li>
-          <li><strong>Erotic minimalism:</strong> sensuality implied through light, texture, and proximity rather than plot.</li>
-          <li><strong>System identity:</strong> repeated bottle geometry and label discipline create a catalog that reads instantly.</li>
-        </ul>
-        <p>
-          The result is a visual posture that is modern and controlled: the work presents luxury as a sealed object system, not an aspirational storyline.
-        </p>
-
-        <h3>Signature Eras / Campaign References</h3>
-        <ul>
-          <li>Private Blend indexing: color taxonomy, apothecary geometry, label-as-stamp discipline.</li>
-          <li>Black Orchid iconography: ribbed bottle language and gold plaque signaling weight and glamour.</li>
-          <li>Studio dominance: clean, high-contrast object staging built for repetition across formats.</li>
-        </ul>
-
-        <h3>Bottle / Iconography Notes</h3>
-        <p>
-          Private Blend bottles function like catalog trophies: squared shoulders, heavy glass, color as taxonomy, and a consistent label architecture. Black Orchid operates as an icon object: ribbed surface, metallic plaque, and controlled liquid spectacle used to communicate density and permanence.
-        </p>
-
-        <h3>Archival Notes</h3>
-        <ul>
-          <li>Images are archived as campaign artifacts and object/typography references.</li>
-          <li>Credits are recorded only when verified.</li>
-          <li>Representative executions are prioritized over exhaustive duplication.</li>
-        </ul>
-
-        <h3>Closing</h3>
-        <p>
-          Tom Ford is archived in Parfum Campaigns as a modern proof of bottle-as-authority advertising: a house that uses hierarchy, surface, and system discipline to manufacture permanence at scale.
-        </p>
-      </div>
-
-      <div class="house" id="house-dior">
-        <h2>DIOR (Paris, 1946)</h2>
-
-        <div class="twoup">
-          <figure>
-            <img src="assets/img/dior-sauvage-johnny-depp-desert-guitar-print-campaign.jpg"
-                 alt="Dior Sauvage men’s fragrance campaign image set in a desert landscape, featuring a solitary male figure and minimal graphic hierarchy" />
-            <figcaption>
-              <div class="caption-title">Dior Sauvage men’s fragrance campaign set in a desert landscape with a solitary male figure and minimal graphic hierarchy</div>
-              <div class="caption-note">Myth by environment: the landscape is the authority layer, not the copy.</div>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="assets/img/dior-eau-sauvage-vintage-print-advertisement-bottle.jpg"
-                 alt="Vintage Dior Eau Sauvage print reference showing the bottle as a clean object with restrained typography and classic French luxury framing" />
-            <figcaption>
-              <div class="caption-title">Vintage Dior Eau Sauvage print reference showing the bottle as a clean object with restrained typography</div>
-              <div class="caption-note">French clarity: bottle-as-seal presentation with controlled graphic restraint.</div>
-            </figcaption>
-          </figure>
-        </div>
-
-        <h3>Historical / Context Overview</h3>
-        <p>
-          Dior is a Paris fashion house founded in 1946 whose fragrance advertising repeatedly demonstrates a high-level institutional ability: to move between eras without abandoning authority. In campaign history, Dior can operate in classic print discipline, cinematic myth-making, and modern celebrity execution while keeping the house name as the central stabilizer.
-        </p>
-        <p>
-          For Parfum Campaigns, Dior is included because it provides a long-running reference for how a legacy luxury house maintains control across changing media formats — print, outdoor, and film — without collapsing into trend language.
-        </p>
-
-        <h3>Campaign & Visual Language</h3>
-        <p>Dior’s strongest campaign work tends to operate on three structural principles:</p>
-        <ul>
-          <li><strong>House authority first:</strong> DIOR functions as a stamp; the campaign exists to reinforce the stamp.</li>
-          <li><strong>Myth via restraint:</strong> environments and composition do the persuasion work; copy stays minimal.</li>
-          <li><strong>Object legitimacy:</strong> the bottle is treated as a formal artifact, not a lifestyle prop.</li>
-        </ul>
-        <p>
-          When Dior campaigns succeed, they read as controlled: the frame establishes hierarchy immediately, then allows the viewer to project identity into the structure.
-        </p>
-
-        <h3>Signature Eras / Campaign References</h3>
-        <ul>
-          <li>Classic print discipline: bottle clarity, restrained typography, French luxury legibility.</li>
-          <li>Film-scale myth executions: landscape, silence, and controlled narrative minimalism.</li>
-          <li>Modern men’s franchise systems: consistent bottle silhouette and brand mark stability across iterations.</li>
-        </ul>
-
-        <h3>Bottle / Iconography Notes</h3>
-        <p>
-          Dior’s bottle systems tend to emphasize clean geometry, repeatable label hierarchy, and immediate recognition at distance. Even when presentation becomes cinematic, the object is kept legible as an institutional token rather than a decorative element.
-        </p>
-
-        <h3>Archival Notes</h3>
-        <ul>
-          <li>Images are archived as campaign artifacts and object/typography references.</li>
-          <li>Credits are recorded only when verified.</li>
-          <li>Representative executions are prioritized over exhaustive duplication.</li>
-        </ul>
-
-        <h3>Closing</h3>
-        <p>
-          Dior is archived in Parfum Campaigns as a legacy reference for sustained authority: a house capable of scaling myth while keeping hierarchy, object legitimacy, and brand stamp discipline intact.
-        </p>
-      </div>
-
-      <div class="house" id="house-ysl">
-        <h2>YSL (Paris, 1961)</h2>
-
-        <div class="twoup">
-          <figure>
-            <img src="assets/img/ysl-kouros-vintage-print-advertisement-marble-bust-bottle.jpg"
-                 alt="Vintage YSL Kouros print advertisement featuring a classical marble bust motif and the Kouros bottle presented as an icon object" />
-            <figcaption>
-              <div class="caption-title">Vintage YSL Kouros print advertisement featuring a classical marble bust motif with the Kouros bottle treated as an icon object</div>
-              <div class="caption-note">Classicism as authority: sculpture language used to manufacture permanence and masculine scale.</div>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="assets/img/ysl-la-nuit-de-lhomme-black-glass-bottle-studio-campaign.jpg"
-                 alt="YSL La Nuit de L’Homme studio campaign image showing a dark faceted bottle in controlled low-key lighting with minimal typography" />
-            <figcaption>
-              <div class="caption-title">YSL La Nuit de L’Homme studio campaign showing a dark faceted bottle in controlled low-key lighting with minimal typography</div>
-              <div class="caption-note">Modern restraint: the bottle reads as a seal through light control and disciplined hierarchy.</div>
-            </figcaption>
-          </figure>
-        </div>
-
-        <h3>Historical / Context Overview</h3>
-        <p>
-          Yves Saint Laurent is a Paris house founded in 1961 whose fragrance advertising has repeatedly moved between two durable modes: (1) classicism as institutional authority and (2) modern nocturnal minimalism. Across eras, the strongest YSL work treats fragrance as a sign system — an emblem, a posture, a seal — rather than a lifestyle vignette.
-        </p>
-        <p>
-          For Parfum Campaigns, YSL is included because the house demonstrates how iconography can shift without collapsing: the imagery changes, but hierarchy and authority remain legible.
-        </p>
-
-        <h3>Campaign & Visual Language</h3>
-        <p>YSL’s most effective campaign language tends to operate on three structural principles:</p>
-        <ul>
-          <li><strong>Iconography first:</strong> bottle and name hierarchy remain dominant; secondary story elements never outrank the seal.</li>
-          <li><strong>Controlled drama:</strong> contrast and shadow are used as structure, not decoration — the frame stays disciplined.</li>
-          <li><strong>Posture over plot:</strong> campaigns imply identity through stance, light, and composition rather than narrative explanation.</li>
-        </ul>
-        <p>
-          When YSL campaigns succeed, they do not attempt to persuade with detail. They establish a controlled myth and let the emblem do the work.
-        </p>
-
-        <h3>Signature Eras / Campaign References</h3>
-        <ul>
-          <li>Kouros-era classicism: sculpture references and monumental masculinity used to create permanence.</li>
-          <li>Modern nocturnal franchise language: dark palettes, low-key lighting, and minimal typographic noise.</li>
-          <li>Object discipline across formats: bottle legibility engineered to scale from print to outdoor.</li>
-        </ul>
-
-        <h3>Bottle / Iconography Notes</h3>
-        <p>
-          YSL bottle systems often communicate through geometry and shadow: faceted caps, strict silhouettes, and a recurring emphasis on legibility at distance. The strongest executions treat the bottle as an authority token — not an accessory — supported by restrained typography and controlled lighting.
-        </p>
-
-        <h3>Archival Notes</h3>
-        <ul>
-          <li>Images are archived as campaign artifacts and object/typography references.</li>
-          <li>Credits are recorded only when verified.</li>
-          <li>Representative executions are prioritized over exhaustive duplication.</li>
-        </ul>
-
-        <h3>Closing</h3>
-        <p>
-          YSL is archived in Parfum Campaigns as a reference for icon continuity: a house that can move from monumental classicism to modern night minimalism while keeping the stamp, hierarchy, and object legitimacy intact.
-        </p>
-      </div>
-
-      <div class="footer-note">
-        Parfum Campaigns is an independent editorial archive. This site is documentation, not promotion.
-      </div>
-    </main>
-  </div>
-
-  <script>
-    (function(){
-      const nav = document.getElementById('nav');
-      const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
-      const sections = links
-        .map(a => document.querySelector(a.getAttribute('href')))
-        .filter(Boolean);
-
-      function setActive(){
-        let best = null;
-        for(const s of sections){
-          const r = s.getBoundingClientRect();
-          if(r.top <= 120) best = s;
-        }
-        links.forEach(a => a.classList.remove('active'));
-        if(best){
-          const id = "#" + best.id;
-          const a = links.find(x => x.getAttribute('href') === id);
-          if(a) a.classList.add('active');
-        }
+<div class="layout">
+<aside class="sidebar">
+<div class="brand">Parfum<br/>Campaigns</div>
+<input id="search" class="search" type="search" placeholder="Search this page..." aria-label="Search this page" />
+<div class="navgroup-title">Overview</div>
+<nav class="nav" id="nav">
+<a href="#overview">Overview</a>
+<a href="#mission">Mission</a>
+<a href="#scope">Scope</a>
+<a href="#site-structure">Site structure</a>
+<a href="#image-standards">Image standards</a>
+<a href="#seo-standards">SEO standards</a>
+<a href="#style-guide">Style guide</a>
+<a href="#change-log">Change log</a>
+<a href="#references">References</a>
+<div class="navgroup-title" style="margin-top:18px;">Houses</div>
+<a class="indent" href="#house-chanel">CHANEL</a>
+<a class="indent" href="#house-calvin-klein">CALVIN KLEIN</a>
+<a class="indent" href="#house-hugo-boss">HUGO BOSS</a>
+<a class="indent" href="#house-creed">CREED</a>
+<a class="indent" href="#house-house-of-salisbury">HOUSE OF SALISBURY</a>
+<a class="indent" href="#house-guess">GUESS</a>
+<a class="indent" href="#house-giorgio-armani">GIORGIO ARMANI</a>
+<a class="indent" href="#house-tom-ford">TOM FORD</a>
+<a class="indent" href="#house-dior">DIOR</a>
+<a class="indent" href="#house-ysl">YSL</a>
+</nav>
+</aside>
+<main class="content">
+<h1>Parfum Campaigns</h1>
+<p class="subtitle">Independent editorial archive dedicated to the documentation and preservation of fragrance advertising, campaign imagery, and brand visual language.</p>
+<div class="topgrid">
+<div class="callout">
+<p style="margin:0;">
+Parfum Campaigns functions as a reference system — not a marketplace, not a review platform, and not a promotional outlet. It serves as a single source of structural and visual truth for the archive.
+</p>
+</div>
+<div class="info" aria-label="Parfum Campaigns summary table">
+<table>
+<tr><th colspan="2" style="text-align:center; font-size:18px;">Parfum Campaigns</th></tr>
+<tr><th>Type</th><td>Independent editorial archive</td></tr>
+<tr><th>Focus</th><td>Fragrance advertising campaigns</td></tr>
+<tr><th>Layout</th><td>White background, grid-first</td></tr>
+<tr><th>Image system</th><td>Descriptive filenames and alt text</td></tr>
+<tr><th>Hosting</th><td>Static single-page HTML</td></tr>
+<tr><th>Status</th><td>Active</td></tr>
+</table>
+</div>
+</div>
+<div class="contents" aria-label="Contents">
+<h3>Contents</h3>
+<ol>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#mission">Mission</a></li>
+<li><a href="#scope">Scope</a></li>
+<li><a href="#site-structure">Site structure</a></li>
+<li><a href="#image-standards">Image standards</a></li>
+<li><a href="#seo-standards">SEO standards</a></li>
+<li><a href="#style-guide">Style guide</a></li>
+<li><a href="#change-log">Change log</a></li>
+<li><a href="#references">References</a></li>
+</ol>
+</div>
+<section id="overview">
+<h2>Overview</h2>
+<p>
+This archive exists to document fragrance campaigns as cultural artifacts: the way houses frame identity, status, gender, and permanence through image discipline. The emphasis is not on product description. The emphasis is on visual language — what repeats, what endures, and what collapses under trend.
+</p>
+<p>
+Operating principle: the archive records what is structurally true in campaign work — not what is currently fashionable.
+</p>
+</section>
+<section id="mission">
+<h2>Mission</h2>
+<p>
+Preserve high-signal campaign executions and document the structural principles behind them: composition, casting posture, graphic hierarchy, bottle treatment, and brand myth mechanics.
+</p>
+<p><strong>This is documentation, not promotion.</strong></p>
+</section>
+<section id="scope">
+<h2>Scope</h2>
+<p>
+The archive prioritizes: (1) print campaigns, (2) billboard and outdoor executions, (3) film and stills when they represent durable brand language, and (4) bottle/iconography systems when the bottle is treated as a seal rather than a prop.
+</p>
+<p>
+Coverage will expand house-by-house. The standard is consistency: every house follows the same template.
+</p>
+</section>
+<section id="site-structure">
+<h2>Site structure</h2>
+<p>
+Single-page reference layout with a left navigation index and anchored sections. Houses appear under the “Houses” group and follow a consistent editorial template.
+</p>
+<ul>
+<li>Neutral documentary tone.</li>
+<li>No pricing. No calls to action. No affiliate framing.</li>
+<li>Two-up image grids where applicable.</li>
+<li>Descriptive filenames + descriptive alt text for every image.</li>
+</ul>
+</section>
+<section id="image-standards">
+<h2>Image standards</h2>
+<ul>
+<li>Use clean scans or official press assets where possible.</li>
+<li>Prefer representative executions over exhaustive duplication.</li>
+<li>Avoid watermarks where possible.</li>
+<li>JPG format preferred for consistency.</li>
+<li>Images live in <code>/assets/img/</code>.</li>
+</ul>
+</section>
+<section id="seo-standards">
+<h2>SEO standards</h2>
+<p>
+Filenames must be descriptive and consistent. The filename is part of the archive record.
+</p>
+<p>
+Filename pattern: <code>house-product-campaign-context.jpg</code>
+</p>
+<p>Examples:</p>
+<ul>
+<li><code>chanel-no5-print-campaign-classic-bottle.jpg</code></li>
+<li><code>chanel-allure-homme-sport-mens-fragrance-campaign-monochrome.jpg</code></li>
+</ul>
+<p>
+Alt text must be descriptive, not decorative. It should describe what is visible (and why it matters) without sales language.
+</p>
+</section>
+<section id="style-guide">
+<h2>Style guide</h2>
+<ul>
+<li>House names in caps in the nav; title case in body headings is allowed.</li>
+<li>Keep sentences direct. Avoid hype.</li>
+<li>Describe structure: discipline, framing, hierarchy, posture, permanence.</li>
+<li>No claims about performance or scent unless explicitly documented and relevant.</li>
+</ul>
+</section>
+<section id="change-log">
+<h2>Change log</h2>
+<ul>
+<li>2026-01-06: Restored full wiki sections and locked CHANEL house entry with working two-image grid.</li>
+<li>2026-01-06: Added CALVIN KLEIN house entry with locked two-image grid and archival template compliance.</li>
+<li>2026-01-06: Added HUGO BOSS house entry with locked two-image grid and archival template compliance.</li>
+<li>2026-01-06: Added CREED house entry with locked two-image grid and archival template compliance.</li>
+<li>2026-01-06: Added MORPH house entry with locked two-image grid and archival template compliance.</li>
+<li>2026-01-06: Added GUESS house entry with locked two-image grid and archival template compliance.</li>
+<li>2026-01-06: Added GIORGIO ARMANI house entry with locked two-image grid and archival template compliance.</li>
+<li>2026-01-08: Added TOM FORD house entry with locked two-image grid and archival template compliance.</li>
+<li>2026-01-14: Added DIOR house entry with locked two-image grid and archival template compliance.</li>
+<li>2026-01-15: Added YSL house entry with locked two-image grid and archival template compliance.</li>
+</ul>
+</section>
+<section id="references">
+<h2>References</h2>
+<p><strong>Primary sources:</strong> official campaign releases, press materials, and archival scans.</p>
+<p><strong>Secondary sources:</strong> reputable editorial archives (credits recorded only when verified).</p>
+</section>
+<div class="house" id="house-chanel">
+<h2>CHANEL (Paris, 1910)</h2>
+<div class="twoup">
+<figure>
+<img src="assets/img/chanel-no5-print-campaign-classic-bottle.jpg" alt="Chanel No. 5 classic print advertisement showing the rectangular bottle on a neutral background" />
+<figcaption>
+<div class="caption-title">Chanel No. 5 classic print advertisement showing the rectangular bottle on a neutral background</div>
+<div class="caption-note">Icon object framing: the bottle treated as a seal, not a prop.</div>
+</figcaption>
+</figure>
+<figure>
+<img src="assets/img/chanel-allure-homme-sport-mens-fragrance-campaign-monochrome.jpg" alt="Chanel Allure Homme Sport men’s fragrance campaign photographed in monochrome studio lighting" />
+<figcaption>
+<div class="caption-title">Chanel Allure Homme Sport men’s fragrance campaign photographed in monochrome studio lighting</div>
+<div class="caption-note">Men’s presence framing: posture, restraint, and controlled myth.</div>
+</figcaption>
+</figure>
+</div>
+<h3>Historical / Context Overview</h3>
+<p>
+Chanel is a Paris fashion house founded in 1910 whose fragrance work became one of the defining reference points of 20th-century luxury advertising. In campaign history, Chanel consistently treats fragrance as identity and myth — less “product story” and more cultural signal — built through controlled imagery, disciplined casting, and an insistence on permanence.
+</p>
+<p>
+For Parfum Campaigns, Chanel is included because its advertising language set enduring standards: minimal visual noise, high editorial authority, and a repeated ability to make a single bottle feel like an institution.
+</p>
+<h3>Campaign & Visual Language</h3>
+<p>Chanel campaigns typically operate on three structural principles:</p>
+<ul>
+<li><strong>Icon-first framing:</strong> the bottle or emblem is treated like a seal, not a prop.</li>
+<li><strong>Editorial restraint:</strong> controlled color, clean negative space, and a refusal to “explain” the scent visually.</li>
+<li><strong>Casting as architecture:</strong> faces are selected for posture and myth, not relatability — reinforcing distance, authority, and longevity.</li>
+</ul>
+<p>
+Across decades, Chanel’s strongest work avoids trend-chasing. Even when campaigns become cinematic, the visual message remains: this is not a seasonal release; it is a permanent object.
+</p>
+<h3>Signature Eras / Campaign References</h3>
+<ul>
+<li>No. 5 — The Icon Era (multi-decade): fragrance advertising as cultural mythology, positioned above fashion cycles.</li>
+<li>1990s–2000s cinematic luxury: film-scale storytelling with the bottle treated as a formal artifact.</li>
+<li>Modern men’s fragrance authority: clean architecture, monochrome discipline, command presence.</li>
+</ul>
+<h3>Bottle / Iconography Notes</h3>
+<p>
+Chanel’s bottle language is geometric, strict, and intentionally unromantic. Packaging is treated like typography: legibility over ornament, permanence over novelty.
+</p>
+<h3>Archival Notes</h3>
+<ul>
+<li>Images are archived as advertising artifacts, not lifestyle content.</li>
+<li>Credits are recorded only when verified.</li>
+<li>Representative executions are prioritized over exhaustive duplication.</li>
+</ul>
+<h3>Closing</h3>
+<p>
+Chanel is archived in Parfum Campaigns as a baseline house — proof that the strongest fragrance advertising does not chase attention. It consolidates authority until the bottle feels inevitable.
+</p>
+</div>
+<div class="house" id="house-calvin-klein">
+<h2>CALVIN KLEIN (New York, 1968)</h2>
+<div class="twoup">
+<figure>
+<img src="assets/img/calvin-klein-black-white-campaign-1980s.jpg" alt="Black-and-white Calvin Klein campaign image reflecting the brand's minimalist, body-forward advertising style" />
+<figcaption>
+<div class="caption-title">Black-and-white Calvin Klein campaign image reflecting the brand's minimalist, body-forward advertising style</div>
+<div class="caption-note">Minimalism as authority: the body used as the billboard, with almost no visual noise.</div>
+</figcaption>
+</figure>
+<figure>
+<img src="assets/img/calvin-klein-calvin-cologne-1981-vintage-bottle.jpg" alt="Vintage bottle of Calvin Klein Calvin Cologne (1981) shown as a reference point in the house’s fragrance iconography" />
+<figcaption>
+<div class="caption-title">Vintage bottle of Calvin Klein Calvin Cologne (1981) shown as a reference point in the house’s fragrance iconography</div>
+<div class="caption-note">Bottle as signature: plain-spoken, direct, and intentionally non-ornamental.</div>
+</figcaption>
+</figure>
+</div>
+<h3>Historical / Context Overview</h3>
+<p>
+Calvin Klein is a New York fashion house founded in 1968 whose advertising became a defining reference point for late 20th-century American minimalism. In campaign history, Calvin Klein repeatedly reduces luxury to a single idea: a controlled image, a controlled body, and an uncompromising graphic hierarchy.
+</p>
+<p>
+For Parfum Campaigns, Calvin Klein is included because the house demonstrated how restraint can function as mass impact — not by adding story, but by removing everything that is not the signal.
+</p>
+<h3>Campaign & Visual Language</h3>
+<p>Calvin Klein’s strongest campaign work tends to operate on three structural principles:</p>
+<ul>
+<li><strong>Reduction as strategy:</strong> minimal sets, minimal copy, and a refusal to decorate the frame.</li>
+<li><strong>Body-forward casting:</strong> posture and physical presence treated as the core brand language.</li>
+<li><strong>Graphic discipline:</strong> typography and marks kept sparse, legible, and repeatable across formats.</li>
+</ul>
+<p>
+The result is a visual system that can scale from print to billboard without changing the core message. When it works, the image feels inevitable: not a campaign trying to persuade, but a brand stating what it is.
+</p>
+<h3>Signature Eras / Campaign References</h3>
+<ul>
+<li>Late 1970s–1990s black-and-white dominance: high-contrast photography used to manufacture permanence.</li>
+<li>Jeans and underwear iconography: American minimalism framed as provocation through restraint.</li>
+<li>Fragrance as extension of image discipline: bottles and ads kept direct, spare, and instantly readable.</li>
+</ul>
+<h3>Bottle / Iconography Notes</h3>
+<p>
+Calvin Klein bottle language typically avoids ornament and romantic symbolism. The most durable executions treat packaging like a label system: clear naming, clean geometry, and a deliberate absence of flourish.
+</p>
+<h3>Archival Notes</h3>
+<ul>
+<li>Images are archived as advertising artifacts, not lifestyle content.</li>
+<li>Credits are recorded only when verified.</li>
+<li>Representative executions are prioritized over exhaustive duplication.</li>
+</ul>
+<h3>Closing</h3>
+<p>
+Calvin Klein is archived in Parfum Campaigns as a proof case for American minimalism: a house that repeatedly achieved scale through reduction, letting the frame do less so the signal could do more.
+</p>
+</div>
+<div class="house" id="house-hugo-boss">
+<h2>HUGO BOSS (Metzingen, 1924)</h2>
+<div class="twoup">
+<figure>
+<img src="assets/img/hugo-boss-mens-tailoring-campaign-1990s.jpg" alt="Hugo Boss men’s tailoring campaign image emphasizing structured suits, masculine posture, and disciplined authority" />
+<figcaption>
+<div class="caption-title">Hugo Boss men’s tailoring campaign image emphasizing structured suits, masculine posture, and disciplined authority</div>
+<div class="caption-note">Tailoring as language: structure, posture, and controlled masculinity.</div>
+</figcaption>
+</figure>
+<figure>
+<img src="assets/img/hugo-boss-boss-bottled-1998-fragrance-bottle.jpg" alt="Hugo Boss Boss Bottled (1998) fragrance bottle shown as a reference point in the house’s modern fragrance iconography" />
+<figcaption>
+<div class="caption-title">Hugo Boss Boss Bottled (1998) fragrance bottle shown as a reference point in the house’s modern fragrance iconography</div>
+<div class="caption-note">Modern icon object: clean geometry, mass legibility, repeatable form.</div>
+</figcaption>
+</figure>
+</div>
+<h3>Historical / Context Overview</h3>
+<p>
+Hugo Boss is a German fashion house founded in 1924 and associated in late 20th-century culture with a specific visual promise: clean tailoring, professional masculinity, and an image system engineered for mainstream legibility.
+</p>
+<p>
+For Parfum Campaigns, Hugo Boss is included because its campaigns often function as a blueprint for corporate-era men’s advertising: the suit as structure, the model as posture, the frame as controlled signal.
+</p>
+<h3>Campaign & Visual Language</h3>
+<p>Hugo Boss campaign work typically operates on three structural principles:</p>
+<ul>
+<li><strong>Tailoring-first authority:</strong> the suit is treated as identity architecture rather than wardrobe.</li>
+<li><strong>Controlled posture:</strong> stillness, stance, and restraint carry more meaning than narrative.</li>
+<li><strong>Clean repeatability:</strong> imagery designed to read instantly across print, outdoor, and retail environments.</li>
+</ul>
+<p>
+The strongest executions avoid clutter and trend effects. The image is built to be understood at a glance, then remembered as a stable type of masculinity rather than a specific story.
+</p>
+<h3>Signature Eras / Campaign References</h3>
+<ul>
+<li>1990s–2000s suit-era authority: sharp tailoring and neutral environments used to manufacture permanence.</li>
+<li>Retail-scale masculinity: campaigns designed for repetition without diminishing the signal.</li>
+<li>Modern fragrance iconography: bottles and packaging treated as clean industrial objects.</li>
+</ul>
+<h3>Bottle / Iconography Notes</h3>
+<p>
+Hugo Boss fragrance iconography is typically geometric and functional: bottles designed for clarity, shelf recognition, and consistency across flankers. When it works, the object reads as a stable token of the house’s broader tailoring identity.
+</p>
+<h3>Archival Notes</h3>
+<ul>
+<li>Images are archived as advertising artifacts, not lifestyle content.</li>
+<li>Credits are recorded only when verified.</li>
+<li>Representative executions are prioritized over exhaustive duplication.</li>
+</ul>
+<h3>Closing</h3>
+<p>
+Hugo Boss is archived in Parfum Campaigns as a reference for disciplined, retail-scalable masculinity: a house that repeatedly uses tailoring, posture, and reduction to hold a stable visual message across decades.
+</p>
+</div>
+<div class="house" id="house-creed">
+<h2>CREED (London / Paris, 1760)</h2>
+<div class="twoup">
+<figure>
+<img src="assets/img/creed-aventus-mens-fragrance-print-campaign-bottle.jpg" alt="Creed Aventus bottle photographed in dramatic studio lighting with angled composition and deep shadow" />
+<figcaption>
+<div class="caption-title">Creed Aventus bottle photographed in dramatic studio lighting with angled composition and deep shadow</div>
+<div class="caption-note">Object primacy: the bottle treated as the entire message.</div>
+</figcaption>
+</figure>
+<figure>
+<img src="assets/img/creed-green-irish-tweed-vintage-print-advertisement.jpg" alt="Vintage Creed Green Irish Tweed presentation showing the bottle beside plain packaging, photographed as a collectible object" />
+<figcaption>
+<div class="caption-title">Vintage Creed Green Irish Tweed presentation showing the bottle beside plain packaging, photographed as a collectible object</div>
+<div class="caption-note">Inheritance framing: packaging and bottle treated as heirloom artifacts.</div>
+</figcaption>
+</figure>
+</div>
+<h3>Historical / Context Overview</h3>
+<p>
+Creed is a fragrance house with a heritage narrative anchored in London and Paris, presenting itself through continuity, tradition, and controlled understatement. In campaign terms, Creed’s visual language often treats fragrance less as lifestyle and more as a formal object: a name, a bottle, a lineage.
+</p>
+<p>
+For Parfum Campaigns, Creed is included because it demonstrates a specific discipline: the refusal to entertain. The imagery prioritizes stability over spectacle and relies on inheritance signaling rather than narrative escalation.
+</p>
+<h3>Campaign & Visual Language</h3>
+<p>Creed’s strongest advertising posture typically operates on three structural principles:</p>
+<ul>
+<li><strong>Object-first hierarchy:</strong> the bottle is treated as the main subject, not a prop inside a scene.</li>
+<li><strong>Heritage signaling:</strong> names, marks, and presentation imply lineage and continuity more than novelty.</li>
+<li><strong>Controlled austerity:</strong> restrained color, restrained environments, and minimal performative casting.</li>
+</ul>
+<p>
+The result is a visual system that can appear “quiet” or “boring” by design: the work aims to feel older than the moment, and therefore less dependent on attention tactics.
+</p>
+<h3>Signature Eras / Campaign References</h3>
+<ul>
+<li>Modern studio bottle portraits: dramatic light, clean framing, minimal copy.</li>
+<li>Retail object authority: packaging treated as a formal case rather than an expressive design canvas.</li>
+<li>Heritage continuity: repeated emphasis on lineage rather than seasonal creative reinvention.</li>
+</ul>
+<h3>Bottle / Iconography Notes</h3>
+<p>
+Creed’s bottle language functions as a signature object system: recognizable silhouette, repeatable label structure, and controlled ornament. The bottle is positioned as a token of continuity — not a stage for trend design.
+</p>
+<h3>Archival Notes</h3>
+<ul>
+<li>Images are archived as campaign artifacts and object/typography references.</li>
+<li>Credits are recorded only when verified.</li>
+<li>Representative executions are prioritized over exhaustive duplication.</li>
+</ul>
+<h3>Closing</h3>
+<p>
+Creed is archived in Parfum Campaigns as a reference for deliberate restraint: a house that often removes casting and story so the object can carry the entire claim.
+</p>
+</div>
+<div class="house" id="house-house-of-salisbury">
+<h2> MORPH <span class="subhead">House of Salisbury</span> <span class="region">(United States)</span> </h2>
+<div class="twoup">
+<figure>
+<img src="assets/img/morph-house-of-salisbury-fragrance-surreal-mens-campaign-chase-visual.jpg" alt="Surreal men’s fragrance campaign image showing a suited man running while a goat charges behind him, with a MORPH House of Salisbury bottle composited in the foreground" />
+<figcaption>
+<div class="caption-title">Surreal men’s fragrance campaign image showing a suited man running while a goat charges behind him, with a MORPH House of Salisbury bottle composited in the foreground</div>
+<div class="caption-note">Surreal threat framing: status imagery destabilized to create tension and recall.</div>
+</figcaption>
+</figure>
+<figure>
+<img src="assets/img/morph-house-of-salisbury-fragrance-bottle-box-studio-print-campaign.jpg" alt="Studio print-style campaign image showing the MORPH House of Salisbury fragrance bottle beside its black presentation box on a dark background with a quoted headline" />
+<figcaption>
+<div class="caption-title">Studio print-style campaign image showing the MORPH House of Salisbury fragrance bottle beside its black presentation box on a dark background with a quoted headline</div>
+<div class="caption-note">Object authority: bottle and box treated as a formal seal, supported by disciplined typography.</div>
+</figcaption>
+</figure>
+</div>
+<h3>Historical / Context Overview</h3>
+<p>
+MORPH is a United States–based independent fragrance project presented under HOUSE OF SALISBURY. Within the archive, MORPH is documented for its deliberate use of tension, restraint, and object-forward hierarchy — placing the bottle as an emblem rather than a lifestyle accessory.
+</p>
+<p>
+For Parfum Campaigns, MORPH is included as a contemporary reference point: a modern house attempting to recover structural discipline in an era dominated by trend mimicry and short-lived visual language.
+</p>
+<h3>Campaign & Visual Language</h3>
+<p>MORPH campaign work, as represented here, tends to operate on three structural principles:</p>
+<ul>
+<li><strong>Tension as signal:</strong> scenarios and compositions engineered to create unease, contrast, and memorability.</li>
+<li><strong>Object-first hierarchy:</strong> the bottle treated as the seal of the frame, not a prop competing for attention.</li>
+<li><strong>Controlled typography:</strong> large, legible marks used as an authority layer rather than copy-heavy persuasion.</li>
+</ul>
+<p>
+The visual system prioritizes readability and recall: the viewer understands the object immediately, then feels the framing. The result is less “storytelling” and more posture — a claim of identity made through structure.
+</p>
+<h3>Signature Eras / Campaign References</h3>
+<ul>
+<li>Studio object authority: bottle and packaging presented as formal artifacts, with minimal distraction.</li>
+<li>Surreal disruption executions: luxury settings interrupted by threat or absurdity to produce tension and memory.</li>
+<li>Typography-led identity: strong wordmark scale functioning as a structural anchor for the frame.</li>
+</ul>
+<h3>Bottle / Iconography Notes</h3>
+<p>
+The bottle treatment is intentionally legible: rectangular geometry, high-contrast label system, and a restrained presentation that reads clearly at distance. Packaging is used as reinforcement — not ornament — extending the object’s authority rather than competing with it.
+</p>
+<h3>Archival Notes</h3>
+<ul>
+<li>Images are archived as campaign artifacts and typography/structure references.</li>
+<li>Credits are recorded only when verified.</li>
+<li>Representative executions are prioritized over exhaustive duplication.</li>
+</ul>
+<h3>Closing</h3>
+<p>
+MORPH is archived in Parfum Campaigns as a contemporary attempt at permanence: a house using controlled hierarchy, tension, and object discipline to produce recall without relying on trend language.
+
+
+<div class="house" id="house-guess">
+<h2>GUESS (Los Angeles, 1981)</h2>
+<div class="twoup">
+<figure>
+<img src="assets/img/guess-jeans-1980s-print-advertising-sexuality-los-angeles.jpg" alt="Vintage GUESS Jeans print advertisement featuring intimate black-and-white couple imagery, emblematic of the brand’s sexually charged Los Angeles campaign language in the 1980s" />
+<figcaption>
+<div class="caption-title">Vintage GUESS Jeans print advertisement featuring intimate black-and-white couple imagery, emblematic of the brand’s sexually charged Los Angeles campaign language in the 1980s</div>
+<div class="caption-note">Provocation framing: erotic tension and denim sexuality used as primary brand signal.</div>
+</figcaption>
+</figure>
+<figure>
+<img src="assets/img/guess-1981-los-angeles-mens-fragrance-bottle-studio.jpg" alt="GUESS 1981 Los Angeles men’s fragrance bottle photographed in studio, emphasizing amber glass, minimal typography, and heritage branding" />
+<figcaption>
+<div class="caption-title">GUESS 1981 Los Angeles men’s fragrance bottle photographed in studio, emphasizing amber glass, minimal typography, and heritage branding</div>
+<div class="caption-note">Heritage anchoring: the fragrance bottle as a symbolic extension of GUESS’s founding myth.</div>
+</figcaption>
+</figure>
+</div>
+<h3>Historical / Context Overview</h3>
+<p>
+GUESS is a Los Angeles fashion brand founded in 1981 that became culturally associated with denim advertising as a form of provocation: black-and-white photography, erotic charge, and a deliberate blur between fashion and seduction.
+</p>
+<p>
+For Parfum Campaigns, GUESS is included because its strongest work demonstrates a different kind of discipline than luxury restraint: a consistent, repeatable sexualized visual system that reads immediately at print and billboard scale.
+</p>
+<h3>Campaign & Visual Language</h3>
+<p>GUESS campaign language typically operates on three structural principles:</p>
+<ul>
+<li><strong>Erotic proximity:</strong> intimacy staged as the primary attention mechanism, often with minimal narrative context.</li>
+<li><strong>Denim as identity:</strong> the product functions as a uniform and a signal, supported by consistent styling codes.</li>
+<li><strong>High-contrast legibility:</strong> monochrome framing and simplified backgrounds engineered for billboard readability.</li>
+</ul>
+<p>
+The system is “raunchy” by design, but it is not random. The visual posture is consistent: youth, heat, closeness, and a certain Los Angeles performance of sexuality.
+</p>
+<h3>Signature Eras / Campaign References</h3>
+<ul>
+<li>1980s–1990s denim billboard dominance: black-and-white photography built for repetition and recall.</li>
+<li>Logo-as-stamp hierarchy: the GUESS wordmark used as a bold seal rather than a decorative layer.</li>
+<li>Fragrance extensions: bottle systems that borrow the founding myth language (city/year) to anchor product lines.</li>
+</ul>
+<h3>Bottle / Iconography Notes</h3>
+<p>
+GUESS fragrance iconography often leans on heritage tagging — city and founding year — to convert a fashion brand into an “origin story.” Bottle forms are typically simple and legible, with typography used as the primary authority layer.
+</p>
+<h3>Archival Notes</h3>
+<ul>
+<li>Images are archived as campaign artifacts and brand-language references.</li>
+<li>Credits are recorded only when verified.</li>
+<li>Representative executions are prioritized over exhaustive duplication.</li>
+</ul>
+<h3>Closing</h3>
+<p>
+GUESS is archived in Parfum Campaigns as a proof of repeatable provocation: a house that standardized erotic tension into a durable, billboard-scale visual system.
+</p>
+</div>
+
+<div class="house" id="house-giorgio-armani">
+<h2>GIORGIO ARMANI (Milan, 1975)</h2>
+<div class="twoup">
+<figure>
+<img src="assets/img/giorgio-armani-boutique-storefront-menswear-evening-suit.jpg" alt="Man in a dark overcoat and suit walking past the Giorgio Armani boutique storefront at night, luxury menswear windows behind him" />
+<figcaption>
+<div class="caption-title">Man in a dark overcoat and suit walking past the Giorgio Armani boutique storefront at night, luxury menswear windows behind him.</div>
+<div class="caption-note">City authority framing: tailoring posture set against the house name as an architectural stamp.</div>
+</figcaption>
+</figure>
+<figure>
+<img src="assets/img/giorgio-armani-acqua-di-gio-eau-de-toilette-bottle-still-life-watch-cufflinks.jpg" alt="Frosted Acqua di Giò Giorgio Armani Eau de Toilette bottle on a desk beside a metal watch, cufflinks, and a water glass in moody light" />
+<figcaption>
+<div class="caption-title">Frosted Acqua di Giò Giorgio Armani Eau de Toilette bottle on a desk beside a metal watch, cufflinks, and a water glass in moody light.</div>
+<div class="caption-note">Object restraint: the bottle presented as a quiet seal inside a disciplined masculine still life.</div>
+</figcaption>
+</figure>
+</div>
+<h3>Historical / Context Overview</h3>
+<p>
+Giorgio Armani is an Italian fashion house founded in 1975 and associated with a particular form of modern luxury discipline: relaxed tailoring, controlled palette, and a refusal to overstate. In campaign history, Armani frequently communicates status through restraint — the opposite of spectacle.
+</p>
+<p>
+For Parfum Campaigns, Giorgio Armani is included because its advertising language often operates like architecture: clean surfaces, precise posture, and an insistence that the house name itself is the authority layer.
+</p>
+<h3>Campaign & Visual Language</h3>
+<p>Armani’s strongest campaign work tends to operate on three structural principles:</p>
+<ul>
+<li><strong>Tailoring as structure:</strong> clothing used as posture and identity architecture, not decoration.</li>
+<li><strong>Neutral authority palette:</strong> controlled color temperature and minimal graphic noise to sustain permanence.</li>
+<li><strong>Object as seal:</strong> fragrance bottles presented as quiet tokens of the house rather than staged lifestyle props.</li>
+</ul>
+<p>
+When the system works, the frame reads as composed and inevitable. The campaigns do not attempt to entertain. They establish control, then let the viewer project aspiration into the silence.
+</p>
+<h3>Signature Eras / Campaign References</h3>
+<ul>
+<li>Tailoring-era menswear authority: cinematic street scenes and clean storefront/architecture cues reinforcing house dominance.</li>
+<li>Acqua di Giò object discipline: bottle imagery built around understatement, clarity, and mass legibility without clutter.</li>
+<li>Modern luxury retail language: brand name used as a physical stamp — signage, glass, and controlled interiors.</li>
+</ul>
+<h3>Bottle / Iconography Notes</h3>
+<p>
+Armani fragrance iconography typically emphasizes clarity and repeatable form: clean bottle geometry, restrained typography, and a presentation that reads instantly at distance. The object is not dramatized; it is positioned as stable, adult, and permanent.
+</p>
+<h3>Archival Notes</h3>
+<ul>
+<li>Images are archived as campaign artifacts and object/typography references.</li>
+<li>Credits are recorded only when verified.</li>
+<li>Representative executions are prioritized over exhaustive duplication.</li>
+</ul>
+<h3>Closing</h3>
+<p>
+Giorgio Armani is archived in Parfum Campaigns as a reference for restraint-as-authority: a house that repeatedly communicates luxury through control, letting posture and structure do the work instead of narrative excess.
+</p>
+</div>
+
+<div class="house" id="house-tom-ford">
+<h2>TOM FORD (New York, 2005)</h2>
+<div class="twoup">
+<figure>
+<img src="assets/img/tom-ford-private-blend-neroli-portofino-mandarin-di-amalfi-oud-wood-bottles-campaign.jpg" alt="Tom Ford Private Blend fragrance bottles shown against a monochrome male portrait background, featuring Mandarin di Amalfi, Oud Wood, and Neroli Portofino Forte" />
+<figcaption>
+<div class="caption-title">Tom Ford Private Blend bottle collage with portrait background (Mandarin di Amalfi, Oud Wood, Neroli Portofino Forte)</div>
+<div class="caption-note">Indexing by color: the bottle system functions as catalog discipline, not storytelling.</div>
+</figcaption>
+</figure>
+<figure>
+<img src="assets/img/tom-ford-black-orchid-gold-and-black-bottles-splash-campaign.jpg" alt="Tom Ford Black Orchid campaign image showing gold and black ribbed bottles surrounded by a dramatic liquid splash on a dark background" />
+<figcaption>
+<div class="caption-title">Tom Ford Black Orchid bottle pair with liquid splash (gold and black ribbed bottles)</div>
+<div class="caption-note">Spectacle with control: texture, plaque, and liquid used to communicate weight without clutter.</div>
+</figcaption>
+</figure>
+</div>
+<h3>Historical / Context Overview</h3>
+<p>
+Tom Ford is a modern luxury house whose fragrance advertising operates as a disciplined system of surface, posture, and controlled provocation. The work repeatedly treats fragrance as an authority object rather than a lifestyle accessory, using clean hierarchy and tactile implication to make the bottle read as inevitable.
+</p>
+<p>
+For Parfum Campaigns, Tom Ford is included because the house standardized a contemporary visual language that scales: the bottle as catalog unit, the label as stamp, and sensuality communicated through composition rather than narrative.
+</p>
+<h3>Campaign & Visual Language</h3>
+<p>Tom Ford’s strongest campaign language tends to operate on three structural principles:</p>
+<ul>
+<li><strong>Object-first hierarchy:</strong> the bottle carries the claim; the scene exists to support it.</li>
+<li><strong>Erotic minimalism:</strong> sensuality implied through light, texture, and proximity rather than plot.</li>
+<li><strong>System identity:</strong> repeated bottle geometry and label discipline create a catalog that reads instantly.</li>
+</ul>
+<p>
+The result is a visual posture that is modern and controlled: the work presents luxury as a sealed object system, not an aspirational storyline.
+</p>
+<h3>Signature Eras / Campaign References</h3>
+<ul>
+<li>Private Blend indexing: color taxonomy, apothecary geometry, label-as-stamp discipline.</li>
+<li>Black Orchid iconography: ribbed bottle language and gold plaque signaling weight and glamour.</li>
+<li>Studio dominance: clean, high-contrast object staging built for repetition across formats.</li>
+</ul>
+<h3>Bottle / Iconography Notes</h3>
+<p>
+Private Blend bottles function like catalog trophies: squared shoulders, heavy glass, color as taxonomy, and a consistent label architecture. Black Orchid operates as an icon object: ribbed surface, metallic plaque, and controlled liquid spectacle used to communicate density and permanence.
+</p>
+<h3>Archival Notes</h3>
+<ul>
+<li>Images are archived as campaign artifacts and object/typography references.</li>
+<li>Credits are recorded only when verified.</li>
+<li>Representative executions are prioritized over exhaustive duplication.</li>
+</ul>
+<h3>Closing</h3>
+<p>
+Tom Ford is archived in Parfum Campaigns as a modern proof of bottle-as-authority advertising: a house that uses hierarchy, surface, and system discipline to manufacture permanence at scale.
+</p>
+</div>
+
+<div class="house" id="house-dior">
+<h2>DIOR (Paris, 1946)</h2>
+<div class="twoup">
+<figure>
+<img src="assets/img/dior-sauvage-johnny-depp-desert-guitar-print-campaign.jpg" alt="Dior Sauvage men’s fragrance campaign image set in a desert landscape, featuring a solitary male figure and minimal graphic hierarchy" />
+<figcaption>
+<div class="caption-title">Dior Sauvage men’s fragrance campaign set in a desert landscape with a solitary male figure and minimal graphic hierarchy</div>
+<div class="caption-note">Myth by environment: the landscape is the authority layer, not the copy.</div>
+</figcaption>
+</figure>
+<figure>
+<img src="assets/img/dior-eau-sauvage-vintage-print-advertisement-bottle.jpg" alt="Vintage Dior Eau Sauvage print reference showing the bottle as a clean object with restrained typography and classic French luxury framing" />
+<figcaption>
+<div class="caption-title">Vintage Dior Eau Sauvage print reference showing the bottle as a clean object with restrained typography</div>
+<div class="caption-note">French clarity: bottle-as-seal presentation with controlled graphic restraint.</div>
+</figcaption>
+</figure>
+</div>
+<h3>Historical / Context Overview</h3>
+<p>
+Dior is a Paris fashion house founded in 1946 whose fragrance advertising repeatedly demonstrates a high-level institutional ability: to move between eras without abandoning authority. In campaign history, Dior can operate in classic print discipline, cinematic myth-making, and modern celebrity execution while keeping the house name as the central stabilizer.
+</p>
+<p>
+For Parfum Campaigns, Dior is included because it provides a long-running reference for how a legacy luxury house maintains control across changing media formats — print, outdoor, and film — without collapsing into trend language.
+</p>
+<h3>Campaign & Visual Language</h3>
+<p>Dior’s strongest campaign work tends to operate on three structural principles:</p>
+<ul>
+<li><strong>House authority first:</strong> DIOR functions as a stamp; the campaign exists to reinforce the stamp.</li>
+<li><strong>Myth via restraint:</strong> environments and composition do the persuasion work; copy stays minimal.</li>
+<li><strong>Object legitimacy:</strong> the bottle is treated as a formal artifact, not a lifestyle prop.</li>
+</ul>
+<p>
+When Dior campaigns succeed, they read as controlled: the frame establishes hierarchy immediately, then allows the viewer to project identity into the structure.
+</p>
+<h3>Signature Eras / Campaign References</h3>
+<ul>
+<li>Classic print discipline: bottle clarity, restrained typography, French luxury legibility.</li>
+<li>Film-scale myth executions: landscape, silence, and controlled narrative minimalism.</li>
+<li>Modern men’s franchise systems: consistent bottle silhouette and brand mark stability across iterations.</li>
+</ul>
+<h3>Bottle / Iconography Notes</h3>
+<p>
+Dior’s bottle systems tend to emphasize clean geometry, repeatable label hierarchy, and immediate recognition at distance. Even when presentation becomes cinematic, the object is kept legible as an institutional token rather than a decorative element.
+</p>
+<h3>Archival Notes</h3>
+<ul>
+<li>Images are archived as campaign artifacts and object/typography references.</li>
+<li>Credits are recorded only when verified.</li>
+<li>Representative executions are prioritized over exhaustive duplication.</li>
+</ul>
+<h3>Closing</h3>
+<p>
+Dior is archived in Parfum Campaigns as a legacy reference for sustained authority: a house capable of scaling myth while keeping hierarchy, object legitimacy, and brand stamp discipline intact.
+</p>
+</div>
+
+<div class="house" id="house-ysl">
+<h2>YSL (Paris, 1961)</h2>
+<div class="twoup">
+<figure>
+<img src="assets/img/ysl-kouros-vintage-print-advertisement-marble-bust-bottle.jpg" alt="Vintage YSL Kouros print advertisement featuring a classical marble bust motif and the Kouros bottle presented as an icon object" />
+<figcaption>
+<div class="caption-title">Vintage YSL Kouros print advertisement featuring a classical marble bust motif with the Kouros bottle treated as an icon object</div>
+<div class="caption-note">Classicism as authority: sculpture language used to manufacture permanence and masculine scale.</div>
+</figcaption>
+</figure>
+<figure>
+<img src="assets/img/ysl-la-nuit-de-lhomme-black-glass-bottle-studio-campaign.jpg" alt="YSL La Nuit de L’Homme studio campaign image showing a dark faceted bottle in controlled low-key lighting with minimal typography" />
+<figcaption>
+<div class="caption-title">YSL La Nuit de L’Homme studio campaign showing a dark faceted bottle in controlled low-key lighting with minimal typography</div>
+<div class="caption-note">Modern restraint: the bottle reads as a seal through light control and disciplined hierarchy.</div>
+</figcaption>
+</figure>
+</div>
+<h3>Historical / Context Overview</h3>
+<p>
+Yves Saint Laurent is a Paris house founded in 1961 whose fragrance advertising has repeatedly moved between two durable modes: (1) classicism as institutional authority and (2) modern nocturnal minimalism. Across eras, the strongest YSL work treats fragrance as a sign system — an emblem, a posture, a seal — rather than a lifestyle vignette.
+</p>
+<p>
+For Parfum Campaigns, YSL is included because the house demonstrates how iconography can shift without collapsing: the imagery changes, but hierarchy and authority remain legible.
+</p>
+<h3>Campaign & Visual Language</h3>
+<p>YSL’s most effective campaign language tends to operate on three structural principles:</p>
+<ul>
+<li><strong>Iconography first:</strong> bottle and name hierarchy remain dominant; secondary story elements never outrank the seal.</li>
+<li><strong>Controlled drama:</strong> contrast and shadow are used as structure, not decoration — the frame stays disciplined.</li>
+<li><strong>Posture over plot:</strong> campaigns imply identity through stance, light, and composition rather than narrative explanation.</li>
+</ul>
+<p>
+When YSL campaigns succeed, they do not attempt to persuade with detail. They establish a controlled myth and let the emblem do the work.
+</p>
+<h3>Signature Eras / Campaign References</h3>
+<ul>
+<li>Kouros-era classicism: sculpture references and monumental masculinity used to create permanence.</li>
+<li>Modern nocturnal franchise language: dark palettes, low-key lighting, and minimal typographic noise.</li>
+<li>Object discipline across formats: bottle legibility engineered to scale from print to outdoor.</li>
+</ul>
+<h3>Bottle / Iconography Notes</h3>
+<p>
+YSL bottle systems often communicate through geometry and shadow: faceted caps, strict silhouettes, and a recurring emphasis on legibility at distance. The strongest executions treat the bottle as an authority token — not an accessory — supported by restrained typography and controlled lighting.
+</p>
+<h3>Archival Notes</h3>
+<ul>
+<li>Images are archived as campaign artifacts and object/typography references.</li>
+<li>Credits are recorded only when verified.</li>
+<li>Representative executions are prioritized over exhaustive duplication.</li>
+</ul>
+<h3>Closing</h3>
+<p>
+YSL is archived in Parfum Campaigns as a reference for icon continuity: a house that can move from monumental classicism to modern night minimalism while keeping the stamp, hierarchy, and object legitimacy intact.
+</p>
+</div>
+
+<!-- HERMÈS ADDED BELOW -->
+
+<div class="house" id="house-hermes">
+<h2>HERMÈS (Paris, 1837)</h2>
+<div class="twoup">
+<figure>
+<img src="assets/img/hermes-terre-dhermes-vintage-print-advertisement-bottle.jpg" alt="Hermès Terre d’Hermès print campaign presenting the bottle as a mineral, grounded object with restrained typography and elemental framing" />
+<figcaption>
+<div class="caption-title">Hermès Terre d’Hermès print campaign presenting the bottle as a mineral, grounded object</div>
+<div class="caption-note">Material authority: glass, light, and negative space used to imply permanence without spectacle.</div>
+</figcaption>
+</figure>
+<figure>
+<img src="assets/img/hermes-bel-ami-mens-fragrance-print-campaign-equestrian.jpg" alt="Hermès Bel Ami men’s fragrance campaign featuring equestrian-coded masculinity, restrained palette, and formal editorial composition" />
+<figcaption>
+<div class="caption-title">Hermès Bel Ami men’s fragrance campaign featuring equestrian-coded masculinity</div>
+<div class="caption-note">Heritage posture: masculinity framed through craft, lineage, and restraint rather than trend.</div>
+</figcaption>
+</figure>
+</div>
+<h3>Historical / Context Overview</h3>
+<p>
+Hermès is a Paris house founded in 1837 whose brand language is rooted in leatherwork, equestrian heritage, and an uncompromising commitment to craft. In fragrance advertising, Hermès consistently treats scent as an extension of material discipline rather than lifestyle fantasy.
+</p>
+<p>
+For Parfum Campaigns, Hermès is included because its strongest fragrance work communicates authority through restraint: texture, proportion, and typography functioning as institutional signals rather than promotional devices.
+</p>
+<h3>Campaign & Visual Language</h3>
+<p>Hermès fragrance campaigns typically operate on three structural principles:</p>
+<ul>
+<li><strong>Material primacy:</strong> glass, surface, and light treated as narrative elements.</li>
+<li><strong>Heritage posture:</strong> masculinity framed through lineage and craft rather than performance.</li>
+<li><strong>Typographic restraint:</strong> minimal copy, precise placement, and refusal of spectacle.</li>
+</ul>
+<h3>Signature Eras / Campaign References</h3>
+<ul>
+<li>Terre d’Hermès mineral framing: elemental imagery reinforcing grounded masculinity.</li>
+<li>Bel Ami heritage masculinity: equestrian codes translated into fragrance posture.</li>
+</ul>
+<h3>Bottle / Iconography Notes</h3>
+<p>
+Hermès fragrance bottles emphasize weight, clarity, and proportion. The object is treated as a crafted artifact rather than a decorative accessory, reinforcing the house’s institutional posture.
+</p>
+<h3>Archival Notes</h3>
+<ul>
+<li>Images are archived as campaign artifacts and material-language references.</li>
+<li>Credits are recorded only when verified.</li>
+<li>Representative executions are prioritized over exhaustive duplication.</li>
+</ul>
+<h3>Closing</h3>
+<p>
+Hermès is archived in Parfum Campaigns as material authority: fragrance presented as an extension of craft, permanence, and institutional discipline.
+</p>
+</div>
+
+<div class="footer-note">
+Parfum Campaigns is an independent editorial archive. This site is documentation, not promotion.
+</div>
+</main>
+</div>
+
+<script>
+(function(){
+  const nav = document.getElementById('nav');
+  const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
+  const sections = links
+    .map(a => document.querySelector(a.getAttribute('href')))
+    .filter(Boolean);
+
+  function setActive(){
+    let best = null;
+    for(const s of sections){
+      const r = s.getBoundingClientRect();
+      if(r.top <= 120) best = s;
+    }
+    links.forEach(a => a.classList.remove('active'));
+    if(best){
+      const id = "#" + best.id;
+      const a = links.find(x => x.getAttribute('href') === id);
+      if(a) a.classList.add('active');
+    }
+  }
+
+  window.addEventListener('scroll', setActive, {passive:true});
+  setActive();
+
+  const search = document.getElementById('search');
+  const allTargets = Array.from(document.querySelectorAll('section, .house'));
+
+  search.addEventListener('input', function(){
+    const q = this.value.trim().toLowerCase();
+    if(!q){
+      allTargets.forEach(el => el.style.display = '');
+      links.forEach(a => a.style.display = '');
+      return;
+    }
+    allTargets.forEach(el => {
+      const t = el.innerText.toLowerCase();
+      el.style.display = t.includes(q) ? '' : 'none';
+    });
+    links.forEach(a => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if(!target){
+        a.style.display = '';
+        return;
       }
-      window.addEventListener('scroll', setActive, {passive:true});
-      setActive();
-
-      const search = document.getElementById('search');
-      const allTargets = Array.from(document.querySelectorAll('section, .house'));
-      search.addEventListener('input', function(){
-        const q = this.value.trim().toLowerCase();
-        if(!q){
-          allTargets.forEach(el => el.style.display = '');
-          links.forEach(a => a.style.display = '');
-          return;
-        }
-        allTargets.forEach(el => {
-          const t = el.innerText.toLowerCase();
-          el.style.display = t.includes(q) ? '' : 'none';
-        });
-        links.forEach(a => {
-          const target = document.querySelector(a.getAttribute('href'));
-          if(!target){ a.style.display = ''; return; }
-          a.style.display = (target.style.display === 'none') ? 'none' : '';
-        });
-      });
-    })();
-  </script>
+      a.style.display = (target.style.display === 'none') ? 'none' : '';
+    });
+  });
+})();
+</script>
 </body>
 </html>
