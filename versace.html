@@ -1,1 +1,495 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Versace | Parfum Campaigns</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="description" content="Versace — Milan, 1978. Editorial archive of campaign visual language, Medusa iconography, and fragrance object discipline." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b0b0a;
+  --surface-alt:#141210;
+  --gold:#b8935a;
+  --gold-dim:#8a6f47;
+  --teal:#1f4a43;
+  --ivory:#f3ede1;
+  --stone:#8c8a80;
+  --hair:rgba(243,237,225,0.14);
+  --max:1080px;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--ink);
+  color:var(--ivory);
+  font-family:'Inter',sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--gold); text-decoration:none;}
+a:hover{text-decoration:underline;}
 
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:var(--ink);
+  padding:0 6vw;
+}
+.hero-glow{
+  position:absolute;
+  right:-10%;
+  top:50%;
+  transform:translateY(-50%);
+  width:900px;
+  height:900px;
+  background:radial-gradient(circle, rgba(31,74,67,0.55) 0%, rgba(31,74,67,0.18) 40%, rgba(11,11,10,0) 70%);
+  pointer-events:none;
+}
+.hero-inner{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items:center;
+  gap:2vw;
+  width:100%;
+  max-width:1400px;
+  margin:0 auto;
+}
+.hero-text{padding-top:4vh;}
+.hero-eyebrow{margin-bottom:28px;}
+.hero h1{
+  font-family:'Fraunces',serif;
+  font-optical-sizing:auto;
+  font-weight:900;
+  font-size:clamp(64px, 11vw, 168px);
+  line-height:0.86;
+  letter-spacing:-0.01em;
+  color:var(--ivory);
+}
+.hero-rule{
+  width:140px;
+  height:1px;
+  background:var(--gold);
+  margin:36px 0 28px 0;
+}
+.hero-sub{
+  font-size:18px;
+  color:var(--stone);
+  max-width:420px;
+  font-weight:400;
+}
+.hero-image{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hero-image img{
+  max-width:100%;
+  max-height:78vh;
+  width:auto;
+  filter:drop-shadow(0 40px 80px rgba(0,0,0,0.6));
+}
+.scroll-cue{
+  position:absolute;
+  bottom:5vh;
+  left:6vw;
+  z-index:2;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--stone);
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.scroll-cue::after{
+  content:"";
+  width:1px;
+  height:36px;
+  background:linear-gradient(var(--gold), transparent);
+}
+
+/* SECTION SHELL */
+section{
+  padding:120px 6vw;
+}
+.section-inner{
+  max-width:var(--max);
+  margin:0 auto;
+}
+.alt{background:var(--surface-alt);}
+
+/* PULLQUOTE */
+.pullquote-wrap{
+  text-align:center;
+  position:relative;
+  padding:60px 6vw;
+}
+.pullquote-ring{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:340px;
+  height:340px;
+  border:1px solid var(--gold-dim);
+  border-radius:50%;
+  opacity:0.35;
+  pointer-events:none;
+}
+.pullquote{
+  position:relative;
+  z-index:2;
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-weight:500;
+  font-size:clamp(28px, 4vw, 48px);
+  line-height:1.35;
+  max-width:820px;
+  margin:0 auto;
+  color:var(--ivory);
+}
+.pullquote span{color:var(--gold);}
+
+/* EDITORIAL TWO COL */
+.editorial{
+  display:grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap:60px;
+  align-items:start;
+}
+.editorial h2{
+  font-family:'Fraunces',serif;
+  font-weight:700;
+  font-size:clamp(32px,4vw,48px);
+  margin-bottom:24px;
+  color:var(--ivory);
+}
+.editorial p{
+  font-size:17px;
+  color:#d8d2c4;
+  margin-bottom:18px;
+  max-width:60ch;
+}
+.stat-block{
+  border-left:1px solid var(--gold);
+  padding-left:24px;
+}
+.stat-block .num{
+  font-family:'Fraunces',serif;
+  font-weight:700;
+  font-size:56px;
+  color:var(--gold);
+  line-height:1;
+}
+.stat-block .label{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--stone);
+  margin-top:10px;
+}
+
+/* DICTIONARY LIST — structural principles, not a numbered sequence */
+.dict-list{
+  margin-top:20px;
+}
+.dict-item{
+  border-top:1px solid var(--hair);
+  padding:32px 0;
+  display:grid;
+  grid-template-columns: 280px 1fr;
+  gap:40px;
+}
+.dict-item:last-child{border-bottom:1px solid var(--hair);}
+.dict-term{
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  font-size:24px;
+  color:var(--gold);
+}
+.dict-def{
+  font-size:17px;
+  color:#d8d2c4;
+  max-width:60ch;
+}
+
+/* SIGNATURE ERAS — real chronology, so dates are the marker */
+.eras{
+  position:relative;
+  margin-top:60px;
+}
+.eras-line{
+  position:absolute;
+  top:14px;
+  left:0;
+  right:0;
+  height:1px;
+  background:var(--gold-dim);
+}
+.eras-row{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:40px;
+  position:relative;
+}
+.era{padding-top:40px; position:relative;}
+.era::before{
+  content:"";
+  position:absolute;
+  top:9px;
+  left:0;
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  background:var(--gold);
+}
+.era-date{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:13px;
+  letter-spacing:.08em;
+  color:var(--gold);
+  margin-bottom:12px;
+  display:block;
+}
+.era h3{
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  font-size:22px;
+  margin-bottom:10px;
+  color:var(--ivory);
+}
+.era p{
+  font-size:15.5px;
+  color:var(--stone);
+}
+
+/* FULL BLEED IMAGE MOMENT */
+.image-moment{
+  position:relative;
+  min-height:80vh;
+  display:flex;
+  align-items:center;
+  background:var(--ink);
+  padding:0 6vw;
+  overflow:hidden;
+}
+.image-moment-inner{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:6vw;
+  max-width:1400px;
+  margin:0 auto;
+  align-items:center;
+  width:100%;
+}
+.image-moment img{
+  max-width:100%;
+  filter:drop-shadow(0 30px 60px rgba(0,0,0,0.55));
+}
+.image-moment-text .eyebrow{margin-bottom:20px;}
+.image-moment-text h2{
+  font-family:'Fraunces',serif;
+  font-weight:700;
+  font-size:clamp(30px,3.6vw,44px);
+  margin-bottom:20px;
+  color:var(--ivory);
+}
+.image-moment-text p{
+  font-size:16.5px;
+  color:#d8d2c4;
+  max-width:48ch;
+  margin-bottom:14px;
+}
+
+/* ARCHIVAL / CLOSING — quiet register */
+.closing{
+  max-width:720px;
+}
+.closing h2{
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  font-size:28px;
+  margin-bottom:20px;
+  color:var(--ivory);
+}
+.closing p{
+  font-size:16px;
+  color:var(--stone);
+  margin-bottom:14px;
+}
+.archival-list{
+  list-style:none;
+  margin-top:20px;
+}
+.archival-list li{
+  font-size:14.5px;
+  color:var(--stone);
+  padding:10px 0;
+  border-top:1px solid var(--hair);
+}
+.archival-list li:last-child{border-bottom:1px solid var(--hair);}
+
+footer{
+  padding:48px 6vw 60px;
+  text-align:center;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  letter-spacing:.05em;
+  color:var(--stone);
+  border-top:1px solid var(--hair);
+}
+footer a{color:var(--gold);}
+
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-image{order:-1; padding-top:10vh;}
+  .hero-image img{max-height:46vh;}
+  .hero h1{font-size:clamp(48px,16vw,96px);}
+  .editorial{grid-template-columns:1fr;}
+  .dict-item{grid-template-columns:1fr; gap:12px;}
+  .eras-row{grid-template-columns:1fr; gap:36px;}
+  .image-moment-inner{grid-template-columns:1fr;}
+  section{padding:80px 6vw;}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="eyebrow hero-eyebrow">Milano &middot; Est. 1978</div>
+      <h1>Versace</h1>
+      <div class="hero-rule"></div>
+      <p class="hero-sub">Baroque maximalism, Medusa iconography, and the visual grammar of controlled excess — documented as campaign artifact, not lifestyle.</p>
+    </div>
+    <div class="hero-image">
+      <img src="https://raw.githubusercontent.com/ParfumCampaigns/parfum-campaigns-site/main/assets/img/Versace.jpeg" alt="Versace Eros Eau de Parfum bottle, teal Greek-key patterned glass with gold cap and Medusa medallion" />
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll</div>
+</div>
+
+<div class="pullquote-wrap">
+  <div class="pullquote-ring"></div>
+  <p class="pullquote"><span>Excess</span>, when it is disciplined, is not decoration &mdash; it is architecture.</p>
+</div>
+
+<section>
+  <div class="section-inner editorial">
+    <div>
+      <h2>Historical overview</h2>
+      <p>Versace is a Milan fashion house founded in 1978 by Gianni Versace, built on a visual language that inverted the era's prevailing luxury restraint: where contemporaries pursued minimalism, Versace pursued spectacle &mdash; Baroque pattern, gold, myth, and body confidence staged as maximalist authority.</p>
+      <p>For Parfum Campaigns, Versace is included as the counter-case to quiet luxury. Its fragrance advertising treats abundance itself as the discipline: nothing is accidental, even when everything appears loud.</p>
+    </div>
+    <div class="stat-block">
+      <div class="num">1978</div>
+      <div class="label">Milan &middot; House founding</div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="section-inner">
+    <h2 style="font-family:'Fraunces',serif; font-weight:700; font-size:clamp(32px,4vw,48px); margin-bottom:8px;">Campaign &amp; visual language</h2>
+    <p style="color:var(--stone); max-width:60ch; font-size:16px;">Versace's strongest fragrance advertising operates on three recurring structural principles.</p>
+    <div class="dict-list">
+      <div class="dict-item">
+        <div class="dict-term">Myth as material</div>
+        <div class="dict-def">The Medusa head functions as more than a logo &mdash; it is deployed as a warning and a seal simultaneously, borrowed from classical iconography to imply danger, beauty, and permanence in a single mark.</div>
+      </div>
+      <div class="dict-item">
+        <div class="dict-term">Ornament as authority</div>
+        <div class="dict-def">Where minimalist houses remove pattern to signal restraint, Versace uses density &mdash; Baroque print, gold trim, saturated color &mdash; as its own form of control, engineered rather than incidental.</div>
+      </div>
+      <div class="dict-item">
+        <div class="dict-term">Body as spectacle</div>
+        <div class="dict-def">Casting and posture favor confrontation over distance: direct gaze, physical presence, and glamour staged as power rather than aspiration held at arm's length.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-inner">
+    <h2 style="font-family:'Fraunces',serif; font-weight:700; font-size:clamp(32px,4vw,48px); margin-bottom:8px;">Signature eras</h2>
+    <div class="eras">
+      <div class="eras-line"></div>
+      <div class="eras-row">
+        <div class="era">
+          <span class="era-date">1978</span>
+          <h3>Founding maximalism</h3>
+          <p>Gianni Versace establishes the house's core grammar: Baroque pattern, gold, and myth-as-branding, in direct contrast to the minimalism dominating late-1970s fashion.</p>
+        </div>
+        <div class="era">
+          <span class="era-date">1990s</span>
+          <h3>Supermodel era authority</h3>
+          <p>Campaign work scales to cinematic, celebrity-driven spectacle &mdash; glamour presented at full volume, with the house name itself functioning as the central signal.</p>
+        </div>
+        <div class="era">
+          <span class="era-date">2000s&mdash;present</span>
+          <h3>Modern fragrance iconography</h3>
+          <p>Fragrance lines including Eros translate the house's maximalist language into object form: faceted glass, gold hardware, and the Medusa medallion recur as a stable seal across releases.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="image-moment">
+  <div class="image-moment-inner">
+    <img src="https://raw.githubusercontent.com/ParfumCampaigns/parfum-campaigns-site/main/assets/img/Versace-The-Dreamer.jpeg" alt="Versace The Dreamer, clear rectangular glass bottle with gold cap beside its navy presentation box" />
+    <div class="image-moment-text">
+      <div class="eyebrow">Bottle &amp; iconography notes</div>
+      <h2>The Dreamer</h2>
+      <p>Where Eros leans into color and pattern, The Dreamer represents Versace's quieter register: clear glass, gold hardware, and a navy box kept legible at a distance.</p>
+      <p>The pairing across the archive demonstrates range within a single house &mdash; spectacle and restraint treated as two dialects of the same visual authority, not a contradiction.</p>
+    </div>
+  </div>
+</div>
+
+<section class="alt">
+  <div class="section-inner closing">
+    <h2>Archival notes</h2>
+    <ul class="archival-list">
+      <li>Images are archived as campaign artifacts and iconography references, not lifestyle content.</li>
+      <li>Credits are recorded only when verified.</li>
+      <li>Representative executions are prioritized over exhaustive duplication.</li>
+    </ul>
+    <h2 style="margin-top:40px;">Closing</h2>
+    <p>Versace is archived in Parfum Campaigns as the counter-thesis to restraint: proof that maximalism, handled with discipline, can function as its own form of permanence.</p>
+  </div>
+</section>
+
+<footer>
+  Parfum Campaigns is an independent editorial archive. This site is documentation, not promotion.<br>
+  <a href="index.html">&larr; Back to archive index</a>
+</footer>
+
+</body>
+</html>
