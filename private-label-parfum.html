@@ -271,24 +271,34 @@
   <div class="hero-monogram">
     <svg width="280" height="140" viewBox="0 0 280 140" fill="none" xmlns="http://www.w3.org/2000/svg">
       <!-- Bottle silhouette -->
-      <g opacity="0.3">
+      <g opacity="0.5">
         <!-- Cap -->
-        <rect x="108" y="8" width="24" height="14" rx="2" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" fill="none"/>
+        <rect x="108" y="8" width="24" height="14" rx="2" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" fill="rgba(40,40,40,0.8)"/>
         <!-- Neck -->
-        <rect x="113" y="22" width="14" height="12" stroke="rgba(255,255,255,0.5)" stroke-width="1" fill="none"/>
+        <rect x="113" y="22" width="14" height="12" stroke="rgba(255,255,255,0.4)" stroke-width="1" fill="none"/>
         <!-- Shoulder curves -->
-        <path d="M113 34 Q113 42 100 46 L100 120 Q100 126 106 126 L134 126 Q140 126 140 120 L140 46 Q127 42 127 34" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" fill="none"/>
+        <path d="M113 34 Q113 42 100 46 L100 120 Q100 126 106 126 L134 126 Q140 126 140 120 L140 46 Q127 42 127 34" stroke="rgba(255,255,255,0.45)" stroke-width="1.2" fill="none"/>
+        <!-- Liquid fill -->
+        <path d="M101 56 L101 120 Q101 125 106 125 L134 125 Q139 125 139 120 L139 56 Z" fill="url(#liquidGrad)" opacity="0.6"/>
         <!-- Label area -->
-        <rect x="106" y="64" width="28" height="36" rx="1" stroke="rgba(255,255,255,0.25)" stroke-width="0.8" fill="none"/>
-        <!-- Label text lines -->
-        <line x1="112" y1="75" x2="128" y2="75" stroke="rgba(255,255,255,0.2)" stroke-width="0.6"/>
-        <line x1="114" y1="80" x2="126" y2="80" stroke="rgba(255,255,255,0.15)" stroke-width="0.6"/>
-        <line x1="115" y1="85" x2="125" y2="85" stroke="rgba(255,255,255,0.12)" stroke-width="0.6"/>
+        <rect x="106" y="64" width="28" height="36" rx="1" stroke="rgba(255,255,255,0.3)" stroke-width="0.8" fill="rgba(0,0,0,0.3)"/>
+        <!-- Label text -->
+        <text x="120" y="78" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="5.5" font-weight="600" fill="rgba(255,215,140,0.7)" letter-spacing="1.5">PRIVATE</text>
+        <text x="120" y="85" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="5.5" font-weight="600" fill="rgba(255,215,140,0.7)" letter-spacing="1.5">LABEL</text>
         <!-- Sprayer nozzle -->
-        <rect x="126" y="16" width="8" height="6" rx="1" stroke="rgba(255,255,255,0.4)" stroke-width="0.8" fill="none"/>
+        <rect x="126" y="16" width="8" height="6" rx="1" stroke="rgba(255,255,255,0.4)" stroke-width="0.8" fill="rgba(60,60,60,0.6)"/>
         <!-- Light reflection -->
-        <line x1="105" y1="50" x2="105" y2="110" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+        <line x1="105" y1="50" x2="105" y2="115" stroke="rgba(255,255,255,0.12)" stroke-width="2.5"/>
+        <line x1="108" y1="55" x2="108" y2="100" stroke="rgba(255,230,160,0.06)" stroke-width="4"/>
       </g>
+      <!-- Gradient definitions -->
+      <defs>
+        <linearGradient id="liquidGrad" x1="100" y1="56" x2="140" y2="126" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#d4a44a" stop-opacity="0.5"/>
+          <stop offset="50%" stop-color="#c4883a" stop-opacity="0.7"/>
+          <stop offset="100%" stop-color="#8b5e2a" stop-opacity="0.4"/>
+        </linearGradient>
+      </defs>
       <!-- PC Monogram -->
       <circle cx="200" cy="70" r="46" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
       <text x="200" y="77" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="32" font-weight="600" fill="rgba(255,255,255,0.45)" letter-spacing="3">PC</text>
