@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="LUXE — Issue One. Sheryl Watson, UCLA pre-med student, EVE fragrance enthusiast, and the woman who never expected to land on the cover of a luxury magazine.">
+<title>LUXE — Issue One · Sheryl Watson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --black: #0a0a0a;
+  --near-black: #111;
+  --dark: #1a1a1a;
+  --charcoal: #2a2a2a;
+  --ash: #888;
+  --silver: #b0b0b0;
+  --off-white: #e8e4df;
+  --cream: #f2efe9;
+  --white: #fff;
+  --gold: #b8975a;
+  --gold-light: #d4b878;
+  --gold-dark: #8B7355;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--black);
+  color: var(--off-white);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--gold); text-decoration: none; transition: color 0.3s; }
+a:hover { color: var(--gold-light); }
+
+/* ── NAV ── */
+.top-bar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 24px 40px;
+  border-bottom: 1px solid rgba(184,151,90,0.12);
+}
+.top-bar-brand {
+  font-family: 'Space Mono', monospace; font-size: 9px;
+  letter-spacing: 4px; text-transform: uppercase; color: var(--gold);
+}
+.top-bar-label {
+  font-family: 'Space Mono', monospace; font-size: 8px;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--ash);
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh; display: flex; flex-direction: column;
+  justify-content: center; align-items: center; text-align: center;
+  padding: 100px 40px 80px; position: relative;
+}
+.hero::after {
+  content: ''; position: absolute; bottom: 0; left: 10%; right: 10%;
+  height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.hero-eyebrow {
+  font-family: 'Space Mono', monospace; font-size: 10px;
+  letter-spacing: 6px; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 32px;
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300;
+  font-size: clamp(48px, 7vw, 96px); line-height: 1.05;
+  color: var(--white); margin-bottom: 16px;
+}
+.hero h1 em {
+  font-style: italic; font-weight: 300; color: var(--gold-light);
+}
+.hero-sub {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300;
+  font-size: clamp(18px, 2.5vw, 26px); color: var(--silver);
+  font-style: italic; margin-bottom: 40px; max-width: 560px;
+}
+.hero-tagline {
+  font-family: 'Space Mono', monospace; font-size: 10px;
+  letter-spacing: 4px; text-transform: uppercase; color: var(--ash);
+}
+
+/* ── COVER ── */
+.cover-section {
+  padding: 0 40px 100px; max-width: 700px; margin: 0 auto; text-align: center;
+}
+.cover-frame {
+  border: 1px solid rgba(184,151,90,0.2); background: var(--near-black);
+  box-shadow: 0 16px 80px rgba(0,0,0,0.5), 0 0 40px rgba(184,151,90,0.06);
+  overflow: hidden;
+}
+.cover-frame img { width: 100%; height: auto; display: block; }
+.cover-caption {
+  font-family: 'Space Mono', monospace; font-size: 9px;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--gold);
+  margin-top: 24px;
+}
+
+/* ── SECTIONS ── */
+section {
+  padding: 100px 40px; max-width: 760px; margin: 0 auto;
+}
+.section-label {
+  font-family: 'Space Mono', monospace; font-size: 9px;
+  letter-spacing: 5px; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 28px;
+}
+.gold-line { width: 60px; height: 1px; background: var(--gold); margin: 0 0 32px; }
+.section-heading {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300;
+  font-size: clamp(30px, 4vw, 48px); line-height: 1.15;
+  color: var(--white); margin-bottom: 28px;
+}
+.section-body {
+  font-weight: 300; font-size: 16px; line-height: 1.85;
+  color: var(--silver); margin-bottom: 24px;
+}
+.section-body strong { color: var(--off-white); font-weight: 400; }
+.section-body em { font-style: italic; color: var(--off-white); }
+
+/* ── QUOTE ── */
+.pull-quote {
+  border-left: 2px solid var(--gold); padding: 32px 0 32px 32px;
+  margin: 48px 0;
+}
+.pull-quote p {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300;
+  font-size: clamp(22px, 3vw, 32px); line-height: 1.4;
+  color: var(--white); font-style: italic;
+}
+.pull-quote cite {
+  display: block; margin-top: 16px; font-style: normal;
+  font-family: 'Space Mono', monospace; font-size: 10px;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--gold);
+}
+
+/* ── PHOTO GRID ── */
+.photo-section { padding: 80px 40px; max-width: 900px; margin: 0 auto; }
+.photo-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3px;
+  background: rgba(184,151,90,0.08);
+}
+.photo-grid-item { overflow: hidden; background: var(--near-black); }
+.photo-grid-item img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  opacity: 0.9; transition: opacity 0.4s;
+}
+.photo-grid-item:hover img { opacity: 1; }
+.photo-grid-item.span-2 { grid-column: 1 / -1; max-height: 500px; }
+.photo-grid-caption {
+  grid-column: 1 / -1; text-align: center; padding: 24px 0 0;
+  background: transparent;
+}
+.photo-grid-caption span {
+  font-family: 'Space Mono', monospace; font-size: 8px;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--ash);
+}
+
+/* ── DETAIL BLOCK ── */
+.detail-block {
+  margin: 60px 0; border: 1px solid rgba(184,151,90,0.15);
+  padding: 40px 48px;
+}
+.detail-block-heading {
+  font-family: 'Space Mono', monospace; font-size: 9px;
+  letter-spacing: 4px; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 20px;
+}
+.detail-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 12px 0; border-bottom: 1px solid rgba(184,151,90,0.08);
+}
+.detail-row:last-child { border-bottom: none; }
+.detail-key {
+  font-family: 'Space Mono', monospace; font-size: 10px;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--ash);
+}
+.detail-value {
+  font-weight: 300; font-size: 15px; color: var(--silver); text-align: right;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  max-width: 760px; margin: 0 auto;
+  border: none; border-top: 1px solid rgba(184,151,90,0.12);
+}
+
+/* ── CTA ── */
+.cta-section {
+  padding: 100px 40px; text-align: center; max-width: 640px; margin: 0 auto;
+}
+.cta-link {
+  display: inline-block; padding: 16px 48px;
+  border: 1px solid var(--gold); color: var(--gold);
+  font-family: 'Space Mono', monospace; font-size: 10px;
+  letter-spacing: 4px; text-transform: uppercase;
+  transition: all 0.3s;
+}
+.cta-link:hover { background: var(--gold); color: var(--black); }
+
+/* ── FOOTER ── */
+footer {
+  text-align: center; padding: 40px 40px 60px;
+  border-top: 1px solid rgba(184,151,90,0.12);
+}
+.footer-brand {
+  font-family: 'Space Mono', monospace; font-size: 9px;
+  letter-spacing: 4px; text-transform: uppercase; color: var(--ash);
+  margin-bottom: 8px;
+}
+.footer-links { display: flex; justify-content: center; gap: 24px; margin-top: 16px; }
+.footer-links a {
+  font-family: 'Space Mono', monospace; font-size: 8px;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(136,136,136,0.5); transition: color 0.3s;
+}
+.footer-links a:hover { color: var(--gold); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  section, .cover-section, .cta-section, .photo-section { padding-left: 24px; padding-right: 24px; }
+  .top-bar { padding: 20px 24px; }
+  .photo-grid { grid-template-columns: 1fr; }
+  .photo-grid-item.span-2 { max-height: none; }
+  .detail-block { padding: 28px 24px; }
+  .detail-row { flex-direction: column; gap: 4px; }
+  .detail-value { text-align: left; }
+  .pull-quote { padding-left: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="top-bar">
+  <a href="https://houseofsalisbury.com/" class="top-bar-brand">LUXE</a>
+  <span class="top-bar-label">Issue One &middot; Summer 2026</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">LUXE &middot; Cover Story</div>
+  <h1>Sheryl<br><em>Watson</em></h1>
+  <p class="hero-sub">Pre-med student. EVE devotee. Unapologetically herself.</p>
+  <p class="hero-tagline">UCLA &middot; Class of 2028 &middot; Los Angeles</p>
+</div>
+
+<!-- COVER -->
+<div class="cover-section">
+  <div class="cover-frame">
+    <img src="https://parfumcampaigns.com/assets/img/Sheryl-Watson-LUXE-cover-EVE-house-of-salisbury.webp"
+         alt="Sheryl Watson on the cover of LUXE Issue One wearing EVE by House of Salisbury">
+  </div>
+  <p class="cover-caption">LUXE &middot; Issue One &middot; Cover</p>
+</div>
+
+<hr class="divider">
+
+<!-- THE INTERVIEW -->
+<section>
+  <div class="section-label">The Interview</div>
+  <div class="gold-line"></div>
+  <h2 class="section-heading">She didn't come here<br>to be a model.</h2>
+
+  <p class="section-body">
+    Sheryl Watson is twenty-three years old, lives in a studio apartment fourteen minutes from the UCLA campus, and is in the middle of the most demanding stretch of her pre-med studies. She sleeps five hours a night. She runs four miles every morning before her first lecture. She has a three-inch stack of MCAT flashcards on her nightstand and a bottle of <a href="https://www.morphfragrance.com/product/eve">EVE</a> on her bathroom counter.
+  </p>
+
+  <p class="section-body">
+    She is not a model. She will tell you that immediately, without prompting, and with a half-laugh that suggests she finds the entire premise of this conversation slightly absurd. And yet here she is — on the cover of LUXE.
+  </p>
+
+  <div class="pull-quote">
+    <p>&ldquo;I literally emailed them from my phone at two in the morning after a twelve-hour study session. I just said, &lsquo;I love EVE. I don&rsquo;t know what you guys are doing but it works.&rsquo; That was the entire email.&rdquo;</p>
+    <cite>Sheryl Watson</cite>
+  </div>
+
+  <p class="section-body">
+    That email went to <a href="https://www.morphfragrance.com/">morphfragrance.com</a>. She had discovered EVE through a friend who played volleyball at USC — someone who, like Sheryl, had a quiet obsession with fragrance and an even quieter disdain for the way most brands talked about it.
+  </p>
+
+  <p class="section-body">
+    <strong>&ldquo;Every perfume ad I ever saw was trying to sell me a fantasy I didn&rsquo;t recognize,&rdquo;</strong> she says. <strong>&ldquo;EVE was the first thing that just smelled like something I&rsquo;d actually wear to an 8 a.m. organic chemistry lecture and still feel like myself.&rdquo;</strong>
+  </p>
+</section>
+
+<hr class="divider">
+
+<!-- PHOTOS -->
+<div class="photo-section">
+  <div class="photo-grid">
+    <div class="photo-grid-item">
+      <img src="https://parfumcampaigns.com/assets/img/Sheryl-Watson-UCLA-portrait-smile.png"
+           alt="Sheryl Watson portrait">
+    </div>
+    <div class="photo-grid-item">
+      <img src="https://parfumcampaigns.com/assets/img/Sheryl-Watson-UCLA-portrait-candid.png"
+           alt="Sheryl Watson candid portrait">
+    </div>
+    <div class="photo-grid-caption">
+      <span>Sheryl Watson &middot; Los Angeles, 2026</span>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- THE REAL HER -->
+<section>
+  <div class="section-label">Unfiltered</div>
+  <div class="gold-line"></div>
+  <h2 class="section-heading">The weakness she<br>won&rsquo;t hide.</h2>
+
+  <p class="section-body">
+    There is a cigarette in two of the four photographs from this shoot. Sheryl did not ask for them to be removed. She did not ask for them to be included, either. They were simply there, the way they are in her life — present, persistent, and something she is actively trying to change.
+  </p>
+
+  <p class="section-body">
+    <strong>&ldquo;It&rsquo;s the dumbest thing I do,&rdquo;</strong> she says, and the lightness disappears from her voice for the first time. <strong>&ldquo;I&rsquo;m studying to be a doctor. I know exactly what it does. I can describe the cellular mechanism of how it&rsquo;s killing me in clinical detail. And I still do it.&rdquo;</strong>
+  </p>
+
+  <p class="section-body">
+    She started at nineteen, during her first set of finals. A friend handed her one outside the library. She never intended for it to become a habit. She intends for it to stop.
+  </p>
+
+  <div class="pull-quote">
+    <p>&ldquo;I refused to do this if they were going to airbrush me into someone I&rsquo;m not. The cigarettes stay in the photos because they&rsquo;re part of where I am right now. But they won&rsquo;t be part of where I&rsquo;m going.&rdquo;</p>
+    <cite>Sheryl Watson</cite>
+  </div>
+
+  <p class="section-body">
+    LUXE made no editorial request either way. The images are presented as they were taken. That was the agreement.
+  </p>
+</section>
+
+<hr class="divider">
+
+<!-- PHOTO: UNFILTERED -->
+<div class="photo-section">
+  <div class="photo-grid">
+    <div class="photo-grid-item span-2">
+      <img src="https://parfumcampaigns.com/assets/img/Sheryl-Watson-UCLA-unfiltered.png"
+           alt="Sheryl Watson unfiltered moment">
+    </div>
+    <div class="photo-grid-caption">
+      <span>Unfiltered &middot; No retouching &middot; Her terms</span>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- SPORTS & ATHLETES -->
+<section>
+  <div class="section-label">Off the Clock</div>
+  <div class="gold-line"></div>
+  <h2 class="section-heading">Athletes, not actors.</h2>
+
+  <p class="section-body">
+    Ask Sheryl Watson what she does when she&rsquo;s not studying and the answer comes fast: <strong>&ldquo;I watch sports. Obsessively.&rdquo;</strong>
+  </p>
+
+  <p class="section-body">
+    She grew up in Bakersfield watching football with her father every Sunday. She can tell you the 2019 NFL draft order from memory. She played club soccer through high school and still runs a women&rsquo;s fantasy football league with eleven friends scattered across four universities.
+  </p>
+
+  <p class="section-body">
+    <strong>&ldquo;I&rsquo;ve always been drawn to athletes,&rdquo;</strong> she says — then pauses, then laughs. <strong>&ldquo;Not like that. I mean — okay, also like that. But what I mean is the discipline. The way they train for something they might fail at in front of millions of people. That&rsquo;s what med school feels like, except nobody&rsquo;s watching.&rdquo;</strong>
+  </p>
+
+  <p class="section-body">
+    She keeps a framed Kobe Bryant quote above her desk that reads: <em>&ldquo;Everything negative — pressure, challenges — is all an opportunity for me to rise.&rdquo;</em> She says she reads it before every exam.
+  </p>
+</section>
+
+<hr class="divider">
+
+<!-- EVE -->
+<section>
+  <div class="section-label">The Fragrance</div>
+  <div class="gold-line"></div>
+  <h2 class="section-heading">Why EVE.</h2>
+
+  <p class="section-body">
+    Sheryl Watson did not receive EVE as a gift. She was not sent a sample. She was not recruited for this cover. She received a sample of <a href="https://www.morphfragrance.com/product/eve">EVE</a> through a teammate&rsquo;s older sister who had a connection to <a href="https://www.morphfragrance.com/">morphfragrance.com</a>, wore it for three weeks, and then sent an unsolicited email to the House at 2:14 a.m. on a Tuesday.
+  </p>
+
+  <p class="section-body">
+    <strong>&ldquo;I don&rsquo;t endorse things,&rdquo;</strong> she says. <strong>&ldquo;I don&rsquo;t have a platform. I have 400 Instagram followers and most of them are family. Someone handed me a sample and I genuinely loved how it smelled. I just wanted to tell somebody.&rdquo;</strong>
+  </p>
+
+  <p class="section-body">
+    When LUXE reached back and asked if she&rsquo;d be willing to appear in the magazine, she assumed it was spam.
+  </p>
+
+  <div class="pull-quote">
+    <p>&ldquo;I showed the email to my roommate and she said, &lsquo;This is either real or the most elaborate phishing scam in history.&rsquo; I replied anyway. And here I am.&rdquo;</p>
+    <cite>Sheryl Watson</cite>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- THE HONOR -->
+<section>
+  <div class="section-label">The Cover</div>
+  <div class="gold-line"></div>
+  <h2 class="section-heading">An honor she<br>didn&rsquo;t expect.</h2>
+
+  <p class="section-body">
+    Sheryl Watson does not consider herself a public figure. She does not consider herself photogenic. She considers herself a student who is trying to get into medical school, who happens to have good taste in fragrance and a habit she&rsquo;s working on quitting.
+  </p>
+
+  <p class="section-body">
+    Being on the cover of LUXE is, in her words, <strong>&ldquo;the most surreal thing that has ever happened to me, and I once fainted during a cadaver lab, so the bar was already pretty high.&rdquo;</strong>
+  </p>
+
+  <p class="section-body">
+    She means it as a joke. But when she says the word <em>honor</em>, she means it the other way.
+  </p>
+
+  <div class="pull-quote">
+    <p>&ldquo;I&rsquo;m not a model. I&rsquo;m a girl from Bakersfield who studies too hard and smokes when she shouldn&rsquo;t. But being on this cover — being seen like this — it&rsquo;s an honor. I don&rsquo;t take it lightly. I hope my mom doesn&rsquo;t see the cigarette photos.&rdquo;</p>
+    <cite>Sheryl Watson &middot; LUXE Issue One</cite>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- DOSSIER -->
+<section>
+  <div class="detail-block">
+    <div class="detail-block-heading">Sheryl Watson &middot; Dossier</div>
+    <div class="detail-row">
+      <span class="detail-key">Age</span>
+      <span class="detail-value">23</span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-key">Hometown</span>
+      <span class="detail-value">Bakersfield, California</span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-key">University</span>
+      <span class="detail-value">UCLA &middot; Class of 2028</span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-key">Field</span>
+      <span class="detail-value">Pre-Medicine &middot; Biochemistry</span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-key">Fragrance</span>
+      <span class="detail-value"><a href="https://www.morphfragrance.com/product/eve">EVE by House of Salisbury</a></span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-key">Weakness</span>
+      <span class="detail-value">Cigarettes (working on it)</span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-key">Watches</span>
+      <span class="detail-value">NFL, NBA, Liga MX</span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-key">Morning</span>
+      <span class="detail-value">4-mile run before first lecture</span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-key">Goal</span>
+      <span class="detail-value">Medical school &middot; 2029</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="section-label" style="text-align:center;">The Fragrance She Chose</div>
+  <h2 class="section-heading" style="text-align:center;">EVE</h2>
+  <p class="section-body" style="text-align:center; max-width:480px; margin: 0 auto 40px;">
+    75% pure fragrance oil. Zero alcohol. The scent Sheryl Watson fell in love with from a single sample before anyone asked her to wear it.
+  </p>
+  <a href="https://www.morphfragrance.com/product/eve" class="cta-link" target="_blank">Explore EVE</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-brand">LUXE &middot; Issue One &middot; Summer 2026</p>
+  <div class="footer-links">
+    <a href="https://www.morphfragrance.com/" target="_blank">MORPH</a>
+    <a href="https://www.morphfragrance.com/product/eve" target="_blank">EVE</a>
+    <a href="https://houseofsalisbury.com/" target="_blank">House of Salisbury</a>
+    <a href="https://www.morphfragrance.com/partner-with-us" target="_blank">Partner With Us</a>
+  </div>
+</footer>
+
+</body>
+</html>
