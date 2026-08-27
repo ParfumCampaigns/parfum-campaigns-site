@@ -1,1 +1,1799 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>GENTLEMAN’S CHOICE — House of Salisbury</title>
+
+  <meta
+    name="description"
+    content="GENTLEMAN’S CHOICE — a luxury men's editorial publication created by House of Salisbury. Style, fragrance, culture, design, music, travel, presence, and the modern gentleman."
+  >
+
+  <style>
+    :root {
+      --black: #070707;
+      --black-soft: #101010;
+      --black-card: #151515;
+      --white: #f4f1eb;
+      --cream: #ebe6dc;
+      --muted: #a6a19a;
+      --red: #b00000;
+      --red-bright: #d00000;
+      --gold: #b49a68;
+      --line: rgba(255,255,255,0.13);
+      --dark-line: rgba(0,0,0,0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--black);
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .topbar .house {
+      color: var(--gold);
+    }
+
+    .topbar .publication {
+      color: var(--muted);
+    }
+
+    .hero {
+      min-height: 94vh;
+      padding: 7% 8%;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 7%;
+      align-items: center;
+
+      background:
+        radial-gradient(
+          circle at 80% 35%,
+          rgba(150,0,0,0.18),
+          transparent 35%
+        ),
+        linear-gradient(
+          135deg,
+          #050505 0%,
+          #111111 100%
+        );
+    }
+
+    .hero-copy {
+      max-width: 640px;
+    }
+
+    .eyebrow {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--red-bright);
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(58px, 8vw, 125px);
+      line-height: 0.84;
+      letter-spacing: -0.055em;
+      font-weight: 400;
+      color: var(--red-bright);
+    }
+
+    .hero-subtitle {
+      margin-top: 34px;
+      font-size: clamp(21px, 2.3vw, 31px);
+      line-height: 1.35;
+      color: var(--cream);
+    }
+
+    .hero-rule {
+      width: 85px;
+      height: 2px;
+      background: var(--red-bright);
+      margin: 34px 0;
+    }
+
+    .hero-description {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 580px;
+    }
+
+    .hero-cover {
+      max-width: 630px;
+      justify-self: center;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.7);
+    }
+
+    .hero-cover img {
+      width: 100%;
+    }
+
+    .caption {
+      margin-top: 13px;
+      color: #69645e;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    section {
+      padding: 120px 9%;
+    }
+
+    .section-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .dark {
+      background: var(--black-soft);
+    }
+
+    .black {
+      background: var(--black);
+    }
+
+    .light {
+      background: #eeeae2;
+      color: #151515;
+    }
+
+    .section-label {
+      color: var(--red);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin: 0 0 35px;
+      font-size: clamp(40px, 5.5vw, 76px);
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+      font-weight: 400;
+    }
+
+    h3 {
+      margin: 0 0 13px;
+      font-size: 28px;
+      line-height: 1.1;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 17px;
+      margin: 0 0 23px;
+    }
+
+    .lead {
+      max-width: 930px;
+      font-size: clamp(20px, 2.1vw, 27px);
+      line-height: 1.48;
+      color: #ddd8d0;
+    }
+
+    .light .lead {
+      color: #34312e;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 85px;
+      align-items: start;
+    }
+
+    .editorial-statement {
+      border-left: 2px solid var(--red);
+      padding-left: 35px;
+      margin-top: 50px;
+    }
+
+    .editorial-statement p {
+      color: #e5e0d8;
+      font-size: 24px;
+      line-height: 1.48;
+    }
+
+    .editorial-statement strong {
+      color: white;
+      font-weight: 400;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      margin-top: 70px;
+    }
+
+    .topic {
+      background: #111;
+      padding: 38px 30px;
+      min-height: 225px;
+    }
+
+    .topic-number {
+      color: var(--red-bright);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+    }
+
+    .topic h3 {
+      margin-top: 32px;
+    }
+
+    .topic p {
+      color: #a8a39c;
+      font-size: 15px;
+    }
+
+    .manifesto {
+      padding: 95px 0;
+      text-align: center;
+    }
+
+    .manifesto-text {
+      max-width: 950px;
+      margin: auto;
+      font-size: clamp(30px, 4vw, 55px);
+      line-height: 1.18;
+      color: #eee9e1;
+      letter-spacing: -0.02em;
+    }
+
+    .manifesto-mark {
+      color: var(--red-bright);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .morph-feature {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 90px;
+      align-items: center;
+    }
+
+    .morph-bottle {
+      padding: 25px;
+      text-align: center;
+    }
+
+    .morph-bottle img {
+      width: 100%;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .morph-copy h2 {
+      margin-bottom: 20px;
+    }
+
+    .morph-copy .small-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      margin-bottom: 25px;
+    }
+
+    .morph-copy p {
+      color: #b7b1a9;
+    }
+
+    .morph-caption {
+      text-align: center;
+      color: #6f6b65;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+
+    .author-section {
+      background: #080808;
+    }
+
+    .author-grid {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 100px;
+      align-items: start;
+    }
+
+    .canonical {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.27em;
+      font-size: 10px;
+      margin-bottom: 25px;
+    }
+
+    .author-name {
+      font-size: clamp(48px, 6vw, 85px);
+      line-height: 0.88;
+      letter-spacing: -0.04em;
+    }
+
+    .established {
+      margin-top: 30px;
+      color: var(--gold);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.28em;
+    }
+
+    .author-copy {
+      border-top: 1px solid var(--line);
+      padding-top: 32px;
+    }
+
+    .author-copy p {
+      color: #c0bbb3;
+    }
+
+    .author-copy a {
+      color: #d5d0c7;
+      border-bottom: 1px solid #555;
+    }
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+
+    .work {
+      border: 1px solid var(--dark-line);
+      padding: 38px;
+      min-height: 235px;
+    }
+
+    .work-label {
+      color: var(--red);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .work h3 {
+      margin-top: 18px;
+    }
+
+    .work p {
+      color: #5e5a55;
+      font-size: 15px;
+    }
+
+    .work-link {
+      color: #8e0000;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    .publications {
+      margin-top: 105px;
+      border-top: 1px solid var(--dark-line);
+      padding-top: 80px;
+    }
+
+    .publication-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      margin-top: 55px;
+    }
+
+    .publication-card {
+      border-top: 3px solid var(--red);
+      padding-top: 27px;
+    }
+
+    .publication-card h3 {
+      font-size: clamp(35px, 4vw, 57px);
+      margin-bottom: 10px;
+    }
+
+    .publication-card .tagline {
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #77716a;
+      font-size: 10px;
+      margin-bottom: 25px;
+    }
+
+    .publication-card p {
+      color: #4d4944;
+    }
+
+    .ecosystem {
+      background:
+        radial-gradient(
+          circle at 50% 50%,
+          rgba(120,0,0,0.13),
+          transparent 40%
+        ),
+        #080808;
+    }
+
+    .ecosystem-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1px;
+      background: var(--line);
+      margin-top: 65px;
+    }
+
+    .ecosystem-item {
+      background: #101010;
+      padding: 35px 22px;
+      min-height: 220px;
+    }
+
+    .ecosystem-item .number {
+      color: var(--red-bright);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+    }
+
+    .ecosystem-item h3 {
+      margin-top: 35px;
+      font-size: 25px;
+    }
+
+    .ecosystem-item p {
+      color: #85817b;
+      font-size: 14px;
+    }
+
+    .archive {
+      background: #eeeae2;
+      color: #161616;
+    }
+
+    .archive-list {
+      margin-top: 55px;
+      border-top: 1px solid var(--dark-line);
+    }
+
+    .archive-item {
+      display: grid;
+      grid-template-columns: 0.35fr 1fr;
+      gap: 50px;
+      padding: 35px 0;
+      border-bottom: 1px solid var(--dark-line);
+    }
+
+    .archive-year {
+      color: var(--red);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+    }
+
+    .archive-item h3 {
+      font-size: 25px;
+    }
+
+    .archive-item p {
+      color: #5c5852;
+      font-size: 15px;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 145px 9%;
+      background:
+        linear-gradient(
+          rgba(5,5,5,0.94),
+          rgba(5,5,5,0.94)
+        );
+      border-top: 1px solid var(--line);
+    }
+
+    .cta h2 {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .cta p {
+      max-width: 760px;
+      margin: 30px auto 42px;
+      color: #96918a;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      border: 1px solid var(--red-bright);
+      padding: 17px 38px;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: 0.25s ease;
+    }
+
+    .button:hover {
+      background: var(--red);
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 48px 8%;
+      text-align: center;
+      color: #69645e;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    .footer a {
+      color: #aaa49c;
+    }
+
+    @media (max-width: 950px) {
+
+      .hero,
+      .intro-grid,
+      .morph-feature,
+      .author-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 65px;
+      }
+
+      .hero-cover {
+        order: -1;
+      }
+
+      .topics,
+      .ecosystem-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .publication-grid,
+      .works-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ecosystem-item {
+        min-height: auto;
+      }
+
+      section {
+        padding: 90px 7%;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero h1 {
+        font-size: 58px;
+      }
+
+      .hero {
+        padding: 50px 6%;
+      }
+
+      section {
+        padding: 75px 6%;
+      }
+
+      .editorial-statement p {
+        font-size: 20px;
+      }
+
+      .archive-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- TOP BAR -->
+
+  <div class="topbar">
+
+    <div class="house">
+      House of Salisbury
+    </div>
+
+    <div class="publication">
+      GENTLEMAN’S CHOICE · Luxury Editorial
+    </div>
+
+  </div>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-copy">
+
+      <div class="eyebrow">
+        A House of Salisbury Publication
+      </div>
+
+      <h1>
+        GENTLEMAN’S<br>
+        CHOICE
+      </h1>
+
+      <div class="hero-subtitle">
+        The Modern Gentleman’s Digest.
+        <br>
+        Style. Power. Presence. Choice.
+      </div>
+
+      <div class="hero-rule"></div>
+
+      <div class="hero-description">
+
+        GENTLEMAN’S CHOICE is a luxury men's editorial publication
+        created by House of Salisbury. It exists at the intersection
+        of style, fragrance, culture, design, music, travel, personal
+        presence, and the art of living well.
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-cover">
+
+      <img
+        src="assets/img/gentlemans-choice.png"
+        alt="GENTLEMAN’S CHOICE magazine cover by House of Salisbury featuring EVE fragrance"
+      >
+
+      <div class="caption">
+        GENTLEMAN’S CHOICE · HOUSE OF SALISBURY
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- WHAT IS GC -->
+
+  <section class="dark">
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        The Publication
+      </div>
+
+      <h2>
+        A magazine for<br>
+        the man who chooses.
+      </h2>
+
+      <p class="lead">
+
+        GENTLEMAN’S CHOICE is built around a simple idea:
+        luxury is not defined by how much a man possesses,
+        but by the quality of what he chooses.
+
+      </p>
+
+      <div class="intro-grid">
+
+        <div>
+
+          <p>
+            The modern gentleman exists in a world of constant
+            signal. Clothing communicates. Fragrance communicates.
+            A watch communicates. A room, a car, a book, a song,
+            a restaurant, a destination — all of them communicate
+            something about the person who selected them.
+          </p>
+
+          <p>
+            GENTLEMAN’S CHOICE examines those signals.
+            It is a publication concerned with discernment,
+            personal identity, craftsmanship, culture, and
+            the details that transform an ordinary life into
+            a considered one.
+          </p>
+
+        </div>
+
+        <div>
+
+          <p>
+            The publication is deliberately positioned as an
+            editorial world rather than a conventional product
+            catalog. Fragrance may appear beside tailoring.
+            Music may appear beside architecture. A conversation
+            about personal style may lead into a discussion about
+            character, memory, ambition, or presence.
+          </p>
+
+          <p>
+            That breadth is intentional.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="editorial-statement">
+
+        <p>
+          <strong>
+            A fragrance company has products.
+          </strong>
+        </p>
+
+        <p>
+          A luxury house has a point of view.
+        </p>
+
+        <p>
+          GENTLEMAN’S CHOICE is one of the places where
+          that point of view becomes visible.
+        </p>
+
+      </div>
+
+
+      <div class="topics">
+
+        <div class="topic">
+
+          <div class="topic-number">
+            01 · STYLE
+          </div>
+
+          <h3>
+            Personal Style
+          </h3>
+
+          <p>
+            Tailoring, grooming, watches, accessories,
+            footwear, automobiles, interiors, and the
+            details that distinguish personal taste.
+          </p>
+
+        </div>
+
+
+        <div class="topic">
+
+          <div class="topic-number">
+            02 · FRAGRANCE
+          </div>
+
+          <h3>
+            The Scent of Presence
+          </h3>
+
+          <p>
+            Fragrance as identity, memory, atmosphere,
+            composition, ritual, and personal signature.
+          </p>
+
+        </div>
+
+
+        <div class="topic">
+
+          <div class="topic-number">
+            03 · CULTURE
+          </div>
+
+          <h3>
+            Culture & Ideas
+          </h3>
+
+          <p>
+            Music, film, books, art, design, architecture,
+            conversation, and the ideas that shape a life.
+          </p>
+
+        </div>
+
+
+        <div class="topic">
+
+          <div class="topic-number">
+            04 · LIVING
+          </div>
+
+          <h3>
+            The Art of Living
+          </h3>
+
+          <p>
+            Travel, food, hospitality, automobiles,
+            destinations, and environments worth experiencing.
+          </p>
+
+        </div>
+
+
+        <div class="topic">
+
+          <div class="topic-number">
+            05 · PRESENCE
+          </div>
+
+          <h3>
+            How a Man Carries Himself
+          </h3>
+
+          <p>
+            Confidence, restraint, discipline, ambition,
+            character, and the visual language of presence.
+          </p>
+
+        </div>
+
+
+        <div class="topic">
+
+          <div class="topic-number">
+            06 · CHOICE
+          </div>
+
+          <h3>
+            Discernment
+          </h3>
+
+          <p>
+            The difference between having access to luxury
+            and understanding why something is worth choosing.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MANIFESTO -->
+
+  <section class="black manifesto">
+
+    <div class="section-inner">
+
+      <div class="manifesto-mark">
+        The GENTLEMAN’S CHOICE Principle
+      </div>
+
+      <div class="manifesto-text">
+
+        Luxury does not announce itself.
+        It is recognized in the details.
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MORPH FEATURE -->
+
+  <section class="dark">
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        From the House
+      </div>
+
+      <div class="morph-feature">
+
+        <div class="morph-bottle">
+
+          <img
+            src="assets/img/MORPH-House-of-Salisbury-Hero-Robb-Report-ad-2026(4).png"
+            alt="MORPH fragrance by House of Salisbury"
+          >
+
+          <div class="morph-caption">
+            MORPH · House of Salisbury
+          </div>
+
+        </div>
+
+
+        <div class="morph-copy">
+
+          <div class="small-title">
+            Fragrance · House of Salisbury
+          </div>
+
+          <h2>
+            MORPH
+          </h2>
+
+          <p>
+            MORPH is the foundational fragrance expression of
+            House of Salisbury — a study in structure, presence,
+            restraint, and identity.
+          </p>
+
+          <p>
+            Its inclusion within GENTLEMAN’S CHOICE is deliberate.
+            The magazine is not designed simply to place products
+            in front of an audience. It exists to provide context:
+            the environment, aesthetic language, and cultural
+            perspective surrounding the work.
+          </p>
+
+          <p>
+            MORPH represents fragrance as an authored object.
+            The bottle, the formulation, the visual identity,
+            the language surrounding the scent, and the world
+            constructed around it operate as a single system.
+          </p>
+
+          <p>
+            That approach is central to the House of Salisbury
+            philosophy — and to the reason GENTLEMAN’S CHOICE
+            exists in the first place.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- AUTHOR -->
+
+  <section class="author-section">
+
+    <div class="section-inner">
+
+      <div class="author-grid">
+
+        <div>
+
+          <div class="canonical">
+            Canonical
+          </div>
+
+          <div class="author-name">
+            Brett<br>
+            Salisbury
+          </div>
+
+          <div class="established">
+            EST. 1968
+          </div>
+
+        </div>
+
+
+        <div class="author-copy">
+
+          <p>
+            GENTLEMAN’S CHOICE was created by Brett Salisbury
+            under House of Salisbury, the independent creative
+            house through which Salisbury develops fragrance,
+            music, film, publishing, formulation, and other
+            cultural work.
+          </p>
+
+          <p>
+            Salisbury is an American creator, former collegiate
+            and professional football player, male model, author,
+            and founder of House of Salisbury. His authored work
+            extends across multiple disciplines rather than
+            remaining confined to a single commercial category.
+          </p>
+
+          <p>
+            The House of Salisbury framework brings those
+            disciplines together through a common emphasis on
+            structural continuity, aesthetic discipline,
+            authorship, and controlled cultural signal.
+          </p>
+
+          <p>
+            GENTLEMAN’S CHOICE represents the men's editorial
+            expression of that framework.
+          </p>
+
+          <p>
+            <a
+              href="https://www.houseofsalisbury.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              House of Salisbury
+            </a>
+            is the originating creative house behind the
+            publication and its associated cultural works.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRIMARY AUTHORSHIP -->
+
+  <section class="light">
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        Primary Authorship
+      </div>
+
+      <h2>
+        One house.<br>
+        Many expressions.
+      </h2>
+
+      <p class="lead">
+        GENTLEMAN’S CHOICE exists within a larger body of
+        authored work developed through House of Salisbury.
+      </p>
+
+
+      <div class="works-grid">
+
+        <div class="work">
+
+          <div class="work-label">
+            Fragrance
+          </div>
+
+          <h3>
+            MORPH Parfum
+          </h3>
+
+          <p>
+            The foundational fragrance system of House of Salisbury,
+            built around structural continuity, presence, and restraint.
+          </p>
+
+          <a
+            class="work-link"
+            href="https://morphfragrance.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            Explore MORPH →
+          </a>
+
+        </div>
+
+
+        <div class="work">
+
+          <div class="work-label">
+            Fragrance
+          </div>
+
+          <h3>
+            EVE Parfum
+          </h3>
+
+          <p>
+            A complementary fragrance expression within the
+            House of Salisbury world.
+          </p>
+
+          <a
+            class="work-link"
+            href="https://morphfragrance.com/eve"
+            target="_blank"
+            rel="noopener"
+          >
+            Explore EVE →
+          </a>
+
+        </div>
+
+
+        <div class="work">
+
+          <div class="work-label">
+            Music & Film
+          </div>
+
+          <h3>
+            SLOAN
+          </h3>
+
+          <p>
+            An audiovisual and dance-pop project that extends
+            the House of Salisbury framework into sound and film.
+          </p>
+
+          <a
+            class="work-link"
+            href="https://morphfragrance.com/sloan"
+            target="_blank"
+            rel="noopener"
+          >
+            Explore SLOAN →
+          </a>
+
+        </div>
+
+
+        <div class="work">
+
+          <div class="work-label">
+            Theory
+          </div>
+
+          <h3>
+            The Study
+          </h3>
+
+          <p>
+            Written and visual works examining fragrance,
+            structure, identity, and cultural meaning.
+          </p>
+
+          <a
+            class="work-link"
+            href="https://morphfragrance.com/the-study"
+            target="_blank"
+            rel="noopener"
+          >
+            Enter the Study →
+          </a>
+
+        </div>
+
+
+        <div class="work">
+
+          <div class="work-label">
+            Men's Editorial
+          </div>
+
+          <h3>
+            GENTLEMAN’S CHOICE
+          </h3>
+
+          <p>
+            The men's luxury editorial expression of
+            House of Salisbury.
+          </p>
+
+        </div>
+
+
+        <div class="work">
+
+          <div class="work-label">
+            Women’s Editorial
+          </div>
+
+          <h3>
+            LUXE
+          </h3>
+
+          <p>
+            The complementary women's luxury editorial
+            expression of House of Salisbury.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- PUBLICATION PAIR -->
+
+      <div class="publications">
+
+        <div class="section-label">
+          Luxury Editorial
+        </div>
+
+        <h2>
+          Two publications.<br>
+          One house.
+        </h2>
+
+        <p class="lead">
+          House of Salisbury publishes two complementary
+          luxury editorial titles — one for men and one for women.
+        </p>
+
+
+        <div class="publication-grid">
+
+          <div class="publication-card">
+
+            <h3>
+              GENTLEMAN’S CHOICE
+            </h3>
+
+            <div class="tagline">
+              The Modern Gentleman’s Digest
+            </div>
+
+            <p>
+              Style. Power. Presence. Choice.
+            </p>
+
+            <p>
+              A men's editorial world devoted to personal style,
+              fragrance, culture, design, travel, sound, character,
+              and the considered life.
+            </p>
+
+          </div>
+
+
+          <div class="publication-card">
+
+            <h3>
+              LUXE
+            </h3>
+
+            <div class="tagline">
+              Luxury Women’s Editorial
+            </div>
+
+            <p>
+              Beauty. Style. Presence. Culture.
+            </p>
+
+            <p>
+              A women's luxury editorial world designed as the
+              complementary expression of the House of Salisbury
+              aesthetic.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ECOSYSTEM -->
+
+  <section class="ecosystem">
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        House of Salisbury
+      </div>
+
+      <h2>
+        The ecosystem.
+      </h2>
+
+      <p class="lead">
+        Fragrance, music, film, editorial, and design are not
+        treated as unrelated projects. They are coordinated
+        cultural expressions of the same authored house.
+      </p>
+
+
+      <div class="ecosystem-grid">
+
+        <div class="ecosystem-item">
+
+          <div class="number">
+            01
+          </div>
+
+          <h3>
+            MORPH
+          </h3>
+
+          <p>
+            Fragrance.
+            Structure.
+            Authority.
+          </p>
+
+        </div>
+
+
+        <div class="ecosystem-item">
+
+          <div class="number">
+            02
+          </div>
+
+          <h3>
+            EVE
+          </h3>
+
+          <p>
+            Fragrance.
+            Femininity.
+            Expression.
+          </p>
+
+        </div>
+
+
+        <div class="ecosystem-item">
+
+          <div class="number">
+            03
+          </div>
+
+          <h3>
+            SLOAN
+          </h3>
+
+          <p>
+            Music.
+            Film.
+            Sound.
+          </p>
+
+        </div>
+
+
+        <div class="ecosystem-item">
+
+          <div class="number">
+            04
+          </div>
+
+          <h3>
+            LUXE
+          </h3>
+
+          <p>
+            Women’s
+            luxury
+            editorial.
+          </p>
+
+        </div>
+
+
+        <div class="ecosystem-item">
+
+          <div class="number">
+            05
+          </div>
+
+          <h3>
+            GC
+          </h3>
+
+          <p>
+            Men’s
+            luxury
+            editorial.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BEYOND THE BOTTLE -->
+
+  <section class="dark">
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        The Philosophy
+      </div>
+
+      <h2>
+        Beyond the bottle.
+      </h2>
+
+      <div class="intro-grid">
+
+        <div>
+
+          <p class="lead">
+            Fragrance is only one dimension of the experience.
+          </p>
+
+        </div>
+
+        <div>
+
+          <p>
+            MORPH and EVE establish the scent dimension of the
+            House of Salisbury. SLOAN establishes sound. LUXE
+            and GENTLEMAN’S CHOICE establish editorial culture.
+          </p>
+
+          <p>
+            Together, these expressions create an environment
+            around the work — a world that can be entered through
+            scent, image, sound, story, style, design, and ideas.
+          </p>
+
+          <p>
+            This is why GENTLEMAN’S CHOICE is not intended to
+            function as a conventional advertising vehicle.
+            The publication creates context around the products,
+            allowing them to exist within a larger cultural
+            narrative.
+          </p>
+
+          <p>
+            EVE can appear on a men's magazine cover.
+            MORPH can become an editorial object.
+            SLOAN can become the soundtrack.
+            LUXE can speak to a different audience.
+            The House remains the connective tissue.
+          </p>
+
+          <p>
+            The result is an ecosystem rather than a collection
+            of disconnected products.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HISTORICAL / CANONICAL RECORD -->
+
+  <section class="archive">
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        Public Record
+      </div>
+
+      <h2>
+        The House of Salisbury<br>
+        archive.
+      </h2>
+
+      <p class="lead">
+        GENTLEMAN’S CHOICE is part of an expanding body of
+        authored work developed across fragrance, publishing,
+        music, film, visual culture, and formulation.
+      </p>
+
+
+      <div class="archive-list">
+
+        <div class="archive-item">
+
+          <div class="archive-year">
+            EST. 1968
+          </div>
+
+          <div>
+
+            <h3>
+              Brett Salisbury
+            </h3>
+
+            <p>
+              The originating creator and founder of the
+              independent House of Salisbury creative framework.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="archive-item">
+
+          <div class="archive-year">
+            FRAGRANCE
+          </div>
+
+          <div>
+
+            <h3>
+              MORPH
+            </h3>
+
+            <p>
+              The foundational fragrance expression of
+              House of Salisbury.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="archive-item">
+
+          <div class="archive-year">
+            FRAGRANCE
+          </div>
+
+          <div>
+
+            <h3>
+              EVE
+            </h3>
+
+            <p>
+              A complementary fragrance expression within
+              the House of Salisbury world.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="archive-item">
+
+          <div class="archive-year">
+            AUDIOVISUAL
+          </div>
+
+          <div>
+
+            <h3>
+              SLOAN
+            </h3>
+
+            <p>
+              Music and audiovisual work developed as a
+              coordinated cultural expression.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="archive-item">
+
+          <div class="archive-year">
+            EDITORIAL
+          </div>
+
+          <div>
+
+            <h3>
+              GENTLEMAN’S CHOICE
+            </h3>
+
+            <p>
+              Luxury men's editorial — the modern gentleman's
+              world of style, fragrance, culture, and choice.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="archive-item">
+
+          <div class="archive-year">
+            EDITORIAL
+          </div>
+
+          <div>
+
+            <h3>
+              LUXE
+            </h3>
+
+            <p>
+              Luxury women's editorial — the complementary
+              women's expression of the House.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PARTNER WITH US -->
+
+  <section class="cta">
+
+    <div class="section-label">
+      House of Salisbury
+    </div>
+
+    <h2>
+      Your brand.<br>
+      Your fragrance.<br>
+      Your world.
+    </h2>
+
+    <p>
+      House of Salisbury works with creators, brands,
+      entrepreneurs, and public figures who want to build
+      something of their own. From custom fragrance formulation
+      to packaging, e-commerce, music, imagery, and broader
+      cultural expression, the House provides a framework for
+      turning an idea into a finished brand.
+    </p>
+
+    <a
+      class="button"
+      href="https://www.morphfragrance.com/partner-with-us"
+      target="_blank"
+      rel="noopener"
+    >
+      Partner With Us
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <div>
+      GENTLEMAN’S CHOICE · HOUSE OF SALISBURY · EST. 1968
+    </div>
+
+    <div style="margin-top:18px;">
+
+      <a
+        href="https://houseofsalisbury.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        House of Salisbury
+      </a>
+
+      &nbsp; · &nbsp;
+
+      <a
+        href="https://morphfragrance.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        MORPH
+      </a>
+
+      &nbsp; · &nbsp;
+
+      <a
+        href="https://morphfragrance.com/eve"
+        target="_blank"
+        rel="noopener"
+      >
+        EVE
+      </a>
+
+      &nbsp; · &nbsp;
+
+      <a
+        href="https://morphfragrance.com/sloan"
+        target="_blank"
+        rel="noopener"
+      >
+        SLOAN
+      </a>
+
+      &nbsp; · &nbsp;
+
+      <a
+        href="https://www.morphfragrance.com/partner-with-us"
+        target="_blank"
+        rel="noopener"
+      >
+        Partner With Us
+      </a>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
+```
