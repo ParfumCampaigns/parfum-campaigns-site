@@ -7,22 +7,31 @@
 <title>GENTLEMAN’S CHOICE — House of Salisbury</title>
 
 <meta name="description"
-content="GENTLEMAN’S CHOICE — the modern gentleman’s luxury editorial by House of Salisbury and Brett Salisbury. Style, fragrance, culture, design, music, travel, presence and choice.">
+content="GENTLEMAN’S CHOICE — a luxury men's editorial publication created by House of Salisbury. Style, fragrance, culture, design, music, travel, presence and choice.">
 
 <style>
 
+/* =========================================================
+   FOUNDATION
+========================================================= */
+
 :root {
-  --black: #070707;
-  --black-2: #0d0d0d;
-  --black-3: #151515;
-  --ivory: #eeeae2;
-  --ivory-dark: #d9d3c9;
-  --silver: #d9d9d9;
-  --silver-bright: #f4f4f4;
-  --silver-dark: #8d8d8d;
-  --muted: #99958f;
-  --line: rgba(255,255,255,.13);
-  --dark-line: rgba(0,0,0,.14);
+  --black: #050505;
+  --black-soft: #0b0b0b;
+  --black-card: #111111;
+
+  --ivory: #f0ece4;
+  --ivory-soft: #ddd8cf;
+
+  --silver: #c9c9c9;
+  --silver-light: #eeeeee;
+  --silver-dark: #8b8b8b;
+
+  --gray: #9b9791;
+  --gray-dark: #696661;
+
+  --line: rgba(255,255,255,.14);
+  --dark-line: rgba(0,0,0,.16);
 }
 
 * {
@@ -35,9 +44,13 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
+
   background: var(--black);
   color: var(--ivory);
+
   font-family: Georgia, "Times New Roman", serif;
+
   line-height: 1.75;
 }
 
@@ -51,28 +64,37 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  opacity: .78;
+}
+
 
 /* =========================================================
    TOP BAR
 ========================================================= */
 
 .topbar {
-  height: 62px;
-  border-bottom: 1px solid var(--line);
+  min-height: 62px;
+
   padding: 0 7%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 9px;
-  letter-spacing: .25em;
-  text-transform: uppercase;
+  border-bottom: 1px solid var(--line);
+
+  background: #050505;
 
   color: var(--silver-dark);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
 }
 
-.topbar .house {
+.topbar a {
   color: var(--silver);
 }
 
@@ -82,36 +104,44 @@ a {
 ========================================================= */
 
 .hero {
-  min-height: 92vh;
+  min-height: 94vh;
 
-  padding: 80px 8% 95px;
+  padding: 90px 8% 100px;
 
   display: grid;
-  grid-template-columns: .88fr 1.12fr;
-  gap: 7%;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(390px, .76fr);
+
+  gap: clamp(55px, 8vw, 125px);
 
   align-items: center;
 
+  overflow: hidden;
+
   background:
     radial-gradient(
-      circle at 78% 40%,
-      rgba(255,255,255,.075),
-      transparent 31%
+      circle at 80% 48%,
+      rgba(255,255,255,.055),
+      transparent 30%
     ),
     linear-gradient(
       115deg,
-      #050505 0%,
-      #0b0b0b 55%,
+      #040404 0%,
+      #090909 57%,
       #111111 100%
     );
 }
 
 .hero-copy {
-  max-width: 650px;
+  min-width: 0;
+  width: 100%;
+  max-width: 720px;
 }
 
 .eyebrow {
-  margin-bottom: 28px;
+  margin-bottom: 29px;
 
   color: var(--silver-dark);
 
@@ -124,30 +154,38 @@ a {
 .hero h1 {
   margin: 0;
 
-  font-size: clamp(62px, 8vw, 125px);
-  line-height: .82;
-  letter-spacing: -.055em;
+  max-width: 700px;
+
+  font-size: clamp(52px, 6.2vw, 104px);
+
+  line-height: .83;
+
+  letter-spacing: -.05em;
+
   font-weight: 400;
 
-  color: var(--silver-bright);
+  color: var(--silver-light);
 
   text-shadow:
     0 1px 0 #ffffff,
-    0 2px 7px rgba(255,255,255,.18),
-    0 12px 35px rgba(0,0,0,.8);
+    0 2px 8px rgba(255,255,255,.18),
+    0 15px 40px rgba(0,0,0,.9);
 }
 
 .hero-subtitle {
-  margin-top: 38px;
+  margin-top: 39px;
+
+  max-width: 650px;
 
   color: var(--ivory);
 
-  font-size: clamp(21px, 2.2vw, 30px);
+  font-size: clamp(20px, 2.1vw, 29px);
+
   line-height: 1.35;
 }
 
 .hero-rule {
-  width: 95px;
+  width: 100px;
   height: 1px;
 
   margin: 35px 0;
@@ -156,45 +194,55 @@ a {
     linear-gradient(
       90deg,
       #ffffff,
-      #888888,
+      #777777,
       #ffffff
     );
 
-  box-shadow: 0 0 8px rgba(255,255,255,.25);
+  box-shadow:
+    0 0 8px rgba(255,255,255,.18);
 }
 
 .hero-description {
-  max-width: 575px;
+  max-width: 610px;
 
-  color: #aaa69f;
+  color: #aaa59e;
 
   font-size: 16px;
-  line-height: 1.8;
+
+  line-height: 1.85;
+}
+
+.hero-cover-wrap {
+  min-width: 0;
+  width: 100%;
+
+  justify-self: end;
 }
 
 .hero-cover {
   width: 100%;
-  max-width: 610px;
+  max-width: 555px;
 
-  justify-self: center;
+  margin-left: auto;
 
   box-shadow:
-    0 35px 90px rgba(0,0,0,.75),
-    0 0 1px rgba(255,255,255,.25);
+    0 35px 90px rgba(0,0,0,.8),
+    0 0 1px rgba(255,255,255,.3);
 }
 
 .hero-cover img {
   width: 100%;
+  height: auto;
 }
 
-.caption {
-  margin-top: 13px;
+.cover-caption {
+  margin-top: 14px;
 
   color: #68645e;
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 8px;
-  letter-spacing: .2em;
+  letter-spacing: .22em;
   text-transform: uppercase;
 }
 
@@ -208,12 +256,13 @@ section {
 }
 
 .section-inner {
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
 .dark {
-  background: var(--black-2);
+  background: var(--black-soft);
 }
 
 .black {
@@ -226,34 +275,29 @@ section {
 }
 
 .section-label {
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 
   color: var(--silver-dark);
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 9px;
-  letter-spacing: .34em;
+  letter-spacing: .36em;
   text-transform: uppercase;
 }
 
 .light .section-label {
-  color: #77736d;
+  color: #77726b;
 }
 
 h2 {
   margin: 0 0 38px;
 
-  font-size: clamp(43px, 5.5vw, 78px);
-  line-height: .96;
-  letter-spacing: -.04em;
-  font-weight: 400;
-}
+  font-size: clamp(45px, 5.5vw, 82px);
 
-h3 {
-  margin: 0 0 14px;
+  line-height: .94;
 
-  font-size: 28px;
-  line-height: 1.12;
+  letter-spacing: -.045em;
+
   font-weight: 400;
 }
 
@@ -266,9 +310,10 @@ p {
 .lead {
   max-width: 900px;
 
-  color: #d8d3cb;
+  color: #d7d2ca;
 
-  font-size: clamp(21px, 2vw, 28px);
+  font-size: clamp(21px, 2vw, 29px);
+
   line-height: 1.5;
 }
 
@@ -285,71 +330,80 @@ p {
   display: grid;
 
   grid-template-columns:
-    1.15fr
-    .85fr;
+    1.05fr
+    .95fr;
 
-  gap: 90px;
+  gap: clamp(60px, 9vw, 125px);
 
   align-items: start;
 }
 
-.editorial-opening p {
-  color: #b6b1aa;
+.editorial-opening-copy p {
+  color: #aaa59f;
+}
+
+.editorial-opening-copy a {
+  color: #dedad3;
+
+  border-bottom: 1px solid #666;
 }
 
 .editorial-note {
-  padding-top: 8px;
+  margin-top: 75px;
+
+  padding-top: 27px;
 
   border-top: 1px solid var(--line);
 }
 
-.editorial-note .number {
-  margin-bottom: 30px;
+.editorial-note-number {
+  margin-bottom: 25px;
 
   color: var(--silver-dark);
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 9px;
-  letter-spacing: .25em;
+  letter-spacing: .28em;
+  text-transform: uppercase;
 }
 
-.editorial-note .large {
-  color: var(--silver-bright);
+.editorial-note-quote {
+  max-width: 700px;
 
-  font-size: 31px;
-  line-height: 1.3;
+  color: var(--silver-light);
+
+  font-size: clamp(27px, 3.2vw, 43px);
+
+  line-height: 1.25;
 }
 
 
 /* =========================================================
-   EDITORIAL IMAGE SPREAD
+   FULL EDITORIAL IMAGE SPREAD
 ========================================================= */
 
-.image-spread {
+.editorial-spread {
   display: grid;
 
   grid-template-columns:
-    .7fr
-    1.3fr;
+    .72fr
+    1.28fr;
 
-  gap: 0;
+  min-height: 720px;
 
-  min-height: 680px;
-
-  background: #111;
+  background: #101010;
 }
 
-.image-spread-image {
-  min-height: 680px;
+.editorial-spread-image {
+  min-height: 720px;
 
   background:
-    #151515
     url("../img/Model-Alessandro-Vieri.jpg")
     center center / cover no-repeat;
 }
 
-.image-spread-copy {
-  padding: 85px 75px;
+.editorial-spread-copy {
+  padding: 85px 8%;
 
   display: flex;
   flex-direction: column;
@@ -358,63 +412,64 @@ p {
   background:
     linear-gradient(
       135deg,
-      #111111,
-      #191919
+      #101010,
+      #181818
     );
 }
 
-.image-spread-copy .issue {
-  margin-bottom: 45px;
+.editorial-spread-category {
+  margin-bottom: 43px;
 
   color: var(--silver-dark);
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 9px;
-  letter-spacing: .3em;
+  letter-spacing: .31em;
   text-transform: uppercase;
 }
 
-.image-spread-copy h2 {
-  color: var(--silver-bright);
+.editorial-spread-copy h2 {
+  color: var(--silver-light);
 
-  font-size: clamp(48px, 6vw, 84px);
+  font-size: clamp(48px, 6vw, 87px);
 }
 
-.image-spread-copy p {
-  max-width: 560px;
+.editorial-spread-copy p {
+  max-width: 570px;
 
-  color: #a8a49e;
+  color: #a5a19a;
 }
 
 .pullquote {
   max-width: 580px;
 
-  margin-top: 35px;
+  margin-top: 30px;
   padding-top: 30px;
 
   border-top: 1px solid var(--line);
 
-  color: #eeeeee;
+  color: #ededed;
 
-  font-size: clamp(25px, 3vw, 39px);
-  line-height: 1.25;
+  font-size: clamp(25px, 2.7vw, 38px);
+
+  line-height: 1.28;
 }
 
 
 /* =========================================================
-   THE WORLD OF THE GENTLEMAN
+   WORLD OF THE GENTLEMAN
 ========================================================= */
 
 .world {
-  background: #111111;
+  background: #0c0c0c;
 }
 
 .world-intro {
   display: grid;
 
   grid-template-columns:
-    .8fr
-    1.2fr;
+    .9fr
+    1.1fr;
 
   gap: 100px;
 
@@ -422,7 +477,7 @@ p {
 }
 
 .world-intro p {
-  color: #a9a49d;
+  color: #a8a39c;
 }
 
 .world-list {
@@ -433,13 +488,13 @@ p {
   display: grid;
 
   grid-template-columns:
-    110px
+    90px
     1fr
     1fr;
 
-  gap: 40px;
+  gap: 45px;
 
-  padding: 33px 0;
+  padding: 35px 0;
 
   border-bottom: 1px solid var(--line);
 
@@ -451,11 +506,17 @@ p {
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 9px;
-  letter-spacing: .2em;
+  letter-spacing: .22em;
 }
 
 .world-item h3 {
-  color: var(--silver-bright);
+  margin: 0;
+
+  color: var(--silver-light);
+
+  font-size: 30px;
+
+  font-weight: 400;
 }
 
 .world-item p {
@@ -468,27 +529,26 @@ p {
 
 
 /* =========================================================
-   MORPH EDITORIAL FEATURE
+   MORPH FEATURE
 ========================================================= */
 
 .morph-feature {
   display: grid;
 
   grid-template-columns:
-    .9fr
-    1.1fr;
+    .95fr
+    1.05fr;
 
-  gap: 90px;
+  gap: clamp(65px, 9vw, 120px);
 
   align-items: center;
 }
 
 .morph-image {
-  position: relative;
-
   min-height: 650px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -497,63 +557,81 @@ p {
   background:
     radial-gradient(
       circle at center,
-      #272727 0%,
-      #111111 48%,
+      #292929 0%,
+      #151515 43%,
       #070707 100%
     );
 }
 
+.morph-image a {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
 .morph-image img {
-  width: 88%;
-  max-width: 520px;
+  width: 91%;
+  max-width: 550px;
 
   object-fit: contain;
 
   filter:
-    drop-shadow(0 30px 40px rgba(0,0,0,.75));
+    drop-shadow(0 30px 45px rgba(0,0,0,.8));
 }
 
 .morph-copy {
-  max-width: 620px;
+  max-width: 630px;
 }
 
-.morph-copy .category {
-  margin-bottom: 25px;
+.morph-category {
+  margin-bottom: 24px;
 
   color: var(--silver-dark);
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 9px;
-  letter-spacing: .32em;
+  letter-spacing: .34em;
   text-transform: uppercase;
 }
 
 .morph-copy h2 {
-  color: var(--silver-bright);
+  margin-bottom: 31px;
 
-  font-size: clamp(60px, 7vw, 105px);
+  color: var(--silver-light);
+
+  font-size: clamp(63px, 7vw, 108px);
 
   text-shadow:
     0 1px 0 #fff,
-    0 4px 20px rgba(255,255,255,.08);
+    0 5px 25px rgba(255,255,255,.08);
 }
 
 .morph-copy p {
-  color: #aaa59e;
+  color: #aaa59f;
+}
+
+.morph-copy a {
+  color: #e0ddd6;
+
+  border-bottom: 1px solid #666;
 }
 
 .morph-signature {
-  margin-top: 40px;
+  margin-top: 38px;
 
   padding-top: 25px;
 
   border-top: 1px solid var(--line);
 
-  color: #d9d5cf;
+  color: #d5d1ca;
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 9px;
-  letter-spacing: .24em;
+  letter-spacing: .26em;
   text-transform: uppercase;
 }
 
@@ -566,8 +644,8 @@ p {
   background:
     linear-gradient(
       135deg,
-      #eeeae2,
-      #dcd7ce
+      #efebe3 0%,
+      #ded9d0 100%
     );
 
   color: #151515;
@@ -577,8 +655,8 @@ p {
   display: grid;
 
   grid-template-columns:
-    .75fr
-    1.25fr;
+    .78fr
+    1.22fr;
 
   gap: 100px;
 
@@ -586,37 +664,43 @@ p {
 }
 
 .house-name {
-  font-size: clamp(50px, 6vw, 88px);
+  font-size: clamp(53px, 6vw, 91px);
 
   line-height: .88;
 
-  letter-spacing: -.045em;
+  letter-spacing: -.05em;
 }
 
 .house-est {
-  margin-top: 32px;
+  margin-top: 33px;
 
-  color: #6f6a63;
+  color: #716c65;
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 9px;
-  letter-spacing: .3em;
+  letter-spacing: .32em;
 }
 
 .house-copy {
-  border-top: 1px solid var(--dark-line);
-
   padding-top: 30px;
+
+  border-top: 1px solid var(--dark-line);
 }
 
 .house-copy p {
-  color: #55514b;
+  color: #56514b;
 }
 
 .house-copy strong {
-  color: #1a1918;
+  color: #171616;
 
   font-weight: 400;
+}
+
+.house-copy a {
+  color: #1c1b1a;
+
+  border-bottom: 1px solid #77716a;
 }
 
 
@@ -625,11 +709,19 @@ p {
 ========================================================= */
 
 .publications {
-  margin-top: 105px;
+  margin-top: 110px;
 
   padding-top: 75px;
 
   border-top: 1px solid var(--dark-line);
+}
+
+.publications-intro {
+  max-width: 900px;
+}
+
+.publications-intro p {
+  color: #57534d;
 }
 
 .publication-grid {
@@ -637,84 +729,105 @@ p {
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 70px;
+  gap: 75px;
 
-  margin-top: 60px;
+  margin-top: 65px;
 }
 
 .publication {
-  padding-top: 27px;
+  padding-top: 29px;
 
-  border-top: 2px solid #77736d;
+  border-top: 2px solid #76716a;
 }
 
 .publication h3 {
-  margin-bottom: 12px;
+  margin: 0 0 16px;
 
-  font-size: clamp(35px, 4vw, 58px);
+  color: #171616;
 
-  line-height: .95;
+  font-size: clamp(37px, 4.2vw, 62px);
+
+  line-height: .92;
+
+  letter-spacing: -.04em;
+
+  font-weight: 400;
 }
 
-.publication .tagline {
+.publication-tagline {
   margin-bottom: 25px;
 
-  color: #77726b;
+  color: #77716a;
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 9px;
-  letter-spacing: .2em;
+  letter-spacing: .23em;
   text-transform: uppercase;
 }
 
 .publication p {
-  color: #55514c;
+  color: #57534d;
+}
+
+.publication a {
+  display: inline-block;
+
+  margin-top: 7px;
+
+  color: #292725;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+
+  border-bottom: 1px solid #88817a;
 }
 
 
 /* =========================================================
-   COLLABORATION IMAGE
+   COLLABORATION
 ========================================================= */
 
 .collaboration {
   padding: 0;
 
-  background: #090909;
+  background: #080808;
 }
 
 .collaboration-image {
   width: 100%;
-  max-height: 750px;
+  max-height: 760px;
 
   object-fit: cover;
 }
 
 .collaboration-caption {
-  padding: 35px 9% 45px;
+  padding: 34px 9% 44px;
 
-  color: #77736d;
+  color: #77736c;
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 8px;
-  letter-spacing: .2em;
+  letter-spacing: .23em;
   text-transform: uppercase;
 }
 
 
 /* =========================================================
-   AUTHORSHIP RECORD
+   AUTHORSHIP
 ========================================================= */
 
 .author-section {
-  background: #080808;
+  background: #070707;
 }
 
 .author-grid {
   display: grid;
 
   grid-template-columns:
-    .8fr
-    1.2fr;
+    .78fr
+    1.22fr;
 
   gap: 100px;
 }
@@ -726,18 +839,18 @@ p {
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 9px;
-  letter-spacing: .32em;
+  letter-spacing: .35em;
   text-transform: uppercase;
 }
 
 .author-name {
-  font-size: clamp(53px, 6vw, 88px);
+  color: var(--silver-light);
+
+  font-size: clamp(55px, 6vw, 91px);
 
   line-height: .86;
 
-  letter-spacing: -.045em;
-
-  color: var(--silver-bright);
+  letter-spacing: -.05em;
 }
 
 .established {
@@ -751,17 +864,17 @@ p {
 }
 
 .author-copy {
-  border-top: 1px solid var(--line);
+  padding-top: 31px;
 
-  padding-top: 32px;
+  border-top: 1px solid var(--line);
 }
 
 .author-copy p {
-  color: #aaa59f;
+  color: #aaa59e;
 }
 
 .author-copy a {
-  color: #e1ddd6;
+  color: #e0ddd6;
 
   border-bottom: 1px solid #666;
 }
@@ -778,11 +891,11 @@ p {
 }
 
 .works-intro {
-  max-width: 900px;
+  max-width: 950px;
 }
 
 .works-intro p {
-  color: #55514c;
+  color: #55514b;
 }
 
 .work-list {
@@ -795,7 +908,7 @@ p {
   display: grid;
 
   grid-template-columns:
-    150px
+    145px
     1fr
     1fr;
 
@@ -807,22 +920,34 @@ p {
 }
 
 .work-type {
-  color: #77726b;
+  color: #77716a;
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 9px;
-  letter-spacing: .2em;
+  letter-spacing: .22em;
   text-transform: uppercase;
 }
 
 .work-row h3 {
-  font-size: 27px;
+  margin: 0;
+
+  color: #191817;
+
+  font-size: 28px;
+
+  line-height: 1.15;
+
+  font-weight: 400;
+}
+
+.work-row h3 a {
+  border-bottom: 1px solid #aaa39b;
 }
 
 .work-row p {
   margin: 0;
 
-  color: #5c5751;
+  color: #5d5852;
 
   font-size: 15px;
 }
@@ -835,25 +960,26 @@ p {
 .ecosystem {
   background:
     radial-gradient(
-      circle at 50% 50%,
-      rgba(255,255,255,.06),
+      circle at center,
+      rgba(255,255,255,.055),
       transparent 38%
     ),
-    #090909;
+    #080808;
 }
 
 .ecosystem-intro {
-  max-width: 900px;
+  max-width: 950px;
 }
 
 .ecosystem-intro p {
-  color: #aaa59e;
+  color: #aaa59f;
 }
 
 .ecosystem-grid {
   display: grid;
 
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns:
+    repeat(5, 1fr);
 
   gap: 1px;
 
@@ -863,33 +989,39 @@ p {
 }
 
 .ecosystem-item {
-  min-height: 250px;
+  min-height: 260px;
 
-  padding: 35px 23px;
+  padding: 35px 25px;
 
   background: #111111;
 }
 
-.ecosystem-item .num {
+.ecosystem-number {
   color: var(--silver-dark);
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 9px;
-  letter-spacing: .2em;
+  letter-spacing: .22em;
 }
 
 .ecosystem-item h3 {
-  margin-top: 45px;
+  margin-top: 48px;
 
-  color: var(--silver-bright);
+  color: var(--silver-light);
 
-  font-size: 25px;
+  font-size: 27px;
+
+  font-weight: 400;
 }
 
 .ecosystem-item p {
-  color: #7d7973;
+  color: #7e7973;
 
   font-size: 14px;
+}
+
+.ecosystem-item a {
+  border-bottom: 1px solid #555;
 }
 
 
@@ -901,6 +1033,14 @@ p {
   background: #e9e5dd;
 
   color: #151515;
+}
+
+.archive-intro {
+  max-width: 950px;
+}
+
+.archive-intro p {
+  color: #57534d;
 }
 
 .archive-list {
@@ -923,39 +1063,52 @@ p {
   border-bottom: 1px solid var(--dark-line);
 }
 
-.archive-year {
-  color: #77726b;
+.archive-label {
+  color: #77716a;
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 9px;
-  letter-spacing: .2em;
+  letter-spacing: .22em;
+  text-transform: uppercase;
 }
 
 .archive-item h3 {
-  font-size: 27px;
+  margin: 0 0 12px;
+
+  color: #181716;
+
+  font-size: 28px;
+
+  font-weight: 400;
 }
 
 .archive-item p {
-  color: #59554f;
+  margin: 0;
+
+  color: #59544e;
 
   font-size: 15px;
 }
 
+.archive-item a {
+  border-bottom: 1px solid #88817a;
+}
+
 
 /* =========================================================
-   PARTNER
+   PARTNERSHIP
 ========================================================= */
 
 .cta {
-  padding: 150px 9%;
+  padding: 155px 9%;
 
   text-align: center;
 
   background:
     radial-gradient(
       circle at center,
-      #202020,
-      #070707 60%
+      #222222,
+      #060606 62%
     );
 }
 
@@ -964,43 +1117,50 @@ p {
 }
 
 .cta h2 {
-  max-width: 950px;
+  max-width: 1000px;
 
-  margin: auto;
+  margin: 0 auto;
 
-  color: var(--silver-bright);
+  color: var(--silver-light);
 
-  font-size: clamp(48px, 6vw, 86px);
+  font-size: clamp(50px, 6vw, 90px);
 }
 
 .cta p {
-  max-width: 760px;
+  max-width: 780px;
 
-  margin: 35px auto 45px;
+  margin: 37px auto 48px;
 
-  color: #96918a;
+  color: #99948d;
+
+  font-size: 17px;
 }
 
 .button {
   display: inline-block;
 
-  padding: 17px 40px;
+  padding: 17px 43px;
 
   border: 1px solid #aaa;
 
-  color: white;
+  color: #f4f4f4;
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 9px;
-  letter-spacing: .22em;
+  letter-spacing: .24em;
   text-transform: uppercase;
 
-  transition: .25s ease;
+  transition:
+    background .25s ease,
+    color .25s ease;
 }
 
 .button:hover {
-  background: white;
-  color: black;
+  background: #f4f4f4;
+
+  color: #050505;
+
+  opacity: 1;
 }
 
 
@@ -1015,16 +1175,18 @@ p {
 
   border-top: 1px solid var(--line);
 
-  color: #66625c;
+  background: #050505;
+
+  color: #65615b;
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 8px;
-  letter-spacing: .18em;
+  letter-spacing: .19em;
   text-transform: uppercase;
 }
 
 .footer a {
-  color: #aaa59d;
+  color: #a8a39c;
 }
 
 
@@ -1032,9 +1194,20 @@ p {
    RESPONSIVE
 ========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
 
-  .hero,
+  .hero {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(330px, .72fr);
+
+    gap: 55px;
+  }
+
+  .hero h1 {
+    font-size: clamp(50px, 6vw, 82px);
+  }
+
   .editorial-opening,
   .world-intro,
   .morph-feature,
@@ -1043,16 +1216,12 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .hero-cover {
-    order: -1;
-  }
-
-  .image-spread {
+  .editorial-spread {
     grid-template-columns: 1fr;
   }
 
-  .image-spread-image {
-    min-height: 520px;
+  .editorial-spread-image {
+    min-height: 580px;
   }
 
   .publication-grid {
@@ -1060,34 +1229,14 @@ p {
   }
 
   .ecosystem-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ecosystem-item {
-    min-height: auto;
-  }
-
-  .world-item,
-  .work-row {
-    grid-template-columns: 90px 1fr;
-  }
-
-  .world-item p,
-  .work-row p {
-    grid-column: 2;
-  }
-
-  section {
-    padding: 95px 7%;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 
-@media (max-width: 650px) {
+@media (max-width: 760px) {
 
   .topbar {
-    height: auto;
-
     padding: 18px 6%;
 
     flex-direction: column;
@@ -1098,44 +1247,103 @@ p {
   }
 
   .hero {
-    padding: 55px 6% 75px;
+    min-height: auto;
+
+    padding: 65px 6% 80px;
+
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .hero-copy {
+    max-width: none;
   }
 
   .hero h1 {
-    font-size: 57px;
+    font-size: clamp(55px, 14vw, 82px);
   }
 
-  .image-spread-copy {
-    padding: 60px 35px;
+  .hero-cover-wrap {
+    width: 100%;
   }
 
-  .image-spread-image {
-    min-height: 430px;
-  }
+  .hero-cover {
+    max-width: 570px;
 
-  .morph-image {
-    min-height: 480px;
-  }
-
-  .world-item,
-  .work-row,
-  .archive-item {
-    grid-template-columns: 1fr;
-
-    gap: 12px;
-  }
-
-  .world-item p,
-  .work-row p {
-    grid-column: auto;
+    margin: 0 auto;
   }
 
   section {
-    padding: 75px 6%;
+    padding: 85px 6%;
+  }
+
+  .editorial-spread-copy {
+    padding: 65px 35px;
+  }
+
+  .editorial-spread-image {
+    min-height: 470px;
+  }
+
+  .world-item {
+    grid-template-columns:
+      60px
+      1fr;
+  }
+
+  .world-item p {
+    grid-column: 2;
+  }
+
+  .work-row {
+    grid-template-columns:
+      1fr;
+
+    gap: 14px;
+  }
+
+  .archive-item {
+    grid-template-columns:
+      1fr;
+
+    gap: 13px;
+  }
+
+  .ecosystem-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ecosystem-item {
+    min-height: auto;
   }
 
   .cta {
-    padding: 100px 6%;
+    padding: 105px 6%;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+  }
+
+  .editorial-spread-image {
+    min-height: 390px;
+  }
+
+  .morph-image {
+    min-height: 450px;
+  }
+
+  .publication-grid {
+    gap: 55px;
   }
 
 }
@@ -1148,20 +1356,24 @@ p {
 
 
 <!-- ======================================================
-     HEADER
+     TOP BAR
 ======================================================= -->
 
-<div class="topbar">
+<header class="topbar">
 
-  <div class="house">
+  <a
+    href="https://www.houseofsalisbury.com/"
+    target="_blank"
+    rel="noopener"
+  >
     House of Salisbury
-  </div>
+  </a>
 
   <div>
     GENTLEMAN’S CHOICE · Luxury Editorial
   </div>
 
-</div>
+</header>
 
 
 
@@ -1169,7 +1381,7 @@ p {
      HERO
 ======================================================= -->
 
-<header class="hero">
+<section class="hero">
 
   <div class="hero-copy">
 
@@ -1192,35 +1404,53 @@ p {
 
     <div class="hero-description">
 
-      GENTLEMAN’S CHOICE is a luxury men's editorial publication
-      created by House of Salisbury. It exists at the intersection
-      of style, fragrance, culture, design, music, travel, personal
-      presence, and the art of living well.
+      GENTLEMAN’S CHOICE is a luxury men's editorial
+      publication created by
+      <a
+        href="https://www.houseofsalisbury.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        House of Salisbury
+      </a>.
+
+      It exists at the intersection of style, fragrance,
+      culture, design, music, travel, personal presence,
+      and the art of living well.
 
     </div>
 
   </div>
 
 
-  <div class="hero-cover">
+  <div class="hero-cover-wrap">
 
-    <img
-      src="assets/img/Gentlemans-Choice-Magazine-by-House-of-Salisbury.png"
-      alt="GENTLEMAN’S CHOICE magazine cover by House of Salisbury featuring EVE"
+    <a
+      href="https://www.morphfragrance.com/partner-with-us"
+      target="_blank"
+      rel="noopener"
+      class="hero-cover"
     >
 
-    <div class="caption">
+      <img
+        src="assets/img/Gentlemans-Choice-Magazine-by-House-of-Salisbury.png"
+        alt="GENTLEMAN’S CHOICE magazine cover by House of Salisbury featuring EVE"
+      >
+
+    </a>
+
+    <div class="cover-caption">
       GENTLEMAN’S CHOICE · HOUSE OF SALISBURY
     </div>
 
   </div>
 
-</header>
+</section>
 
 
 
 <!-- ======================================================
-     EDITORIAL OPENING
+     EDITORIAL PREMISE
 ======================================================= -->
 
 <section class="dark">
@@ -1248,7 +1478,7 @@ p {
       </div>
 
 
-      <div>
+      <div class="editorial-opening-copy">
 
         <p>
           GENTLEMAN’S CHOICE is built around the idea that
@@ -1257,8 +1487,8 @@ p {
 
         <p>
           Clothing communicates. Fragrance communicates.
-          A watch communicates. A room, a car, a book, a
-          destination, a song, a restaurant — each represents
+          A watch communicates. A room, a car, a book,
+          a destination, a song, a restaurant — each represents
           a choice.
         </p>
 
@@ -1281,11 +1511,11 @@ p {
 
     <div class="editorial-note">
 
-      <div class="number">
-        EDITORIAL NOTE · 001
+      <div class="editorial-note-number">
+        Editorial Note · 001
       </div>
 
-      <div class="large">
+      <div class="editorial-note-quote">
         Luxury is not volume.
         It is discernment.
       </div>
@@ -1299,20 +1529,21 @@ p {
 
 
 <!-- ======================================================
-     EDITORIAL IMAGE SPREAD
+     MEN'S EDITORIAL SPREAD
 ======================================================= -->
 
 <section class="black">
 
   <div class="section-inner">
 
-    <div class="image-spread">
+    <div class="editorial-spread">
 
-      <div class="image-spread-image"></div>
+      <div class="editorial-spread-image"></div>
 
-      <div class="image-spread-copy">
 
-        <div class="issue">
+      <div class="editorial-spread-copy">
+
+        <div class="editorial-spread-category">
           The Gentleman · Presence
         </div>
 
@@ -1325,7 +1556,7 @@ p {
         <p>
           Before a man speaks, the room has already received
           him. Clothing, posture, grooming, fragrance, movement,
-          restraint — together they create a visual language.
+          and restraint together create a visual language.
         </p>
 
         <p>
@@ -1334,9 +1565,9 @@ p {
         </p>
 
         <div class="pullquote">
-          “Style is not what you put on.
+          Style is not what you put on.
           It is what remains when everything
-          unnecessary has been removed.”
+          unnecessary has been removed.
         </div>
 
       </div>
@@ -1350,7 +1581,7 @@ p {
 
 
 <!-- ======================================================
-     WORLD OF THE GENTLEMAN
+     THE WORLD OF THE GENTLEMAN
 ======================================================= -->
 
 <section class="world">
@@ -1395,11 +1626,16 @@ p {
 
     <div class="world-list">
 
+
       <div class="world-item">
 
-        <div class="world-number">01</div>
+        <div class="world-number">
+          01
+        </div>
 
-        <h3>Style</h3>
+        <h3>
+          Style
+        </h3>
 
         <p>
           Tailoring, grooming, footwear, accessories,
@@ -1411,9 +1647,13 @@ p {
 
       <div class="world-item">
 
-        <div class="world-number">02</div>
+        <div class="world-number">
+          02
+        </div>
 
-        <h3>Fragrance</h3>
+        <h3>
+          Fragrance
+        </h3>
 
         <p>
           Scent as identity, atmosphere, memory, ritual
@@ -1425,9 +1665,13 @@ p {
 
       <div class="world-item">
 
-        <div class="world-number">03</div>
+        <div class="world-number">
+          03
+        </div>
 
-        <h3>Culture</h3>
+        <h3>
+          Culture
+        </h3>
 
         <p>
           Music, film, books, art, architecture, conversation
@@ -1439,9 +1683,13 @@ p {
 
       <div class="world-item">
 
-        <div class="world-number">04</div>
+        <div class="world-number">
+          04
+        </div>
 
-        <h3>Living</h3>
+        <h3>
+          Living
+        </h3>
 
         <p>
           Travel, hospitality, automobiles, food,
@@ -1453,9 +1701,13 @@ p {
 
       <div class="world-item">
 
-        <div class="world-number">05</div>
+        <div class="world-number">
+          05
+        </div>
 
-        <h3>Presence</h3>
+        <h3>
+          Presence
+        </h3>
 
         <p>
           Confidence, discipline, restraint, ambition,
@@ -1467,9 +1719,13 @@ p {
 
       <div class="world-item">
 
-        <div class="world-number">06</div>
+        <div class="world-number">
+          06
+        </div>
 
-        <h3>Choice</h3>
+        <h3>
+          Choice
+        </h3>
 
         <p>
           The ability to distinguish what is merely expensive
@@ -1477,6 +1733,7 @@ p {
         </p>
 
       </div>
+
 
     </div>
 
@@ -1500,24 +1757,39 @@ p {
 
     <div class="morph-feature">
 
+
       <div class="morph-image">
 
-        <img
-          src="assets/img/MORPH-House-of-Salisbury-Hero-Robb-Report-ad-2026.png"
-          alt="MORPH fragrance by House of Salisbury"
+        <a
+          href="https://morphfragrance.com/"
+          target="_blank"
+          rel="noopener"
         >
+
+          <img
+            src="assets/img/MORPH-House-of-Salisbury-Hero-Robb-Report-ad-2026.png"
+            alt="MORPH fragrance by House of Salisbury"
+          >
+
+        </a>
 
       </div>
 
 
       <div class="morph-copy">
 
-        <div class="category">
+        <div class="morph-category">
           Fragrance · House of Salisbury
         </div>
 
         <h2>
-          MORPH
+          <a
+            href="https://morphfragrance.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            MORPH
+          </a>
         </h2>
 
         <p>
@@ -1543,6 +1815,16 @@ p {
           The bottle becomes more than a container.
           It becomes part of the visual vocabulary of
           the House.
+        </p>
+
+        <p>
+          <a
+            href="https://morphfragrance.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            Explore MORPH →
+          </a>
         </p>
 
         <div class="morph-signature">
@@ -1573,6 +1855,7 @@ p {
 
     <div class="house-grid">
 
+
       <div>
 
         <div class="house-name">
@@ -1591,7 +1874,14 @@ p {
 
         <p>
           <strong>
-            GENTLEMAN’S CHOICE is a creation of House of Salisbury.
+            GENTLEMAN’S CHOICE is a creation of
+            <a
+              href="https://www.houseofsalisbury.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              House of Salisbury
+            </a>.
           </strong>
         </p>
 
@@ -1636,18 +1926,31 @@ p {
     </div>
 
 
+    <!-- TWO PUBLICATIONS -->
+
     <div class="publications">
 
       <div class="section-label">
         Luxury Editorial
       </div>
 
-      <h2>
-        Two worlds.<br>
-        One house.
-      </h2>
+      <div class="publications-intro">
+
+        <h2>
+          Two worlds.<br>
+          One house.
+        </h2>
+
+        <p class="lead">
+          House of Salisbury publishes two luxury editorial
+          expressions — one for men and one for women.
+        </p>
+
+      </div>
+
 
       <div class="publication-grid">
+
 
         <div class="publication">
 
@@ -1656,7 +1959,7 @@ p {
             CHOICE
           </h3>
 
-          <div class="tagline">
+          <div class="publication-tagline">
             Men's Luxury Editorial
           </div>
 
@@ -1670,6 +1973,10 @@ p {
             culture, design, travel and personal presence.
           </p>
 
+          <a href="#top">
+            Current Publication →
+          </a>
+
         </div>
 
 
@@ -1679,7 +1986,7 @@ p {
             LUXE
           </h3>
 
-          <div class="tagline">
+          <div class="publication-tagline">
             Women's Luxury Editorial
           </div>
 
@@ -1693,7 +2000,16 @@ p {
             language of luxury.
           </p>
 
+          <a
+            href="https://www.morphfragrance.com/partner-with-us"
+            target="_blank"
+            rel="noopener"
+          >
+            Explore the House →
+          </a>
+
         </div>
+
 
       </div>
 
@@ -1735,6 +2051,7 @@ p {
 
     <div class="author-grid">
 
+
       <div>
 
         <div class="canonical">
@@ -1756,7 +2073,8 @@ p {
       <div class="author-copy">
 
         <p>
-          GENTLEMAN’S CHOICE was created by Brett Salisbury
+          GENTLEMAN’S CHOICE was created by
+          <strong>Brett Salisbury</strong>
           under House of Salisbury.
         </p>
 
@@ -1785,11 +2103,12 @@ p {
             target="_blank"
             rel="noopener"
           >
-            House of Salisbury
+            House of Salisbury →
           </a>
         </p>
 
       </div>
+
 
     </div>
 
@@ -1807,9 +2126,11 @@ p {
 
   <div class="section-inner">
 
+
     <div class="section-label">
       Primary Authorship
     </div>
+
 
     <div class="works-intro">
 
@@ -1828,6 +2149,7 @@ p {
 
     <div class="work-list">
 
+
       <div class="work-row">
 
         <div class="work-type">
@@ -1835,7 +2157,13 @@ p {
         </div>
 
         <h3>
-          MORPH Parfum
+          <a
+            href="https://morphfragrance.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            MORPH Parfum
+          </a>
         </h3>
 
         <p>
@@ -1854,7 +2182,13 @@ p {
         </div>
 
         <h3>
-          EVE Parfum
+          <a
+            href="https://morphfragrance.com/eve"
+            target="_blank"
+            rel="noopener"
+          >
+            EVE Parfum
+          </a>
         </h3>
 
         <p>
@@ -1872,7 +2206,13 @@ p {
         </div>
 
         <h3>
-          SLOAN
+          <a
+            href="https://morphfragrance.com/sloan"
+            target="_blank"
+            rel="noopener"
+          >
+            SLOAN
+          </a>
         </h3>
 
         <p>
@@ -1890,7 +2230,13 @@ p {
         </div>
 
         <h3>
-          The Study
+          <a
+            href="https://morphfragrance.com/the-study"
+            target="_blank"
+            rel="noopener"
+          >
+            The Study
+          </a>
         </h3>
 
         <p>
@@ -1926,7 +2272,13 @@ p {
         </div>
 
         <h3>
-          LUXE
+          <a
+            href="https://www.morphfragrance.com/partner-with-us"
+            target="_blank"
+            rel="noopener"
+          >
+            LUXE
+          </a>
         </h3>
 
         <p>
@@ -1935,6 +2287,132 @@ p {
         </p>
 
       </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     AUTHORED BOOKS / CULTURAL WORK
+======================================================= -->
+
+<section class="dark">
+
+  <div class="section-inner">
+
+    <div class="section-label">
+      Authored Work
+    </div>
+
+    <div class="world-intro">
+
+      <div>
+
+        <h2>
+          Beyond<br>
+          the magazine.
+        </h2>
+
+      </div>
+
+      <div>
+
+        <p class="lead">
+          The editorial world exists alongside a broader
+          body of written, visual and cultural work.
+        </p>
+
+        <p>
+          The House of Salisbury archive includes theoretical
+          writing and visual monographs examining fragrance,
+          authority, identity and the environments surrounding
+          the work.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="work-list">
+
+
+      <div class="work-row">
+
+        <div class="work-type">
+          Book
+        </div>
+
+        <h3>
+          <a
+            href="https://www.amazon.com/dp/B0GDK9VT16"
+            target="_blank"
+            rel="noopener"
+          >
+            MORPH: The MORPH Fragrance Manifesto
+          </a>
+        </h3>
+
+        <p>
+          Foundational theoretical text establishing the
+          discipline and structural philosophy of MORPH.
+        </p>
+
+      </div>
+
+
+      <div class="work-row">
+
+        <div class="work-type">
+          Monograph
+        </div>
+
+        <h3>
+          <a
+            href="https://www.amazon.com/dp/B0GGW8MB4G"
+            target="_blank"
+            rel="noopener"
+          >
+            MORPH: A Study in Authority
+          </a>
+        </h3>
+
+        <p>
+          A visual monograph documenting the aesthetic
+          environment and presence system of MORPH.
+        </p>
+
+      </div>
+
+
+      <div class="work-row">
+
+        <div class="work-type">
+          Music
+        </div>
+
+        <h3>
+          <a
+            href="https://open.spotify.com/artist/4t2L1H5UwfGrJCXJp3P8XV"
+            target="_blank"
+            rel="noopener"
+          >
+            SLOAN on Spotify
+          </a>
+        </h3>
+
+        <p>
+          Public artist profile and commercially released
+          recordings preserved as part of the House archive.
+        </p>
+
+      </div>
+
 
     </div>
 
@@ -1952,9 +2430,11 @@ p {
 
   <div class="section-inner">
 
+
     <div class="section-label">
       The House Ecosystem
     </div>
+
 
     <div class="ecosystem-intro">
 
@@ -1979,12 +2459,21 @@ p {
 
     <div class="ecosystem-grid">
 
+
       <div class="ecosystem-item">
 
-        <div class="num">01</div>
+        <div class="ecosystem-number">
+          01
+        </div>
 
         <h3>
-          MORPH
+          <a
+            href="https://morphfragrance.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            MORPH
+          </a>
         </h3>
 
         <p>
@@ -1998,10 +2487,18 @@ p {
 
       <div class="ecosystem-item">
 
-        <div class="num">02</div>
+        <div class="ecosystem-number">
+          02
+        </div>
 
         <h3>
-          EVE
+          <a
+            href="https://morphfragrance.com/eve"
+            target="_blank"
+            rel="noopener"
+          >
+            EVE
+          </a>
         </h3>
 
         <p>
@@ -2015,10 +2512,18 @@ p {
 
       <div class="ecosystem-item">
 
-        <div class="num">03</div>
+        <div class="ecosystem-number">
+          03
+        </div>
 
         <h3>
-          SLOAN
+          <a
+            href="https://morphfragrance.com/sloan"
+            target="_blank"
+            rel="noopener"
+          >
+            SLOAN
+          </a>
         </h3>
 
         <p>
@@ -2032,7 +2537,9 @@ p {
 
       <div class="ecosystem-item">
 
-        <div class="num">04</div>
+        <div class="ecosystem-number">
+          04
+        </div>
 
         <h3>
           LUXE
@@ -2049,7 +2556,9 @@ p {
 
       <div class="ecosystem-item">
 
-        <div class="num">05</div>
+        <div class="ecosystem-number">
+          05
+        </div>
 
         <h3>
           G.C.
@@ -2062,6 +2571,7 @@ p {
         </p>
 
       </div>
+
 
     </div>
 
@@ -2079,27 +2589,34 @@ p {
 
   <div class="section-inner">
 
+
     <div class="section-label">
       Public Record
     </div>
 
-    <h2>
-      The House<br>
-      archive.
-    </h2>
 
-    <p class="lead">
-      GENTLEMAN’S CHOICE forms part of an expanding body
-      of authored work across fragrance, publishing,
-      music, film, visual culture and formulation.
-    </p>
+    <div class="archive-intro">
+
+      <h2>
+        The House<br>
+        archive.
+      </h2>
+
+      <p class="lead">
+        GENTLEMAN’S CHOICE forms part of an expanding body
+        of authored work across fragrance, publishing,
+        music, film, visual culture and formulation.
+      </p>
+
+    </div>
 
 
     <div class="archive-list">
 
+
       <div class="archive-item">
 
-        <div class="archive-year">
+        <div class="archive-label">
           EST. 1968
         </div>
 
@@ -2121,14 +2638,20 @@ p {
 
       <div class="archive-item">
 
-        <div class="archive-year">
-          FRAGRANCE
+        <div class="archive-label">
+          Fragrance
         </div>
 
         <div>
 
           <h3>
-            MORPH
+            <a
+              href="https://morphfragrance.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              MORPH
+            </a>
           </h3>
 
           <p>
@@ -2143,14 +2666,20 @@ p {
 
       <div class="archive-item">
 
-        <div class="archive-year">
-          FRAGRANCE
+        <div class="archive-label">
+          Fragrance
         </div>
 
         <div>
 
           <h3>
-            EVE
+            <a
+              href="https://morphfragrance.com/eve"
+              target="_blank"
+              rel="noopener"
+            >
+              EVE
+            </a>
           </h3>
 
           <p>
@@ -2165,14 +2694,20 @@ p {
 
       <div class="archive-item">
 
-        <div class="archive-year">
-          AUDIOVISUAL
+        <div class="archive-label">
+          Audiovisual
         </div>
 
         <div>
 
           <h3>
-            SLOAN
+            <a
+              href="https://morphfragrance.com/sloan"
+              target="_blank"
+              rel="noopener"
+            >
+              SLOAN
+            </a>
           </h3>
 
           <p>
@@ -2187,8 +2722,8 @@ p {
 
       <div class="archive-item">
 
-        <div class="archive-year">
-          EDITORIAL
+        <div class="archive-label">
+          Editorial
         </div>
 
         <div>
@@ -2209,8 +2744,8 @@ p {
 
       <div class="archive-item">
 
-        <div class="archive-year">
-          EDITORIAL
+        <div class="archive-label">
+          Editorial
         </div>
 
         <div>
@@ -2227,6 +2762,7 @@ p {
         </div>
 
       </div>
+
 
     </div>
 
