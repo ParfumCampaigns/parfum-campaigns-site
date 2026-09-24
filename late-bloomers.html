@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Late Bloomers — People Who Changed the World After 40</title>
+
+  <meta
+    name="description"
+    content="A collection of entrepreneurs, innovators, entertainers, authors, artists and designers who achieved major breakthroughs, fame, wealth or cultural impact after age 40."
+  >
+
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --surface: #121212;
+      --surface-hover: #181818;
+      --border: #2a2a2a;
+      --text: #f4f4f4;
+      --muted: #a5a5a5;
+      --accent: #ffffff;
+      --gold: #c9a96e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* HERO */
+
+    header {
+      padding: 100px 0 80px;
+      border-bottom: 1px solid var(--border);
+      background:
+        radial-gradient(
+          circle at top center,
+          rgba(255,255,255,0.07),
+          transparent 42%
+        );
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 900px;
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      font-weight: 800;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+      margin-top: 30px;
+      color: var(--muted);
+      font-size: 19px;
+    }
+
+    .hero-note {
+      margin-top: 28px;
+      padding: 18px 22px;
+      border-left: 2px solid var(--gold);
+      background: rgba(255,255,255,0.025);
+      color: #d8d8d8;
+    }
+
+    /* NAV */
+
+    .toc {
+      padding: 35px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .toc-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .toc-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .toc-links a {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 7px 14px;
+      font-size: 13px;
+      color: #d0d0d0;
+    }
+
+    .toc-links a:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 35px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 46px);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .section-number {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    /* PEOPLE GRID */
+
+    .people {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .person {
+      padding: 25px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .person:hover {
+      transform: translateY(-3px);
+      background: var(--surface-hover);
+      border-color: #444;
+    }
+
+    .person-name {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .person-name a {
+      border-bottom: none;
+    }
+
+    .age {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .person p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* FEATURED */
+
+    .featured {
+      margin-bottom: 20px;
+      border: 1px solid #383838;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(201,169,110,0.08),
+          rgba(255,255,255,0.025)
+        );
+    }
+
+    .featured .person-name {
+      font-size: 26px;
+    }
+
+    .featured .age {
+      color: var(--gold);
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 70px 0;
+      color: var(--muted);
+    }
+
+    footer strong {
+      color: var(--text);
+    }
+
+    .footer-title {
+      font-size: 22px;
+      color: var(--text);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .source-note {
+      font-size: 13px;
+      max-width: 850px;
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      header {
+        padding: 70px 0 60px;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .people {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading {
+        display: block;
+      }
+
+      .section-number {
+        display: block;
+        margin-top: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================================================
+       HERO
+       ========================================================= -->
+
+  <header id="top">
+    <div class="container">
+
+      <div class="eyebrow">
+        The Late-Bloomers Archive
+      </div>
+
+      <h1>
+        They Didn't Peak Early.<br>
+        They Built Anyway.
+      </h1>
+
+      <p class="hero-copy">
+        A collection of entrepreneurs, innovators, entertainers, authors,
+        artists and designers whose defining breakthroughs, major businesses,
+        cultural influence or widespread fame arrived after age 40.
+      </p>
+
+      <div class="hero-note">
+        <strong>The point:</strong>
+        Age is not a deadline. Some of the world's most recognizable names
+        were still building, changing direction, taking risks and creating
+        their defining work well into middle age and beyond.
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- =========================================================
+       TABLE OF CONTENTS
+       ========================================================= -->
+
+  <nav class="toc">
+    <div class="container">
+
+      <div class="toc-title">
+        Explore the archive
+      </div>
+
+      <div class="toc-links">
+        <a href="#business">Business & Innovation</a>
+        <a href="#entertainment">Entertainment</a>
+        <a href="#authors">Authors & Culture</a>
+        <a href="#artists">Artists & Designers</a>
+        <a href="#sources">Sources & Notes</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <main>
+
+    <!-- =======================================================
+         BUSINESS
+         ======================================================= -->
+
+    <section id="business">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Business, Innovation & Corporate Founders</h2>
+          <div class="section-number">01 / Business</div>
+        </div>
+
+        <div class="people">
+
+          <article class="person featured">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Harland_Sanders" target="_blank" rel="noopener">
+                Colonel Harland Sanders
+              </a>
+            </div>
+            <div class="age">Age 65</div>
+            <p>
+              Began franchising Kentucky Fried Chicken at an age when many
+              people had already retired. He later sold his stake in KFC
+              and became a multi-millionaire.
+            </p>
+          </article>
+
+          <article class="person featured">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Brett_Salisbury" target="_blank" rel="noopener">
+                Brett Salisbury
+              </a>
+            </div>
+            <div class="age">Age 57</div>
+            <p>
+              Former college quarterback, international model and author who
+              launched House of Salisbury in 2026, developing MORPH, EVE and
+              the SLOAN audiovisual project.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Ray_Kroc" target="_blank" rel="noopener">
+                Ray Kroc
+              </a>
+            </div>
+            <div class="age">Age 52</div>
+            <p>
+              Built McDonald's into a global franchise empire after discovering
+              the McDonald brothers' highly efficient restaurant model.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Leo_Goodwin_Sr." target="_blank" rel="noopener">
+                Leo Goodwin Sr.
+              </a>
+            </div>
+            <div class="age">Age 50</div>
+            <p>
+              Founded the Government Employees Insurance Company, better known
+              as GEICO, during the Great Depression.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Taikichiro_Mori" target="_blank" rel="noopener">
+                Taikichiro Mori
+              </a>
+            </div>
+            <div class="age">Age 55</div>
+            <p>
+              Left academia and entered real estate, founding Mori Building
+              Company and becoming one of Japan's most prominent developers.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Momofuku_Ando" target="_blank" rel="noopener">
+                Momofuku Ando
+              </a>
+            </div>
+            <div class="age">Age 48 & 61</div>
+            <p>
+              Invented instant ramen at 48 and later introduced Cup Noodles
+              at 61, transforming his invention into a global food business.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Bernie_Marcus" target="_blank" rel="noopener">
+                Bernie Marcus
+              </a>
+            </div>
+            <div class="age">Age 50</div>
+            <p>
+              Co-founded The Home Depot after being fired from his previous
+              position, helping create a new model for home-improvement retail.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/John_Stith_Pemberton" target="_blank" rel="noopener">
+                John Pemberton
+              </a>
+            </div>
+            <div class="age">Age 55</div>
+            <p>
+              Pharmacist and inventor of the original Coca-Cola formula in 1886.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Gary_Burrell" target="_blank" rel="noopener">
+                Gary Burrell
+              </a>
+            </div>
+            <div class="age">Age 52</div>
+            <p>
+              Co-founded Garmin with Min Kao, helping establish a major global
+              navigation and GPS technology company.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Julie_Wainwright" target="_blank" rel="noopener">
+                Julie Wainwright
+              </a>
+            </div>
+            <div class="age">Age 54</div>
+            <p>
+              Founded The RealReal after a previous technology venture failed,
+              creating a major luxury resale platform later in her career.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Chaleo_Yoovidhya" target="_blank" rel="noopener">
+                Chaleo Yoovidhya
+              </a>
+            </div>
+            <div class="age">Age 53</div>
+            <p>
+              Developed Krating Daeng, the Thai energy drink that became the
+              foundation for the international Red Bull brand.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Wally_Blume" target="_blank" rel="noopener">
+                Wally Blume
+              </a>
+            </div>
+            <div class="age">Age 57</div>
+            <p>
+              Left a long career in the dairy industry and founded Denali
+              Flavors, creator of the Moose Tracks ice cream brand.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Dietrich_Mateschitz" target="_blank" rel="noopener">
+                Dietrich Mateschitz
+              </a>
+            </div>
+            <div class="age">Age 53</div>
+            <p>
+              Expanded Red Bull internationally and helped transform it into
+              a globally recognized consumer brand.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Henry_Ford" target="_blank" rel="noopener">
+                Henry Ford
+              </a>
+            </div>
+            <div class="age">Age 50</div>
+            <p>
+              Introduced the moving assembly line for automobile production,
+              dramatically changing industrial manufacturing.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Sam_Walton" target="_blank" rel="noopener">
+                Sam Walton
+              </a>
+            </div>
+            <div class="age">Age 44</div>
+            <p>
+              Opened the first Walmart store in Rogers, Arkansas, beginning
+              the retail business that would become Walmart.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Chip_Wilson" target="_blank" rel="noopener">
+                Chip Wilson
+              </a>
+            </div>
+            <div class="age">Age 42</div>
+            <p>
+              Founded Lululemon and helped establish a major global athletic
+              apparel and athleisure brand.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Tom_Ford" target="_blank" rel="noopener">
+                Tom Ford
+              </a>
+            </div>
+            <div class="age">Age 44</div>
+            <p>
+              Launched his namesake luxury brand after his years at Gucci,
+              creating one of the most recognizable modern luxury labels.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Giorgio_Armani" target="_blank" rel="noopener">
+                Giorgio Armani
+              </a>
+            </div>
+            <div class="age">Age 41</div>
+            <p>
+              Founded Armani after working across medicine, the military and
+              fashion, building one of the world's most influential luxury
+              fashion houses.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Guccio_Gucci" target="_blank" rel="noopener">
+                Guccio Gucci
+              </a>
+            </div>
+            <div class="age">Age 40</div>
+            <p>
+              Returned to Italy and opened his own leather-goods shop in 1921,
+              laying the foundation for the Gucci fashion house.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         ENTERTAINMENT
+         ======================================================= -->
+
+    <section id="entertainment">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Entertainment, Film & Television</h2>
+          <div class="section-number">02 / Entertainment</div>
+        </div>
+
+        <div class="people">
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Morgan_Freeman" target="_blank" rel="noopener">
+                Morgan Freeman
+              </a>
+            </div>
+            <div class="age">Age 52</div>
+            <p>
+              Achieved major mainstream recognition with
+              <em>Driving Miss Daisy</em> after decades of acting work.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Judy_Sheindlin" target="_blank" rel="noopener">
+                Judge Judy / Judy Sheindlin
+              </a>
+            </div>
+            <div class="age">Age 53</div>
+            <p>
+              Transitioned from a New York family-court career into syndicated
+              television and became one of the medium's highest-paid figures.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Christoph_Waltz" target="_blank" rel="noopener">
+                Christoph Waltz
+              </a>
+            </div>
+            <div class="age">Age 52</div>
+            <p>
+              Became internationally famous after playing Hans Landa in
+              <em>Inglourious Basterds</em>.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Bea_Arthur" target="_blank" rel="noopener">
+                Bea Arthur
+              </a>
+            </div>
+            <div class="age">Age 50</div>
+            <p>
+              Reached widespread television fame with the title role in
+              <em>Maude</em>, followed by <em>The Golden Girls</em>.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Danny_Trejo" target="_blank" rel="noopener">
+                Danny Trejo
+              </a>
+            </div>
+            <div class="age">Age 51</div>
+            <p>
+              After years of struggle and supporting work, achieved mainstream
+              recognition through films including <em>Desperado</em> and
+              <em>Heat</em>.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Hannah_Waddingham" target="_blank" rel="noopener">
+                Hannah Waddingham
+              </a>
+            </div>
+            <div class="age">Age 50</div>
+            <p>
+              Reached global television recognition as Rebecca Welton in
+              <em>Ted Lasso</em>.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Kathryn_Joosten" target="_blank" rel="noopener">
+                Kathryn Joosten
+              </a>
+            </div>
+            <div class="age">Age 59</div>
+            <p>
+              Moved into professional acting after working as a psychiatric
+              nurse and became widely recognized through television roles.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Steve_Carell" target="_blank" rel="noopener">
+                Steve Carell
+              </a>
+            </div>
+            <div class="age">Age 43</div>
+            <p>
+              Reached household-name status through his role as Michael Scott
+              on <em>The Office</em>.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Melissa_McCarthy" target="_blank" rel="noopener">
+                Melissa McCarthy
+              </a>
+            </div>
+            <div class="age">Age 41</div>
+            <p>
+              Achieved major mainstream film recognition with her breakout
+              performance in <em>Bridesmaids</em>.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         AUTHORS
+         ======================================================= -->
+
+    <section id="authors">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Authors, Chefs & Cultural Icons</h2>
+          <div class="section-number">03 / Culture</div>
+        </div>
+
+        <div class="people">
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Julia_Child" target="_blank" rel="noopener">
+                Julia Child
+              </a>
+            </div>
+            <div class="age">Age 50–51</div>
+            <p>
+              Published <em>Mastering the Art of French Cooking</em> at 50 and
+              became a television celebrity soon afterward.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Laura_Ingalls_Wilder" target="_blank" rel="noopener">
+                Laura Ingalls Wilder
+              </a>
+            </div>
+            <div class="age">Age 65</div>
+            <p>
+              Published her first children's book, <em>Little House in the
+              Big Woods</em>, at 65.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Duncan_Hines" target="_blank" rel="noopener">
+                Duncan Hines
+              </a>
+            </div>
+            <div class="age">Age 55</div>
+            <p>
+              Began publishing restaurant recommendations later in life,
+              eventually lending his name to a major commercial food brand.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Charles_Darwin" target="_blank" rel="noopener">
+                Charles Darwin
+              </a>
+            </div>
+            <div class="age">Age 50</div>
+            <p>
+              Published <em>On the Origin of Species</em>, the defining work
+              associated with his theory of evolution.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Bram_Stoker" target="_blank" rel="noopener">
+                Bram Stoker
+              </a>
+            </div>
+            <div class="age">Age 50</div>
+            <p>
+              Published <em>Dracula</em>, a novel that became one of the most
+              enduring works in popular horror literature.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Harry_Bernstein_(author)" target="_blank" rel="noopener">
+                Harry Bernstein
+              </a>
+            </div>
+            <div class="age">Age 96</div>
+            <p>
+              Achieved international literary recognition with his memoir
+              <em>The Invisible Wall</em>, published when he was 96.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada" target="_blank" rel="noopener">
+                A.C. Bhaktivedanta Swami Prabhupada
+              </a>
+            </div>
+            <div class="age">Age 69</div>
+            <p>
+              Traveled to New York at 69 and established the international
+              Hare Krishna movement.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Martha_Stewart" target="_blank" rel="noopener">
+                Martha Stewart
+              </a>
+            </div>
+            <div class="age">Age 41 & 58</div>
+            <p>
+              Achieved mainstream recognition with <em>Entertaining</em> at 41
+              and later founded Martha Stewart Living Omnimedia, becoming a
+              billionaire at 58.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Toni_Morrison" target="_blank" rel="noopener">
+                Toni Morrison
+              </a>
+            </div>
+            <div class="age">Age 40</div>
+            <p>
+              Published her first novel, <em>The Bluest Eye</em>, at 40,
+              beginning the literary career that would eventually include a
+              Nobel Prize and Pulitzer Prize.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         ARTISTS & DESIGNERS
+         ======================================================= -->
+
+    <section id="artists">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Artists & Designers</h2>
+          <div class="section-number">04 / Design</div>
+        </div>
+
+        <div class="people">
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Grandma_Moses" target="_blank" rel="noopener">
+                Grandma Moses
+              </a>
+            </div>
+            <div class="age">Age 78</div>
+            <p>
+              Anna Mary Robertson Moses began her celebrated painting career
+              late in life and became one of America's best-known folk artists.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Paul_C%C3%A9zanne" target="_blank" rel="noopener">
+                Paul Cézanne
+              </a>
+            </div>
+            <div class="age">Age 56</div>
+            <p>
+              Held his first solo exhibition at 56, later becoming one of the
+              most influential figures in modern art.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Vivienne_Westwood" target="_blank" rel="noopener">
+                Vivienne Westwood
+              </a>
+            </div>
+            <div class="age">Age 50+</div>
+            <p>
+              Expanded her influence from the punk movement into a major
+              international fashion house under her own name.
+            </p>
+          </article>
+
+          <article class="person">
+            <div class="person-name">
+              <a href="https://en.wikipedia.org/wiki/Vera_Wang" target="_blank" rel="noopener">
+                Vera Wang
+              </a>
+            </div>
+            <div class="age">Age 40</div>
+            <p>
+              Entered fashion design at 40 and built an internationally
+              recognized luxury bridal and fashion brand.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         HOUSE OF SALISBURY
+         ======================================================= -->
+
+    <section id="house-of-salisbury">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>A Modern Chapter</h2>
+          <div class="section-number">05 / 2026</div>
+        </div>
+
+        <article class="person featured">
+
+          <div class="person-name">
+            <a
+              href="https://www.morphfragrance.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              House of Salisbury
+            </a>
+          </div>
+
+          <div class="age">
+            Brett Salisbury — Age 57
+          </div>
+
+          <p>
+            In 2026, Brett Salisbury launched House of Salisbury, a luxury
+            creative house spanning fragrance, music and visual culture.
+            Its projects include
+            <a
+              href="https://www.morphfragrance.com/"
+              target="_blank"
+              rel="noopener"
+            >MORPH</a>,
+            EVE and the audiovisual music project SLOAN.
+          </p>
+
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer id="sources">
+    <div class="container">
+
+      <div class="footer-title">
+        The Late-Bloomers Archive
+      </div>
+
+      <p class="source-note">
+        This page is based on the supplied master list of people whose major
+        breakthroughs, businesses, cultural recognition or defining work
+        occurred at age 40 or later. Ages and descriptions reflect the
+        supplied source material and are presented as historical reference
+        points rather than a ranking.
+      </p>
+
+      <p class="source-note">
+        Individual names link to their respective Wikipedia reference pages.
+        External links open in a new browser tab.
+      </p>
+
+      <p>
+        <a href="#top">↑ Back to top</a>
+      </p>
+
+    </div>
+  </footer>
+
+</body>
+</html>
